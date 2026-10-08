@@ -1,0 +1,218 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f4f1e9"><title>Minigame · 三玩法试玩</title><link rel="icon" href="data:,"><style>:root{--paper:#f4f1e9;--surface:#fff;--ink:#242b28;--muted:#717871;--line:#deded4;--accent:#ed765e;--red:#ed765e;--green:#4eaa95;--purple:#8f89d0;--gold:#e7b751;font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;border:1px solid var(--line);background:var(--surface);border-radius:12px;min-height:46px;cursor:pointer;touch-action:manipulation;transition:background .15s,transform .15s}button:hover:not(:disabled){background:#f5f4ef}button:active:not(:disabled){transform:scale(.97)}button:disabled{cursor:default;opacity:.42}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}a{color:inherit;text-decoration:none}.mast{height:96px;max-width:1296px;margin:auto;display:flex;align-items:center;gap:24px;padding:0 36px}.brand{font-size:30px;font-weight:800;letter-spacing:-2px}.brand span{font-size:12px;letter-spacing:1px;font-weight:500;margin-left:16px}.edition{font-size:12px;color:var(--muted);margin-left:auto}.text-button{border:0;background:transparent;min-height:40px;padding:6px 2px;font-size:12px;color:var(--muted)}.layout{max-width:1180px;margin:34px auto 70px;display:grid;grid-template-columns:minmax(200px,1fr) 390px minmax(180px,.9fr);gap:56px;padding:0 24px;align-items:start}.eyebrow{font-size:10px;font-weight:700;letter-spacing:1.6px;color:var(--muted)}.intro{padding-top:34px}.intro h1{font-size:42px;line-height:1.4;letter-spacing:-1.5px;margin:18px 0}.intro p,.notes p{font-size:13px;line-height:1.9;color:var(--muted)}#game-nav{display:flex;flex-direction:column;gap:12px;margin-top:32px}.game-option{display:flex;align-items:center;text-align:left;padding:13px 16px;gap:16px;border:0;background:transparent}.game-option.current{background:#fff}.option-letter{font-size:26px;color:var(--option);font-weight:800}.option-name{display:block;font-size:14px;font-weight:700}.option-sub{font-size:11px;color:var(--muted);display:block;margin-top:5px}.aside-note{margin-top:42px;max-width:240px}.play-shell{width:100%;padding:24px;background:#faf9f4;border:1px solid #e8e6dd;border-radius:26px;box-shadow:0 18px 50px #292e2308}.game-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.game-head h2{font-size:25px;margin:7px 0 0;letter-spacing:-.7px}.icon-button{border:0;min-width:46px;min-height:46px;background:transparent;font-size:22px}.icon-button span{font-size:11px}.rule{font-size:12px;line-height:1.75;min-height:42px;color:var(--muted);margin:15px 0}.levels{display:flex;gap:8px}.level{min-height:35px;width:35px;border:0;background:transparent;font-size:12px;color:var(--muted)}.level.current{background:var(--ink);color:white}.level.complete::after{content:'·';color:var(--accent);font-size:18px;line-height:0;display:block;position:relative;top:2px}.stats{display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin:20px 0 12px}.stats span:first-child{color:var(--accent)}.stage{width:100%;aspect-ratio:1;background:white;border-radius:18px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.board{display:grid;width:100%;height:100%;padding:14px;gap:5px;grid-template-columns:repeat(var(--size),1fr);grid-template-rows:repeat(var(--size),1fr)}.cell{border:0;min-height:0;min-width:0;padding:0;display:flex;align-items:center;justify-content:center;border-radius:10px;position:relative;background:#f3f2ec;transition:background .18s,transform .2s;aspect-ratio:1}.arrow{font-size:38px;line-height:1;color:var(--accent);background:white;font-weight:500}.arrow:hover:not(:disabled){background:#faf5f0}.arrow.empty{opacity:1;background:white;cursor:default;color:#dbddd3;font-size:20px}.arrow.empty:disabled{opacity:1}.blockcell{color:#fff;font-size:19px}.blockcell.empty{background:#f1f1ea}.color-0{background:var(--red)!important}.color-1{background:var(--green)!important}.color-2{background:var(--purple)!important}.color-3{background:var(--gold)!important}.color-0,.color-1,.color-2,.color-3{color:#fff}.shape-mark{font-size:11px;opacity:.9}.star{position:absolute;font-size:24px;text-shadow:0 1px 4px #0003;line-height:1}.blockcell.empty .star{color:#8f7836;text-shadow:none}.ghost-valid{outline:3px solid var(--accent);outline-offset:-3px;filter:brightness(1.07)}.ghost-invalid{outline:3px solid #dc354b;outline-offset:-3px}.tubes{display:flex;gap:12px;align-items:center;justify-content:center;width:100%;padding:26px 16px;flex-wrap:wrap}.tube-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}.tube{width:58px;height:180px;display:flex;flex-direction:column-reverse;justify-content:flex-start;padding:5px;gap:3px;border:2px solid #d6d9cf;border-top:0;border-radius:2px 2px 19px 19px;background:transparent;position:relative;min-height:0}.tube:hover:not(:disabled){background:#fafaf5}.tube.selected{transform:translateY(-12px);border-color:var(--accent);box-shadow:0 8px 0 #00000005}.tube-label{font-size:10px;color:var(--muted)}.layer{height:calc((100% - (var(--capacity) - 1)*3px)/var(--capacity));width:100%;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}.special{min-height:56px;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px}.flip{padding:0 24px;background:var(--ink);color:white;border:0}.flip:hover:not(:disabled){background:#3c4841}.pieces{display:flex;gap:12px}.piece{min-width:74px;min-height:64px;display:flex;align-items:center;justify-content:center;padding:8px;background:transparent}.piece.selected{border:2px solid var(--accent);background:white}.mini-grid{display:grid;gap:3px;grid-template-columns:repeat(var(--width),16px)}.mini-cell{width:16px;height:16px;border-radius:4px}.chance{font-size:14px;letter-spacing:4px;color:var(--accent)}.feedback{min-height:42px;line-height:1.7;text-align:center;font-size:12px;color:var(--muted);padding:2px 0 10px}.toolbar{display:flex;gap:8px}.toolbar button{flex:1;font-size:12px}.bottom-row{display:flex;justify-content:space-between;gap:10px;margin-top:4px}.stamp-row{border-top:1px solid var(--line);margin-top:14px;padding-top:16px}.stamp-row>div:first-child{display:flex;align-items:center;justify-content:space-between}#collection-count{font-size:11px;color:var(--muted)}#stamps{display:flex;gap:9px;margin-top:12px}.stamp{width:46px;height:46px;border:1px dashed #d9dacf;border-radius:50%;display:grid;place-items:center;color:#c9ccbf;font-size:15px}.stamp.earned{border:0;background:#fff;color:var(--accent)}.stamp svg{width:34px;height:34px}.prototype-note{text-align:center;font-size:9px;color:#94988e;margin:16px 0 0;letter-spacing:.5px}.notes{padding-top:35px}.notes h3{font-size:23px;line-height:1.6;letter-spacing:-.6px;margin:14px 0 28px}.film-lines{display:flex;flex-direction:column;gap:22px}.film-line{display:flex;gap:16px;font-size:12px;line-height:1.8}.film-line span{color:var(--accent);font-size:10px;white-space:nowrap;padding-top:2px}.tiny-rule{height:1px;background:var(--line);margin:30px 0 16px}.notes details{font-size:11px;color:var(--muted);margin:20px 0}.notes details button{padding:0 15px;font-size:12px}.research-link{font-size:11px;display:inline-block;margin-top:15px;text-decoration:underline;text-underline-offset:5px}.mobile-tabs{display:none}dialog{border:0;border-radius:22px;padding:28px;width:min(350px,calc(100vw - 32px));color:var(--ink);background:#faf9f4;box-shadow:0 20px 70px #1113}dialog::backdrop{background:#26332b70;backdrop-filter:blur(4px)}dialog h2{font-size:26px;margin:10px 0}dialog p{font-size:13px;color:var(--muted);line-height:1.8}dialog button{width:100%;margin-top:10px}.primary{background:var(--ink);color:white;border:0}.primary:hover:not(:disabled){background:#465248}.win-stamp{width:100px;margin:6px auto;color:var(--accent)}.win-stamp svg{width:100%;height:100%}.dialog-label{font-size:10px;letter-spacing:1px;color:var(--accent)}#particles{position:fixed;inset:0;pointer-events:none;z-index:20}.particle{position:absolute;width:8px;height:8px;border-radius:3px;background:var(--accent);animation:burst .55s ease-out forwards}@keyframes burst{to{transform:translate(var(--dx),var(--dy)) rotate(90deg);opacity:0}}.shake{animation:shake .2s ease-in-out}@keyframes shake{25%{transform:translateX(5px)}75%{transform:translateX(-5px)}}.hint-glow{box-shadow:inset 0 0 0 3px var(--accent);animation:glow .7s infinite alternate}@keyframes glow{to{filter:brightness(1.2)}}body.focus .mast,body.focus .intro,body.focus .notes,body.focus .mobile-tabs{display:none}body.focus .layout{display:block;width:390px;max-width:100%;padding:0;margin:16px auto}body.focus #focus-exit{display:block}#focus-exit{display:none;position:fixed;right:8px;top:8px;z-index:10;padding:8px;font-size:11px;background:#ffffffc9}@media(max-width:1000px){.layout{grid-template-columns:minmax(190px,1fr) 390px;max-width:850px;gap:40px}.notes{grid-column:1 / -1;display:none}}@media(max-width:650px){.mast{height:56px;padding:0 18px;gap:10px}.brand{font-size:23px}.brand span{font-size:10px;letter-spacing:0;margin-left:10px}.edition{display:none}.mast #focus{margin-left:auto;font-size:11px}.layout{display:block;padding:0 10px;margin:6px auto 28px;max-width:410px}.intro,.notes{display:none}.play-shell{padding:18px;border-radius:22px}.mobile-tabs{display:flex;gap:6px;margin-bottom:18px}.mobile-tabs button{flex:1;font-size:11px;min-height:36px;padding:0;border:0;background:transparent;color:var(--muted)}.mobile-tabs button.current{background:#e9e9df;color:var(--ink);font-weight:700}.game-head h2{font-size:23px}.rule{margin:12px 0;font-size:12px}.stats{margin-top:15px}.board{padding:12px;gap:4px}.arrow{font-size:34px}.stage{border-radius:16px}.tube{width:54px;height:170px}.tubes{gap:9px;padding:22px 8px}.special{margin-top:8px}.stamp{width:43px;height:43px}.prototype-note{font-size:9px}}@media(max-width:350px){.play-shell{padding:13px}.tube{width:48px;height:155px}.tubes{gap:8px}.arrow{font-size:29px}.toolbar button{font-size:11px}.game-head h2{font-size:21px}.mobile-tabs button{font-size:10px}.bottom-row .text-button{font-size:10px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.exit-arrow{position:absolute;display:grid;place-items:center;font-size:34px;color:var(--accent);animation:arrow-exit .32s ease-in forwards;pointer-events:none}@keyframes arrow-exit{to{transform:translate(var(--dx),var(--dy));opacity:0}}
+</style></head><body><header class="mast"><a class="brand" href="#arrows/1">Mix<span>小游戏实验</span></a><span class="edition">3 个方向 · 各 5 关</span><button id="focus" class="text-button">录屏模式</button></header><main class="layout"><aside class="intro"><span class="eyebrow">PLAY FIRST / 先玩一会儿</span><h1>一眼看懂，<br>再来一关。</h1><p>三个确定规则的小实验。<br>不拼手速，换个思路就有新解。</p><nav id="game-nav" aria-label="选择玩法"></nav><div class="aside-note"><span class="eyebrow">这次试什么</span><p id="question"></p></div></aside><section class="play-shell" aria-label="游戏区"><div class="mobile-tabs" id="mobile-nav"></div><div class="game-head"><div><span id="level-code" class="eyebrow"></span><h2 id="title"></h2></div><button id="sound" class="icon-button" aria-label="开启音效" aria-pressed="false">♪ <span>关</span></button></div><p id="rule" class="rule"></p><div class="levels" id="levels" aria-label="关卡"></div><div class="stats"><span id="goal-text"></span><span id="steps"></span></div><div id="stage" class="stage"></div><div id="special" class="special"></div><div id="feedback" class="feedback" role="status" aria-live="polite"></div><div class="toolbar"><button id="undo">↶ 撤回</button><button id="restart">↻ 重开</button><button id="hint">✧ 提示</button></div><div class="bottom-row"><button id="assist" class="text-button">卡住了？助力演示</button><button id="code" class="text-button">复制同题码</button></div><div class="stamp-row"><div><span class="eyebrow">我的通关印记</span><span id="collection-count"></span></div><div id="stamps"></div></div><p class="prototype-note">浏览器原型 · 助力为模拟 · 进度只存本机</p></section><aside class="notes"><span class="eyebrow">一个画面，一句邀请</span><h3 id="hook"></h3><div class="film-lines" id="film-lines"></div><div class="tiny-rule"></div><p>先看真实操作，再决定要不要玩。每个方向都用同一套图形、关卡和反馈反复产出内容。</p><details><summary>试玩记录</summary><p>仅在本机保存通关与操作事件，不上传。</p><button id="export">导出本机记录</button></details><a class="research-link" href="https://app.notion.com/p/3f04af51282e81b5b395e22eb9ca618e" target="_blank" rel="noopener">构建与获客方案 ↗</a></aside></main><dialog id="modal" aria-labelledby="modal-title"><div id="modal-body"></div></dialog><div id="particles" aria-hidden="true"></div><script type="module">const DIRS=[[1,0],[0,1],[-1,0],[0,-1]];
+const clone=x=>JSON.parse(JSON.stringify(x));
+
+function initial(level,micro=true){
+ const s={...clone(level),micro,steps:0,mistakes:0,status:'playing',assisted:false};
+ if(s.kind==='sort')s.flipsLeft=micro?s.flips:0;
+ if(s.kind==='overlap')s.remaining=s.pieces.map((_,i)=>i);
+ return s;
+}
+
+function arrowChain(s,index){
+ const d=s.board[index];if(d==null)return null;
+ let x=index%s.size,y=Math.floor(index/s.size);const chain=[index];
+ const [dx,dy]=DIRS[d];x+=dx;y+=dy;
+ while(x>=0&&y>=0&&x<s.size&&y<s.size){
+  const i=y*s.size+x,other=s.board[i];
+  if(other!=null){if(!s.micro||other!==d)return null;chain.push(i);}
+  x+=dx;y+=dy;
+ }
+ return chain;
+}
+
+function canPour(s,from,to){
+ if(from===to)return 0;
+ const a=s.tubes[from],b=s.tubes[to];if(!a?.length||!b||b.length>=s.capacity)return 0;
+ const color=a[a.length-1];if(b.length&&b[b.length-1]!==color)return 0;
+ let n=1;while(n<a.length&&a[a.length-1-n]===color)n++;
+ return Math.min(n,s.capacity-b.length);
+}
+const sortWon=s=>s.tubes.every(t=>t.length===0||(t.length===s.capacity&&t.every(c=>c===t[0])));
+function placement(s,pieceIndex,x,y){
+ if(!s.remaining.includes(pieceIndex))return null;
+ const p=s.pieces[pieceIndex],cells=[];let fresh=0,overlap=0;
+ for(const [dx,dy] of p.cells){
+  const xx=x+dx,yy=y+dy;if(xx<0||yy<0||xx>=s.size||yy>=s.size)return null;
+  const i=yy*s.size+xx,v=s.board[i];
+  if(v!==-1&&(!s.micro||v!==p.color))return null;
+  if(v===-1)fresh++;else overlap++;
+  cells.push(i);
+ }
+ return fresh?{cells,overlap}:null;
+}
+
+function move(state,a){
+ if(state.status!=='playing')return {state,event:{type:'ignored'}};
+ const s=clone(state);
+ if(s.kind==='arrows'){
+  const chain=arrowChain(s,a.index);
+  if(!chain){s.mistakes++;if(s.mistakes>=3)s.status='lost';return {state:s,event:{type:'blocked',index:a.index}};}
+  chain.forEach(i=>s.board[i]=null);s.steps++;
+  if(s.board.every(x=>x==null))s.status='won';
+  return {state:s,event:{type:'clear',cells:chain,count:chain.length}};
+ }
+ if(s.kind==='sort'){
+  if(a.type==='flip'){
+   const t=s.tubes[a.index];if(!s.flipsLeft||!t?.length||t.every(x=>x===t[0]))return {state,event:{type:'invalid'}};
+   t.reverse();s.flipsLeft--;s.steps++;
+   if(sortWon(s))s.status='won';
+   return {state:s,event:{type:'flip',index:a.index,count:t.length}};
+  }
+  const n=canPour(s,a.from,a.to);if(!n)return {state,event:{type:'invalid'}};
+  const c=s.tubes[a.from].at(-1);s.tubes[a.from].splice(-n,n);s.tubes[a.to].push(...Array(n).fill(c));s.steps++;
+  if(sortWon(s))s.status='won';
+  return {state:s,event:{type:'pour',from:a.from,to:a.to,count:n}};
+ }
+ if(s.kind==='overlap'){
+  const pl=placement(s,a.piece,a.x,a.y);if(!pl)return {state,event:{type:'invalid'}};
+  pl.cells.forEach(i=>s.board[i]=s.pieces[a.piece].color);s.remaining=s.remaining.filter(i=>i!==a.piece);s.steps++;
+  const full=new Set();
+  for(let r=0;r<s.size;r++){
+   const row=Array.from({length:s.size},(_,c)=>r*s.size+c);if(row.every(i=>s.board[i]!==-1))row.forEach(i=>full.add(i));
+   const col=Array.from({length:s.size},(_,c)=>c*s.size+r);if(col.every(i=>s.board[i]!==-1))col.forEach(i=>full.add(i));
+  }
+  let stars=0;full.forEach(i=>{s.board[i]=-1;if(s.stars[i])stars++;s.stars[i]=false;});
+  if(!s.stars.some(Boolean))s.status='won';
+  else if(!s.remaining.length||!overlapMoves(s).length)s.status='lost';
+  return {state:s,event:{type:'place',cells:[...full],placed:pl.cells,overlap:pl.overlap,stars,count:full.size}};
+ }
+ throw new Error('Unknown game');
+}
+
+function overlapMoves(s){
+ const list=[];for(const piece of s.remaining)for(let y=0;y<s.size;y++)for(let x=0;x<s.size;x++)if(placement(s,piece,x,y))list.push({piece,x,y});return list;
+}
+function moves(s){
+ if(s.status!=='playing')return [];
+ if(s.kind==='arrows')return s.board.flatMap((v,index)=>v!=null&&arrowChain(s,index)?[{index}]:[]);
+ if(s.kind==='overlap')return overlapMoves(s);
+ const out=[];
+ for(let from=0;from<s.tubes.length;from++)for(let to=0;to<s.tubes.length;to++)if(canPour(s,from,to))out.push({from,to});
+ if(s.flipsLeft)for(let index=0;index<s.tubes.length;index++){const t=s.tubes[index];if(t.length>1&&!t.every(c=>c===t[0]))out.push({type:'flip',index});}
+ return out;
+}
+function key(s){
+ if(s.kind==='arrows')return s.board.map(x=>x==null?'.':x).join('');
+ if(s.kind==='sort')return s.tubes.map(t=>t.join('')).sort().join('|')+'/'+s.flipsLeft;
+ return s.board.join(',')+'|'+s.stars.map(Number).join('')+'|'+s.remaining.join(',');
+}
+
+function solve(start,limit=70000){
+ if(start.status==='won')return {path:[],visited:1};
+ const root=clone(start);root.status='playing';
+ const nodes=[{s:root,parent:-1,action:null}],seen=new Set([key(root)]);let head=0;
+ while(head<nodes.length&&head<limit){
+  const node=nodes[head];
+  let actions=moves(node.s);
+  if(root.kind==='arrows')actions.sort((a,b)=>arrowChain(node.s,b.index).length-arrowChain(node.s,a.index).length);
+  for(const a of actions){
+   const next=move(node.s,a).state,k=key(next);if(seen.has(k)||next.status==='lost')continue;
+   const ix=nodes.length;nodes.push({s:next,parent:head,action:a});seen.add(k);
+   if(next.status==='won'){
+    const path=[];let i=ix;while(nodes[i].parent!==-1){path.push(nodes[i].action);i=nodes[i].parent;}
+    return {path:path.reverse(),visited:head+1};
+   }
+   if(root.kind==='arrows')break; // Monotone removal: a greedy witness, never claimed optimal.
+  }
+  head++;
+ }
+ return {path:null,visited:head,truncated:head>=limit};
+}
+
+function rescue(state){
+ const s=clone(state);s.assisted=true;s.status='playing';
+ if(s.kind==='arrows')s.mistakes=0;
+ if(s.kind==='sort'){if(!s.extraTube){s.tubes.push([]);s.extraTube=true;}else return state;}
+ return s;
+}
+
+const n=(size,fill)=>Array(size*size).fill(fill);
+function arrows(id,size,rows){return {kind:'arrows',id,size,board:rows.flatMap(r=>r.split('').map(c=>c==='.'?null:Number(c))),flips:0};}
+function blocks(id,rows,stars,pieces){return {kind:'overlap',id,size:5,board:rows.flat(),stars:n(5,false).map((_,i)=>stars.includes(i)),pieces};}
+const H=(color,len=3)=>({color,cells:Array.from({length:len},(_,i)=>[i,0])});
+const V=(color,len=2)=>({color,cells:Array.from({length:len},(_,i)=>[0,i])});
+function generatedArrows(id,size,count,seed){
+ const board=n(size,null);let x=seed>>>0;
+ const rand=()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return (x>>>0)/4294967296;};
+ for(let k=0;k<count;k++){
+  const options=[];
+  for(let index=0;index<board.length;index++)if(board[index]===null)for(let d=0;d<4;d++){
+   board[index]=d;if(arrowChain({board,size,micro:true},index))options.push([index,d]);board[index]=null;
+  }
+  if(!options.length)break;
+  const [index,d]=options[Math.floor(rand()*options.length)];board[index]=d;
+ }
+ return {kind:'arrows',id,size,board};
+}
+const LEVELS={
+ arrows:[
+  arrows('A-01',4,['...3','0003','....','222.']),
+  arrows('A-02',5,['..333','0003.','.13..','.1000','.1222']),
+  generatedArrows('A-03',5,22,731),
+  generatedArrows('A-04',6,30,618),
+  generatedArrows('A-05',6,36,905)
+ ],
+ sort:[
+  {kind:'sort',id:'B-01',capacity:3,flips:1,tubes:[[0,0,1],[1,1,0],[]]},
+  {kind:'sort',id:'B-02',capacity:3,flips:1,tubes:[[1,0,0],[1,2,2],[1,2,0],[]]},
+  {kind:'sort',id:'B-03',capacity:3,flips:1,tubes:[[2,1,2],[1,0,2],[1,0,0],[]]},
+  {kind:'sort',id:'B-04',capacity:4,flips:1,tubes:[[0,2,2,0],[2,1,1,0],[0,2,1,1],[]]},
+  {kind:'sort',id:'B-05',capacity:4,flips:1,tubes:[[0,1,1,2],[1,2,0,2],[1,2,0,0],[]]}
+ ],
+ overlap:[
+  blocks('C-01',[[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[0,0,-1,0,0],[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1]],[10,14],[H(0,3)]),
+  blocks('C-02',[[-1,-1,-1,-1,-1],[0,0,-1,0,0],[-1,-1,-1,-1,-1],[1,1,-1,1,1],[-1,-1,-1,-1,-1]],[5,19],[H(0),H(1)]),
+  blocks('C-03',[[-1,-1,0,-1,-1],[-1,-1,0,-1,-1],[0,0,-1,0,0],[-1,-1,0,-1,-1],[-1,-1,0,-1,-1]],[2,10,14,22],[{color:0,cells:[[0,0],[1,0],[0,1]]}]),
+  blocks('C-04',[[-1,-1,-1,-1,-1],[0,-1,0,0,0],[1,1,-1,1,1],[-1,-1,2,-1,-1],[-1,-1,-1,-1,-1]],[5,14],[H(0),{color:1,cells:[[0,0],[1,0],[1,1]]}]),
+  blocks('C-05',[[-1,-1,-1,-1,-1],[0,-1,0,0,0],[1,1,-1,1,1],[2,2,2,2,-1],[-1,-1,-1,-1,3]],[5,14,16],[H(0),{color:1,cells:[[0,0],[1,0],[1,1]]},{color:2,cells:[[0,0],[1,0],[1,1]]}])
+ ]
+};
+const INFO={
+ arrows:{letter:'A',name:'一推串到底',subtitle:'点对一支，一串退出',rule:'点箭头退出；沿途同向的一起走，异向会挡住。',twist:'成串退出',color:'#ed765e',hook:'这一手，能带走几支？',question:'连续退出带来的爽感，够不够让你再开一关？'},
+ sort:{letter:'B',name:'翻面理色',subtitle:'换个面，路就通了',rule:'点两支色管倒色；同色才能叠。选中色管后可翻面。',twist:'有限翻面',color:'#4eaa95',hook:'这瓶倒不动？翻个面试试。',question:'“原来还能这样解”的瞬间，是否值得多试一关？'},
+ overlap:{letter:'C',name:'叠色消消',subtitle:'同色叠上去，整行消掉',rule:'选一块再点棋盘；同色能叠，铺满一行或一列收走星星。',twist:'同色叠放',color:'#8f89d0',hook:'这块真的放不下吗？',question:'同色叠放带来的新选择，是否清楚又有意思？'}
+};
+
+const $=s=>document.querySelector(s),symbols=['●','◆','▲','■'],arrowSymbols=['→','↓','←','↑'];
+const STORE='mix-minigame-lab-v1';let saved={wins:{},events:[]};try{const x=JSON.parse(localStorage.getItem(STORE));if(x?.wins&&Array.isArray(x.events))saved=x;}catch{}
+let kind='arrows',level=0,state,history=[],selected=null,piece=null,busy=false,sound=false,audioCtx=null,hintAction=null,run=0;
+const films={arrows:['先停在 A-03：你会点哪支？','点一次，整串箭头退出。','留同题码，让观众自己试。'],sort:['展示 B-02 的色管布局。','翻一次面，再接着理顺。','这次你会先翻哪一管？'],overlap:['展示 C-03：看起来放不下。','同色叠进去，行列一起清。','用同题邀请，比较不同摆法。']};
+function save(){try{localStorage.setItem(STORE,JSON.stringify(saved));}catch{}}
+function log(event,data={}){saved.events.push({at:new Date().toISOString(),event,level:state?.id,...data});if(saved.events.length>2000)saved.events.splice(0,saved.events.length-2000);save();}
+function stamp(id){const seed=[...id].reduce((s,c)=>s*31+c.charCodeAt(0),7)>>>0;let content='';for(let i=0;i<8;i++){const angle=i*45,r=9+(seed>>i)%8;content+=`<ellipse cx="32" cy="${32-r}" rx="${4+(seed>>i)%3}" ry="10" transform="rotate(${angle} 32 32)" fill="currentColor" opacity="${.4+i*.07}"/>`;}return `<svg viewBox="0 0 64 64" aria-hidden="true">${content}<circle cx="32" cy="32" r="5" fill="currentColor"/></svg>`;}
+function toast(t){$('#feedback').textContent=t;}
+function initAudio(){if(!sound)return;try{audioCtx??=new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume().catch(()=>{});}catch{sound=false;}}
+function playTone(count=1,win=false){if(!sound)return;initAudio();if(!audioCtx)return;const notes=win?[0,4,7,12]:Array.from({length:Math.min(count,12)},(_,i)=>[0,4,7,9,12][i%5]);notes.forEach((n,i)=>{const t=audioCtx.currentTime+i*.065,o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='triangle';o.frequency.setValueAtTime(440*2**(n/12),t);o.frequency.exponentialRampToValueAtTime(330*2**(n/12),t+.07);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.035,t+.004);g.gain.exponentialRampToValueAtTime(.0001,t+.12);o.connect(g);g.connect(audioCtx.destination);o.start(t);o.stop(t+.13);o.onended=()=>{o.disconnect();g.disconnect();};});}
+function route(k,i){const h=`#${k}/${i+1}`;if(location.hash===h)start(k,i);else location.hash=h;}
+function readRoute(){const [k,n]=location.hash.slice(1).split('/');start(LEVELS[k]?k:'arrows',Math.max(0,Math.min(4,(Number(n)||1)-1)));}
+function start(k,i){run++;kind=k;level=i;state=initial(LEVELS[k][i]);history=[];selected=null;piece=kind==='overlap'?state.remaining[0]:null;hintAction=null;busy=false;$('#modal').close();$('#particles').replaceChildren();log('start');render();toast(kind==='arrows'?'先找一串方向相同的箭头。':kind==='sort'?'先点一支色管，再点要倒入的位置。':'已选中第一块，点棋盘放左上角。');}
+function renderNav(){for(const id of ['#game-nav','#mobile-nav'])$(id).innerHTML=Object.entries(INFO).map(([k,v])=>id==='#game-nav'?`<button class="game-option ${kind===k?'current':''}" style="--option:${v.color}" data-game="${k}" aria-pressed="${kind===k}"><span class="option-letter">${v.letter}</span><span><span class="option-name">${v.name}</span><span class="option-sub">${v.subtitle}</span></span></button>`:`<button data-game="${k}" class="${kind===k?'current':''}" aria-pressed="${kind===k}">${v.letter} ${v.name}</button>`).join('');}
+function render(){const info=INFO[kind];document.documentElement.style.setProperty('--accent',info.color);renderNav();$('#title').textContent=info.name;$('#level-code').textContent=`${state.id} / ${info.twist}`;$('#rule').textContent=info.rule;$('#question').textContent=info.question;$('#hook').textContent=info.hook;$('#film-lines').innerHTML=films[kind].map((t,i)=>`<div class="film-line"><span>0${i+1}</span><div>${t}</div></div>`).join('');$('#levels').innerHTML=LEVELS[kind].map((l,i)=>`<button data-level="${i}" class="level ${level===i?'current':''} ${saved.wins[l.id]?'complete':''}" aria-label="第${i+1}关" aria-pressed="${level===i}">${i+1}</button>`).join('');$('#steps').textContent=`${state.steps} 步`;
+ $('#goal-text').textContent=kind==='arrows'?`退出全部箭头 · 剩 ${state.board.filter(x=>x!==null).length} 支`:kind==='sort'?'每管只留一种颜色':`收走全部星星 · 剩 ${state.stars.filter(Boolean).length} 颗`;
+ if(kind==='arrows')$('#stage').innerHTML=`<div class="board" style="--size:${state.size}">${state.board.map((v,i)=>`<button data-cell="${i}" class="cell arrow ${v===null?'empty':''}" ${v===null?'disabled':''} aria-label="${Math.floor(i/state.size)+1}行${i%state.size+1}列${v===null?'空位':arrowSymbols[v]}">${v===null?'·':arrowSymbols[v]}</button>`).join('')}</div>`;
+ if(kind==='sort')$('#stage').innerHTML=`<div class="tubes">${state.tubes.map((t,i)=>`<div class="tube-wrap"><button class="tube ${selected===i?'selected':''}" style="--capacity:${state.capacity}" data-tube="${i}" aria-label="色管${i+1}，从下到上${t.map(c=>symbols[c]).join('')||'空'}" aria-pressed="${selected===i}">${t.map(c=>`<span class="layer color-${c}">${symbols[c]}</span>`).join('')}</button><span class="tube-label">${i+1}</span></div>`).join('')}</div>`;
+ if(kind==='overlap')$('#stage').innerHTML=`<div class="board" style="--size:${state.size}">${state.board.map((v,i)=>`<button data-cell="${i}" class="cell blockcell ${v===-1?'empty':`color-${v}`}" aria-label="${Math.floor(i/state.size)+1}行${i%state.size+1}列 ${v===-1?'空位':symbols[v]}${state.stars[i]?' 星星':''}">${v!==-1?`<span class="shape-mark">${symbols[v]}</span>`:''}${state.stars[i]?'<span class="star">★</span>':''}</button>`).join('')}</div>`;
+ $('#special').innerHTML=kind==='arrows'?`<span class="chance" aria-label="剩余${3-state.mistakes}次失误机会">${'●'.repeat(3-state.mistakes)}${'○'.repeat(state.mistakes)}</span>`:kind==='sort'?`<button class="flip" id="flip" ${selected===null||!state.flipsLeft||!state.tubes[selected]?.length||state.tubes[selected].every(c=>c===state.tubes[selected][0])?'disabled':''}>翻面 ↕ · 剩 ${state.flipsLeft} 次</button>`:`<div class="pieces">${state.remaining.map(p=>{const obj=state.pieces[p],w=Math.max(...obj.cells.map(c=>c[0]))+1,h=Math.max(...obj.cells.map(c=>c[1]))+1;return `<button class="piece ${piece===p?'selected':''}" data-piece="${p}" aria-label="方块${p+1} ${symbols[obj.color]}" aria-pressed="${piece===p}"><span class="mini-grid" style="--width:${w}">${Array.from({length:w*h},(_,i)=>`<span class="mini-cell ${obj.cells.some(([x,y])=>x===i%w&&y===Math.floor(i/w))?'color-'+obj.color:''}"></span>`).join('')}</span></button>`;}).join('')}</div>`;
+ $('#undo').disabled=!history.length;$('#hint').disabled=state.status!=='playing';$('#assist').disabled=kind==='sort'&&state.extraTube||kind==='overlap'&&!history.length;$('#collection-count').textContent=`${LEVELS[kind].filter(l=>saved.wins[l.id]).length} / 5`;$('#stamps').innerHTML=LEVELS[kind].map((l,i)=>`<button class="stamp ${saved.wins[l.id]?'earned':''}" data-level="${i}" title="${l.id} ${saved.wins[l.id]?'已通关':'未通关'}" aria-label="${l.id} ${saved.wins[l.id]?'已通关':'未通关'}">${saved.wins[l.id]?stamp(l.id):'·'}</button>`).join('');
+}
+function particles(event,rects){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;for(const [j,r]of rects.slice(0,12).entries())for(let i=0;i<3;i++){const el=document.createElement('span');el.className='particle';el.style.cssText=`left:${r.x+r.width/2}px;top:${r.y+r.height/2}px;--dx:${Math.cos(i*2.1+j)*36}px;--dy:${-20-Math.sin(i+j)*35}px;animation-delay:${j*.025}s`;$('#particles').append(el);setTimeout(()=>el.remove(),1000);}if(event.type==='clear'&&history.length){const prev=history.at(-1),d=prev.board[event.cells[0]],boardRect=$('#stage').getBoundingClientRect();rects.forEach((r,j)=>{const el=document.createElement('span');el.className='exit-arrow';el.textContent=arrowSymbols[d];const dx=d===0?boardRect.right-r.x:d===2?boardRect.left-r.x-30:0,dy=d===1?boardRect.bottom-r.y:d===3?boardRect.top-r.y-30:0;el.style.cssText=`left:${r.x}px;top:${r.y}px;width:${r.width}px;height:${r.height}px;--dx:${dx}px;--dy:${dy}px;animation-delay:${j*.04}s`;$('#particles').append(el);setTimeout(()=>el.remove(),1000);});}}
+function act(a){if(busy||state.status!=='playing')return;hintAction=null;const result=move(state,a),ev=result.event;const rects=(ev.cells||ev.placed||[]).map(i=>$(`[data-cell="${i}"]`)?.getBoundingClientRect()).filter(Boolean);if(result.state===state){toast(kind==='sort'?'这里只能倒入同色或空管；再点选中的管可取消。':'这里放不下；同色可叠，也要覆盖至少一格空位。');$('#stage').classList.add('shake');setTimeout(()=>$('#stage').classList.remove('shake'),240);log('invalid');return;}history.push(clone(state));state=result.state;selected=null;if(kind==='overlap')piece=state.remaining[0]??null;render();particles(ev,rects);log(ev.type,{steps:state.steps,count:ev.count??0});playTone(ev.count||1);
+ const messages={blocked:`前面被挡住了，还能失误 ${3-state.mistakes} 次。`,clear:`一手带走 ${ev.count} 支${ev.count>1?'，连起来了！':'。'}`,flip:'上下翻过来了，再看看能怎么倒。',pour:`理顺 ${ev.count} 格。`,place:ev.stars?`收走 ${ev.stars} 颗星${ev.overlap?'，同色叠得正好！':'！'}`:'放好了，下一块放哪里？'};toast(messages[ev.type]||'');if(state.status==='won'){const old=saved.wins[state.id];saved.wins[state.id]={best:Math.min(old?.best??Infinity,state.steps),assisted:state.assisted&&old?.assisted!==false};save();log('win',{steps:state.steps,assisted:state.assisted});render();playTone(1,true);const token=run;setTimeout(()=>{if(token===run&&state.status==='won')showWin();},280);}else if(state.status==='lost')showLost();else if(kind==='sort'&&!moves(state).length)toast('暂时没有合法操作。可以撤回，也可以重开原题。');}
+function modal(html){$('#modal-body').innerHTML=html;if(!$('#modal').open)$('#modal').showModal();}
+function showWin(){modal(`<span class="dialog-label">${state.id} · 新的印记</span><div class="win-stamp">${stamp(state.id)}</div><h2 id="modal-title">这关，理顺了。</h2><p>${state.steps} 步通关${state.assisted?' · 使用了提示或助力':''}。${level<4?'换一张题，再试一次。':'五关都能随时重玩，也可以换个方向。'}</p><button class="primary" data-modal="next">${level<4?'下一关':'换个玩法'}</button><button data-modal="restart">重玩本关</button><button class="text-button" data-modal="close">看看我的印记</button>`);}
+function showLost(){modal('<span class="dialog-label">本关进度已保留</span><h2 id="modal-title">换个顺序试试。</h2><p>撤回一步，或重开同一道题。</p><button class="primary" data-modal="undo">撤回一步</button><button data-modal="restart">重开本关</button><button class="text-button" data-modal="assist">查看助力演示</button>');}
+function undo(){if(!history.length)return;run++;state=history.pop();selected=null;hintAction=null;piece=state.remaining?.[0]??null;$('#modal').close();render();toast('退回上一步。');log('undo');}
+function offerAssist(){if(kind==='sort'&&state.extraTube){toast('本局已增加一支空管。');return;}if(kind==='overlap'&&!history.length){toast('先下一步棋，再体验撤回助力。');return;}const text=kind==='arrows'?'恢复 3 次失误机会，保留已经退出的箭头。':kind==='sort'?'本局增加一支空管，保留已经整理的颜色。':'撤回上一步，保留更早的操作。';log('assist_offer',{simulated:true});modal(`<span class="dialog-label">模拟激励广告 · 不产生收入</span><h2 id="modal-title">${kind==='sort'?'多一个空位':kind==='arrows'?'继续这一局':'再想一步'}</h2><p>${text}</p><p>这是奖励流程演示。取消不会发放奖励。</p><button class="primary" data-modal="complete-ad">模拟完成，领取助力</button><button data-modal="cancel-ad">取消</button>`);}
+function hint(){if(busy||state.status!=='playing')return;busy=true;toast('在找一条通路…');const token=run;setTimeout(()=>{if(token!==run)return;const answer=solve(state,20000);busy=false;if(!answer.path?.length){toast(answer.truncated?'这一步还没找到解法，试着撤回。':'这条路走不通了；撤回或重开原题再试。');return;}state.assisted=true;hintAction=answer.path[0];render();if(kind==='arrows'){$(`[data-cell="${hintAction.index}"]`)?.classList.add('hint-glow');toast('试试发光的箭头。');}if(kind==='sort'){if(hintAction.type==='flip'){selected=hintAction.index;render();$('#flip')?.classList.add('hint-glow');toast(`翻一下第 ${hintAction.index+1} 支色管。`);}else{$(`[data-tube="${hintAction.from}"]`)?.classList.add('hint-glow');$(`[data-tube="${hintAction.to}"]`)?.classList.add('hint-glow');toast(`第 ${hintAction.from+1} 管 → 第 ${hintAction.to+1} 管。`);}}if(kind==='overlap'){piece=hintAction.piece;render();$(`[data-cell="${hintAction.y*state.size+hintAction.x}"]`)?.classList.add('hint-glow');toast('用已选方块，点发光格作为左上角。');}log('hint');},20);}
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;initAudio();if(b.dataset.game)route(b.dataset.game,0);else if(b.dataset.level!==undefined)route(kind,Number(b.dataset.level));else if(b.dataset.cell!==undefined){const i=Number(b.dataset.cell);if(kind==='arrows')act({index:i});else if(kind==='overlap'&&piece!==null)act({piece,x:i%state.size,y:Math.floor(i/state.size)});}else if(b.dataset.tube!==undefined){if(state.status!=='playing')return;const i=Number(b.dataset.tube);if(selected===null){selected=i;render();toast(`已选第 ${i+1} 管；再点目标管，或翻面。`);}else if(selected===i){selected=null;render();toast('已取消选择。');}else act({from:selected,to:i});}else if(b.dataset.piece!==undefined){piece=Number(b.dataset.piece);render();toast('点棋盘，把方块左上角放在那一格。');}else if(b.id==='flip'&&selected!==null)act({type:'flip',index:selected});else if(b.dataset.modal){const action=b.dataset.modal;if(action==='close')$('#modal').close();if(action==='restart')start(kind,level);if(action==='next')level<4?route(kind,level+1):route(Object.keys(INFO)[(Object.keys(INFO).indexOf(kind)+1)%3],0);if(action==='undo')undo();if(action==='assist')offerAssist();if(action==='cancel-ad'){log('assist_cancel',{simulated:true});$('#modal').close();}if(action==='complete-ad'){if(kind==='overlap')undo();else{history.push(clone(state));state=rescue(state);render();}state.assisted=true;$('#modal').close();toast('模拟助力已发放，继续这一局。');log('assist_reward',{simulated:true});}}});
+$('#stage').addEventListener('pointerover',e=>{if(kind!=='overlap'||piece===null)return;const b=e.target.closest('[data-cell]');if(!b)return;document.querySelectorAll('.ghost-valid,.ghost-invalid').forEach(n=>n.classList.remove('ghost-valid','ghost-invalid'));const i=Number(b.dataset.cell),x=i%state.size,y=Math.floor(i/state.size),ok=placement(state,piece,x,y);for(const [dx,dy] of state.pieces[piece].cells){if(x+dx<state.size&&y+dy<state.size)$(`[data-cell="${(y+dy)*state.size+x+dx}"]`)?.classList.add(ok?'ghost-valid':'ghost-invalid');}});
+$('#stage').addEventListener('pointerleave',()=>document.querySelectorAll('.ghost-valid,.ghost-invalid').forEach(n=>n.classList.remove('ghost-valid','ghost-invalid')));
+$('#undo').onclick=undo;$('#restart').onclick=()=>start(kind,level);$('#hint').onclick=hint;$('#assist').onclick=offerAssist;$('#sound').onclick=()=>{sound=!sound;$('#sound').setAttribute('aria-pressed',String(sound));$('#sound').setAttribute('aria-label',sound?'关闭音效':'开启音效');$('#sound span').textContent=sound?'开':'关';if(sound)playTone(3);};
+const exit=document.createElement('button');exit.id='focus-exit';exit.textContent='退出录屏';document.body.append(exit);$('#focus').onclick=()=>document.body.classList.add('focus');exit.onclick=()=>document.body.classList.remove('focus');
+$('#code').onclick=async()=>{const text=`${INFO[kind].name} · 同题码 ${state.id}`;try{await navigator.clipboard.writeText(text);toast('同题码已复制。');}catch{toast(text);}log('copy_code');};
+$('#export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(saved,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='minigame-local-playlog.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+window.__lab={snapshot:()=>clone(state),hint:()=>clone(hintAction),events:()=>clone(saved.events),wins:()=>clone(saved.wins)};
+window.addEventListener('hashchange',readRoute);readRoute();
+</script></body></html>
