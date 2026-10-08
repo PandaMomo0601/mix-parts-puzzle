@@ -4,7 +4,7 @@ function error(message){$('error').hidden=false;$('error-copy').textContent=mess
 if(!entry){error('这个玩法入口不存在，请回目录选择。');return;}
 document.title=entry.title+' · Mix';$('game-label').textContent=entry.title;
 if(entry.src){const frame=$('legacy'),url=new URL(entry.src,location.href);if(entry.id==='parts'){for(const k of ['level','v'])if(params.has(k))url.searchParams.set(k,params.get(k));}frame.src=url.href;frame.hidden=false;frame.addEventListener('load',()=>{if(entry.id==='parts'&&params.has('level')){params.delete('level');history.replaceState(null,'','play.html?'+params);}});return;}
-const script=document.createElement('script');script.src='games/'+entry.id+'.js?v=r5';script.onload=start;script.onerror=()=>error('游戏文件加载失败，刷新或返回目录重试。');document.head.appendChild(script);
+const script=document.createElement('script');script.src='games/'+entry.id+'.js?v=r6';script.onload=start;script.onerror=()=>error('游戏文件加载失败，刷新或返回目录重试。');document.head.appendChild(script);
 function start(){const def=window.MixGames?.[entry.id];if(!def){error('游戏尚未加载，请刷新重试。');return;}
 const KEY='mix-clickmove-v1',W=390,H=560,canvas=$('canvas'),ctx=canvas.getContext('2d');let saved={games:{},muted:false};try{const raw=JSON.parse(localStorage.getItem(KEY));if(raw&&typeof raw==='object'&&raw.games&&typeof raw.games==='object'&&!Array.isArray(raw.games))saved=raw;}catch{}
 const progress=saved.games[entry.id]||{current:0,completed:[]};progress.completed=Array.isArray(progress.completed)?progress.completed.filter(n=>Number.isInteger(n)&&n>=0&&n<def.levels.length):[];saved.games[entry.id]=progress;
@@ -23,7 +23,7 @@ function tick(t){const elapsed=last?Math.min((t-last)/1000,.06):0;last=t;if(!pau
 canvas.addEventListener('pointerdown',e=>{if(!e.isPrimary||e.button!==0)return;e.preventDefault();unlock();const r=canvas.getBoundingClientRect();input('down',(e.clientX-r.left)*W/r.width,(e.clientY-r.top)*H/r.height);});
 $('restart').onclick=()=>select(level);$('again').onclick=()=>select(level);$('undo').onclick=undo;$('recover').onclick=undo;$('next').onclick=()=>{if(level+1<def.levels.length)select(level+1);else location.href='./';};$('sound').hidden=false;$('sound').textContent=saved.muted?'声音关':'声音开';$('sound').onclick=()=>{saved.muted=!saved.muted;$('sound').textContent=saved.muted?'声音关':'声音开';save();if(!saved.muted)unlock();};
 window.addEventListener('blur',()=>{paused=true;});window.addEventListener('focus',()=>{paused=false;last=0;});document.addEventListener('visibilitychange',()=>{paused=document.hidden;last=0;});
-const dpr=Math.min(devicePixelRatio||1,2);canvas.width=W*dpr;canvas.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);$('title').textContent=entry.title;$('new-game').hidden=false;
+const dpr=Math.min(devicePixelRatio||1,2);canvas.width=W*dpr;canvas.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);$('title').textContent=entry.title;$('new-game').hidden=false;$('new-game').classList.toggle('many-levels',def.levels.length>6);
 window.lab={state:()=>({id:entry.id,level,ended,won,paused,game:game?.getState(),progress:structuredClone(progress),soundEvents:soundEvents.length}),select:(_,i)=>select(i),input,undo,audio:()=>({muted:!!saved.muted,state:audioCtx?.state||'locked',events:soundEvents.slice()})};
 const requested=params.has('level')?Number(params.get('level')):progress.current;select(requested);if(params.has('level')){params.delete('level');history.replaceState(null,'','play.html?'+params);}requestAnimationFrame(tick);
 }
