@@ -3,3 +3,5 @@
 .many-levels #levels{display:grid;grid-template-columns:repeat(4,minmax(44px,1fr));gap:8px}.many-levels #levels button{width:100%;min-height:44px}.many-levels .stage{width:min(100%,calc((100svh - 300px) * 390 / 560))}@media(min-width:700px){.many-levels .stage{width:100%}}
 
 .many-levels .heading p{min-height:0}
+
+#levels.compact-levels{display:flex;align-items:center;gap:8px}#levels.compact-levels button{flex:0 0 44px;width:44px;min-height:44px;font-size:24px}#level-select{flex:1;min-width:0;max-width:100%;height:44px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);padding:8px;font:inherit;font-size:13px;touch-action:manipulation}#level-select:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
