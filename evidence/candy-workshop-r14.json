@@ -1,0 +1,4676 @@
+{
+  "version": "r14",
+  "date": "2026-10-23T08:10:17.438Z",
+  "newLevels": 24,
+  "modes": 3,
+  "oldRuntimeFilesUnchanged": 159,
+  "oldCatalogEntriesUnchanged": 26,
+  "runtimeFiles": 216,
+  "engineAndStorage": {
+    "tests": 77,
+    "passed": 77
+  },
+  "independentAudit": {
+    "date": "2026-10-23T07:43:52.502Z",
+    "independent": true,
+    "passed": true,
+    "scope": "Pure engine, all 24 levels and physical event order; browser animation/collection UI remains a separate acceptance check.",
+    "fixtures": [
+      {
+        "label": "A: cross-row red automatically resumes after the blue row clears",
+        "mode": "bridge",
+        "actions": [
+          "R4",
+          "B2",
+          "Y2"
+        ],
+        "status": "won",
+        "ledger": {
+          "total": 8,
+          "filled": 8,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "events": 16
+      },
+      {
+        "label": "A: mounting future yellow occupies the final head and blocks current blue",
+        "mode": "bridge",
+        "actions": [
+          "R4",
+          "Y2"
+        ],
+        "status": "stuck",
+        "ledger": {
+          "total": 8,
+          "filled": 2,
+          "empty": 6,
+          "stock": 2,
+          "working": 4,
+          "stockBoxes": 1,
+          "activeBoxes": 2,
+          "byColor": {
+            "need": {
+              "R": 2,
+              "Y": 2,
+              "G": 0,
+              "B": 2
+            },
+            "remaining": {
+              "R": 2,
+              "Y": 2,
+              "G": 0,
+              "B": 2
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "events": 4
+      },
+      {
+        "label": "B: red and blue trays release a dock for yellow",
+        "mode": "trays",
+        "actions": [
+          "red",
+          "blue",
+          "yellow"
+        ],
+        "status": "won",
+        "ledger": {
+          "total": 12,
+          "filled": 12,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "events": 18
+      },
+      {
+        "label": "B: early yellow and unfinished red block the fixed blue stream",
+        "mode": "trays",
+        "actions": [
+          "yellow",
+          "red"
+        ],
+        "status": "stuck",
+        "ledger": {
+          "total": 12,
+          "filled": 2,
+          "empty": 10,
+          "stock": 10,
+          "working": 0,
+          "stockBoxes": 1,
+          "activeBoxes": 2,
+          "byColor": {
+            "need": {
+              "R": 2,
+              "Y": 4,
+              "G": 0,
+              "B": 4
+            },
+            "remaining": {
+              "R": 2,
+              "Y": 4,
+              "G": 0,
+              "B": 4
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 3
+        },
+        "events": 4
+      },
+      {
+        "label": "C: temporarily parked blue clears when red finishes",
+        "mode": "loop",
+        "actions": [
+          "L1R",
+          "L2B",
+          "L2R",
+          "L1B",
+          "L3Y"
+        ],
+        "status": "won",
+        "ledger": {
+          "total": 12,
+          "filled": 12,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "events": 37
+      },
+      {
+        "label": "C: two premature colors fill the actual six-candy loop",
+        "mode": "loop",
+        "actions": [
+          "L3Y",
+          "L2B"
+        ],
+        "status": "stuck",
+        "ledger": {
+          "total": 12,
+          "filled": 0,
+          "empty": 12,
+          "stock": 6,
+          "working": 6,
+          "stockBoxes": 3,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 4,
+              "Y": 4,
+              "G": 0,
+              "B": 4
+            },
+            "remaining": {
+              "R": 4,
+              "Y": 4,
+              "G": 0,
+              "B": 4
+            }
+          },
+          "buffer": 6,
+          "pending": 0,
+          "undockedTrays": 3
+        },
+        "events": 10
+      },
+      {
+        "label": "C: a partially released batch preserves its two upstream candies",
+        "mode": "loop",
+        "actions": [
+          "Y8"
+        ],
+        "status": "stuck",
+        "ledger": {
+          "total": 10,
+          "filled": 0,
+          "empty": 10,
+          "stock": 4,
+          "working": 6,
+          "stockBoxes": 2,
+          "activeBoxes": 1,
+          "byColor": {
+            "need": {
+              "R": 2,
+              "Y": 8,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 2,
+              "Y": 8,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 6,
+          "pending": 2,
+          "undockedTrays": 2
+        },
+        "events": 7
+      },
+      {
+        "label": "C: an eight-candy matching batch passes through a six-candy loop",
+        "mode": "loop",
+        "actions": [
+          "R2",
+          "Y8"
+        ],
+        "status": "won",
+        "ledger": {
+          "total": 10,
+          "filled": 10,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "events": 26
+      }
+    ],
+    "levels": [
+      {
+        "id": "bridge-01",
+        "mode": "bridge",
+        "name": "糖果彩带",
+        "cells": 64,
+        "pictureSHA256": "fa345242ab1bfc44e64d8f5b901e1fa871b99d40073a04d1b185dba89e97a8df",
+        "solution": [
+          "P1",
+          "P2",
+          "P4",
+          "P3"
+        ],
+        "moves": 4,
+        "events": 80,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "P4",
+            "P3"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "bridge-02",
+        "mode": "bridge",
+        "name": "双色风车",
+        "cells": 64,
+        "pictureSHA256": "a4d29235cc205f1b975356e7c779bc6fa2c633ec7877fa62c6ae0622aceef95a",
+        "solution": [
+          "P1",
+          "P2"
+        ],
+        "moves": 2,
+        "events": 76,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "all-reachable-terminal-states-win",
+          "actions": null,
+          "nodes": 4,
+          "terminalWins": 1
+        }
+      },
+      {
+        "id": "bridge-03",
+        "mode": "bridge",
+        "name": "三味回环",
+        "cells": 64,
+        "pictureSHA256": "5f641edcff2a86411b6bba61051cf57f6c1f9f3dfb4ed6974410f9b7c8449c46",
+        "solution": [
+          "P1",
+          "P2",
+          "P3"
+        ],
+        "moves": 3,
+        "events": 78,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "P3",
+            "P2"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "bridge-04",
+        "mode": "bridge",
+        "name": "樱桃双果",
+        "cells": 64,
+        "pictureSHA256": "633602c76552f1f0b433cf9ea441864b706d309ad5b7a3f1420678201545e7a4",
+        "solution": [
+          "P3",
+          "P2",
+          "P1",
+          "P4",
+          "P5",
+          "P6",
+          "P7"
+        ],
+        "moves": 7,
+        "events": 86,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "P7",
+            "P6",
+            "P5"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "bridge-05",
+        "mode": "bridge",
+        "name": "薄荷蝴蝶",
+        "cells": 64,
+        "pictureSHA256": "af986ae43616c9f43eabc0cb774c17afb1249e106be16974e95f9b31a2777c52",
+        "solution": [
+          "P9",
+          "P7",
+          "P3",
+          "P6",
+          "P4",
+          "P5",
+          "P2",
+          "P1",
+          "P8"
+        ],
+        "moves": 9,
+        "events": 90,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "P8",
+            "P5",
+            "P1"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "bridge-06",
+        "mode": "bridge",
+        "name": "星光礼盒",
+        "cells": 256,
+        "pictureSHA256": "60e16766d625fc2a005c452e95caf1aa13c963ddbe5abffeb7aa36e9d5088bb7",
+        "solution": [
+          "P5",
+          "P2",
+          "P6",
+          "P3",
+          "P7",
+          "P4",
+          "P1"
+        ],
+        "moves": 7,
+        "events": 286,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "P7",
+            "P6",
+            "P4"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "bridge-07",
+        "mode": "bridge",
+        "name": "糖果火箭",
+        "cells": 256,
+        "pictureSHA256": "7d1983970ba9a441009ddd90e3c2c38f3c56310a9a8d02a8ac93ad5e8c8fc2c8",
+        "solution": [
+          "P1",
+          "P2",
+          "P4",
+          "P5",
+          "P6",
+          "P8",
+          "P7",
+          "P3"
+        ],
+        "moves": 8,
+        "events": 288,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "P8",
+            "P7",
+            "P6"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "bridge-08",
+        "mode": "bridge",
+        "name": "玫瑰花窗",
+        "cells": 256,
+        "pictureSHA256": "9e51927ad150678394feb00b70db6b84d27b094257cfa0f1b9047ab27d92ad2a",
+        "solution": [
+          "P12",
+          "P11",
+          "P5",
+          "P13",
+          "P2",
+          "P3",
+          "P10",
+          "P6",
+          "P8",
+          "P4",
+          "P1",
+          "P9",
+          "P7"
+        ],
+        "moves": 13,
+        "events": 298,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "P13",
+            "P11",
+            "P10"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "trays-01",
+        "mode": "trays",
+        "name": "四味礼笺",
+        "cells": 64,
+        "pictureSHA256": "892d0ce737d690b04fbe4a1a08fc04cbc5aae0e0c1b6e7560c35170dfb55288d",
+        "solution": [
+          "T2",
+          "T1",
+          "T4",
+          "T3"
+        ],
+        "moves": 4,
+        "events": 72,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "T4",
+            "T3"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "trays-02",
+        "mode": "trays",
+        "name": "花瓣拼盘",
+        "cells": 64,
+        "pictureSHA256": "b88026ac5342cae7636b9ba5a5d12cd9bf2d6bc19e48316bbce6d201d9395921",
+        "solution": [
+          "T1",
+          "T2",
+          "T4",
+          "T3"
+        ],
+        "moves": 4,
+        "events": 72,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "T3",
+            "T2"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "trays-03",
+        "mode": "trays",
+        "name": "莓果双拼",
+        "cells": 64,
+        "pictureSHA256": "d36afc8c519429e459997df61dfccf70a854123f758e7e167293f5afac3495f1",
+        "solution": [
+          "T1",
+          "T3",
+          "T2"
+        ],
+        "moves": 3,
+        "events": 70,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "T2",
+            "T1"
+          ],
+          "nodes": 7,
+          "terminalWins": 1
+        }
+      },
+      {
+        "id": "trays-04",
+        "mode": "trays",
+        "name": "兔耳糖盒",
+        "cells": 64,
+        "pictureSHA256": "5653d42ecba886c43a8f9ed0a06dc729864f8f39232baf0fa0238fb152340109",
+        "solution": [
+          "T1",
+          "T5",
+          "T3",
+          "T2",
+          "T6",
+          "T7",
+          "T4",
+          "T8"
+        ],
+        "moves": 8,
+        "events": 80,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "T8",
+            "T6"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "trays-05",
+        "mode": "trays",
+        "name": "生日蛋糕",
+        "cells": 64,
+        "pictureSHA256": "de6e4476811e69791e9a2c2379b383769fafc7276e780e8fc8c2c9ebe92a9091",
+        "solution": [
+          "T7",
+          "T3",
+          "T8",
+          "T4",
+          "T1",
+          "T5",
+          "T2",
+          "T6"
+        ],
+        "moves": 8,
+        "events": 80,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "T4",
+            "T3"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "trays-06",
+        "mode": "trays",
+        "name": "草莓盆栽",
+        "cells": 256,
+        "pictureSHA256": "1fa85c6f68f35654e184a7154451ee9b0891d99a3def640abdf45bd6918d59d8",
+        "solution": [
+          "T7",
+          "T1",
+          "T5",
+          "T6",
+          "T4",
+          "T3",
+          "T2",
+          "T8"
+        ],
+        "moves": 8,
+        "events": 272,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "T5",
+            "T4",
+            "T2"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "trays-07",
+        "mode": "trays",
+        "name": "喵爪礼盒",
+        "cells": 256,
+        "pictureSHA256": "eb598e63e6beb511d19dbe71a8c5951305fe558ae5f79cfc350fe8eac3c987e6",
+        "solution": [
+          "T5",
+          "T7",
+          "T8",
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T6"
+        ],
+        "moves": 8,
+        "events": 272,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "T4",
+            "T3",
+            "T2"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "trays-08",
+        "mode": "trays",
+        "name": "游乐城堡",
+        "cells": 256,
+        "pictureSHA256": "64a6a74678aa10f97b54e344ac9cf7900e60aa7e362be16c0069e535c0c0094e",
+        "solution": [
+          "T7",
+          "T3",
+          "T4",
+          "T5",
+          "T1",
+          "T6",
+          "T2",
+          "T8"
+        ],
+        "moves": 8,
+        "events": 272,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "T2",
+            "T1",
+            "T6"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "loop-01",
+        "mode": "loop",
+        "name": "三色旗盒",
+        "cells": 64,
+        "pictureSHA256": "06e0e2dfbb593ba21ca04d10fe14d876e9e13c69b8553ada539db65064b16468",
+        "solution": [
+          "L1P1",
+          "L1P2",
+          "L2P1"
+        ],
+        "moves": 3,
+        "events": 142,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "L2P1"
+          ],
+          "nodes": 2,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "loop-02",
+        "mode": "loop",
+        "name": "彩虹阶梯",
+        "cells": 64,
+        "pictureSHA256": "c57a06508524abf94c01b3775df17e7176abcc258690f0b92ad42be6902c5e1b",
+        "solution": [
+          "L1P1",
+          "L2P1",
+          "L1P2"
+        ],
+        "moves": 3,
+        "events": 146,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "L2P1"
+          ],
+          "nodes": 2,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "loop-03",
+        "mode": "loop",
+        "name": "甜蜜接力",
+        "cells": 80,
+        "pictureSHA256": "3e3643c88d26bb1cdc180c5ef76c1bf4e90b4cda84f66a878d5558ab085f7d27",
+        "solution": [
+          "L2P1",
+          "L2P2",
+          "L3P1",
+          "L1P1"
+        ],
+        "moves": 4,
+        "events": 178,
+        "residual": {
+          "total": 80,
+          "filled": 80,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "L3P1",
+            "L2P1"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "loop-04",
+        "mode": "loop",
+        "name": "小鱼糖盒",
+        "cells": 64,
+        "pictureSHA256": "9f113d82214a8ded66e05435e61ee73a98253379595f2709ec0811d575fcc805",
+        "solution": [
+          "L2P1",
+          "L3P1",
+          "L3P2",
+          "L3P3",
+          "L1P1",
+          "L1P2",
+          "L3P4",
+          "L1P3",
+          "L1P4",
+          "L1P5",
+          "L1P6"
+        ],
+        "moves": 11,
+        "events": 170,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "L3P1",
+            "L2P1",
+            "L1P1"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "loop-05",
+        "mode": "loop",
+        "name": "热气球",
+        "cells": 64,
+        "pictureSHA256": "bc9f5c38e7a1c93a49cd9311118b011c113b60efef746e1e316e84505421f8f3",
+        "solution": [
+          "L3P1",
+          "L2P1",
+          "L2P2",
+          "L1P1",
+          "L3P2",
+          "L1P2",
+          "L1P3",
+          "L1P4",
+          "L3P3",
+          "L3P4",
+          "L3P5",
+          "L1P5",
+          "L2P3",
+          "L2P4"
+        ],
+        "moves": 14,
+        "events": 186,
+        "residual": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "L3P1",
+            "L3P2"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "loop-06",
+        "mode": "loop",
+        "name": "雏菊糖盒",
+        "cells": 256,
+        "pictureSHA256": "1d649dff07d1e7750e5183e5bd8c37362743cf38437d0319b46fdb4b7e8ea150",
+        "solution": [
+          "L4P1",
+          "L1P1",
+          "L1P2",
+          "L3P1",
+          "L2P1",
+          "L3P2",
+          "L1P3",
+          "L4P2",
+          "L4P3",
+          "L4P4",
+          "L3P3"
+        ],
+        "moves": 11,
+        "events": 586,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "L4P1",
+            "L4P2",
+            "L4P3"
+          ],
+          "nodes": 4,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "loop-07",
+        "mode": "loop",
+        "name": "灯塔糖盒",
+        "cells": 256,
+        "pictureSHA256": "d9bdcb6d8cddd673930ee13b237246805890cd5b39a95e752283c6e76847d520",
+        "solution": [
+          "L3P1",
+          "L2P1",
+          "L3P2",
+          "L3P3",
+          "L4P1",
+          "L4P2",
+          "L2P2",
+          "L4P3",
+          "L1P1"
+        ],
+        "moves": 9,
+        "events": 574,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "L2P1",
+            "L2P2"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      },
+      {
+        "id": "loop-08",
+        "mode": "loop",
+        "name": "糖果烟花",
+        "cells": 256,
+        "pictureSHA256": "a8c9472816ec0632316f9e4599c1c9a4035d40d409e688bd67825ba68d472a6a",
+        "solution": [
+          "L2P1",
+          "L4P1",
+          "L1P1",
+          "L1P2",
+          "L1P3",
+          "L4P2",
+          "L4P3",
+          "L4P4",
+          "L4P5",
+          "L4P6",
+          "L3P1",
+          "L2P2",
+          "L3P2",
+          "L3P3"
+        ],
+        "moves": 14,
+        "events": 604,
+        "residual": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "losingBranch": {
+          "status": "found",
+          "actions": [
+            "L4P1",
+            "L4P2"
+          ],
+          "nodes": 3,
+          "terminalWins": 0
+        }
+      }
+    ],
+    "checks": [
+      "Eight independent physical strategy fixtures; invalid and non-head clicks rejected without mutation.",
+      "24 unique completed pictures, 8 per mode; every solution replays by physical event to zero resources; every mode has at least five order-dependent levels."
+    ],
+    "issues": [],
+    "completionGates": {
+      "bridge": 22,
+      "trays": 9,
+      "loop": 20
+    },
+    "strategy": {
+      "bridge": {
+        "levels": 8,
+        "concreteLosingBranches": 7,
+        "nontrivialLevelIds": [
+          "bridge-01",
+          "bridge-03",
+          "bridge-04",
+          "bridge-05",
+          "bridge-06",
+          "bridge-07",
+          "bridge-08"
+        ],
+        "unknownIds": [],
+        "allReachableActionsWinIds": [
+          "bridge-02"
+        ]
+      },
+      "trays": {
+        "levels": 8,
+        "concreteLosingBranches": 8,
+        "nontrivialLevelIds": [
+          "trays-01",
+          "trays-02",
+          "trays-03",
+          "trays-04",
+          "trays-05",
+          "trays-06",
+          "trays-07",
+          "trays-08"
+        ],
+        "unknownIds": [],
+        "allReachableActionsWinIds": []
+      },
+      "loop": {
+        "levels": 8,
+        "concreteLosingBranches": 8,
+        "nontrivialLevelIds": [
+          "loop-01",
+          "loop-02",
+          "loop-03",
+          "loop-04",
+          "loop-05",
+          "loop-06",
+          "loop-07",
+          "loop-08"
+        ],
+        "unknownIds": [],
+        "allReachableActionsWinIds": []
+      }
+    },
+    "stateChecks": 5772,
+    "eventChecks": 5470,
+    "sourceSHA256": {
+      "engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+      "levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453"
+    }
+  },
+  "browser": {
+    "base": "http://127.0.0.1:4196/candy-workshop/",
+    "date": "2026-10-23T08:01:47.176Z",
+    "browser": "Installed Chrome / Playwright, 390 × 844 mobile viewport, DPR 2",
+    "operation": "Real DOM clicks only; no runtime state mutation, animation speed changes, or injected completion.",
+    "levels": [
+      {
+        "id": "bridge-01",
+        "mode": "bridge",
+        "number": 1,
+        "name": "糖果彩带",
+        "seconds": 6,
+        "turns": [
+          {
+            "id": "P1",
+            "filled": 16,
+            "remaining": 48,
+            "status": "playing",
+            "physicalEvents": 20
+          },
+          {
+            "id": "P2",
+            "filled": 32,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 20
+          },
+          {
+            "id": "P4",
+            "filled": 48,
+            "remaining": 16,
+            "status": "playing",
+            "physicalEvents": 20
+          },
+          {
+            "id": "P3",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 20
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "trays-01",
+        "mode": "trays",
+        "number": 1,
+        "name": "四味礼笺",
+        "seconds": 5.4,
+        "turns": [
+          {
+            "id": "T2",
+            "filled": 16,
+            "remaining": 48,
+            "status": "playing",
+            "physicalEvents": 18
+          },
+          {
+            "id": "T1",
+            "filled": 32,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 18
+          },
+          {
+            "id": "T4",
+            "filled": 48,
+            "remaining": 16,
+            "status": "playing",
+            "physicalEvents": 18
+          },
+          {
+            "id": "T3",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 18
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "loop-01",
+        "mode": "loop",
+        "number": 1,
+        "name": "三色旗盒",
+        "seconds": 8.8,
+        "turns": [
+          {
+            "id": "L1P1",
+            "filled": 16,
+            "remaining": 48,
+            "status": "playing",
+            "physicalEvents": 36
+          },
+          {
+            "id": "L1P2",
+            "filled": 32,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 36
+          },
+          {
+            "id": "L2P1",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 70
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "bridge-02",
+        "mode": "bridge",
+        "number": 2,
+        "name": "双色风车",
+        "seconds": 4.9,
+        "turns": [
+          {
+            "id": "P1",
+            "filled": 4,
+            "remaining": 60,
+            "status": "playing",
+            "physicalEvents": 5
+          },
+          {
+            "id": "P2",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 71
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "bridge-03",
+        "mode": "bridge",
+        "number": 3,
+        "name": "三味回环",
+        "seconds": 5.4,
+        "turns": [
+          {
+            "id": "P1",
+            "filled": 16,
+            "remaining": 48,
+            "status": "playing",
+            "physicalEvents": 19
+          },
+          {
+            "id": "P2",
+            "filled": 32,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 20
+          },
+          {
+            "id": "P3",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 39
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "bridge-04",
+        "mode": "bridge",
+        "number": 4,
+        "name": "樱桃双果",
+        "seconds": 6.2,
+        "turns": [
+          {
+            "id": "P3",
+            "filled": 12,
+            "remaining": 52,
+            "status": "playing",
+            "physicalEvents": 14
+          },
+          {
+            "id": "P2",
+            "filled": 27,
+            "remaining": 37,
+            "status": "playing",
+            "physicalEvents": 19
+          },
+          {
+            "id": "P1",
+            "filled": 39,
+            "remaining": 25,
+            "status": "playing",
+            "physicalEvents": 15
+          },
+          {
+            "id": "P4",
+            "filled": 46,
+            "remaining": 18,
+            "status": "playing",
+            "physicalEvents": 9
+          },
+          {
+            "id": "P5",
+            "filled": 47,
+            "remaining": 17,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "P6",
+            "filled": 55,
+            "remaining": 9,
+            "status": "playing",
+            "physicalEvents": 12
+          },
+          {
+            "id": "P7",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 14
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "bridge-05",
+        "mode": "bridge",
+        "number": 5,
+        "name": "薄荷蝴蝶",
+        "seconds": 6.6,
+        "turns": [
+          {
+            "id": "P9",
+            "filled": 5,
+            "remaining": 59,
+            "status": "playing",
+            "physicalEvents": 7
+          },
+          {
+            "id": "P7",
+            "filled": 6,
+            "remaining": 58,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "P3",
+            "filled": 7,
+            "remaining": 57,
+            "status": "playing",
+            "physicalEvents": 2
+          },
+          {
+            "id": "P6",
+            "filled": 14,
+            "remaining": 50,
+            "status": "playing",
+            "physicalEvents": 9
+          },
+          {
+            "id": "P4",
+            "filled": 22,
+            "remaining": 42,
+            "status": "playing",
+            "physicalEvents": 11
+          },
+          {
+            "id": "P5",
+            "filled": 30,
+            "remaining": 34,
+            "status": "playing",
+            "physicalEvents": 12
+          },
+          {
+            "id": "P2",
+            "filled": 38,
+            "remaining": 26,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "P1",
+            "filled": 47,
+            "remaining": 17,
+            "status": "playing",
+            "physicalEvents": 12
+          },
+          {
+            "id": "P8",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 24
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "bridge-06",
+        "mode": "bridge",
+        "number": 6,
+        "name": "星光礼盒",
+        "seconds": 17,
+        "turns": [
+          {
+            "id": "P5",
+            "filled": 46,
+            "remaining": 210,
+            "status": "playing",
+            "physicalEvents": 49
+          },
+          {
+            "id": "P2",
+            "filled": 200,
+            "remaining": 56,
+            "status": "playing",
+            "physicalEvents": 165
+          },
+          {
+            "id": "P6",
+            "filled": 224,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 30
+          },
+          {
+            "id": "P3",
+            "filled": 242,
+            "remaining": 14,
+            "status": "playing",
+            "physicalEvents": 21
+          },
+          {
+            "id": "P7",
+            "filled": 248,
+            "remaining": 8,
+            "status": "playing",
+            "physicalEvents": 8
+          },
+          {
+            "id": "P4",
+            "filled": 253,
+            "remaining": 3,
+            "status": "playing",
+            "physicalEvents": 7
+          },
+          {
+            "id": "P1",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 6
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "bridge-07",
+        "mode": "bridge",
+        "number": 7,
+        "name": "糖果火箭",
+        "seconds": 17.2,
+        "turns": [
+          {
+            "id": "P1",
+            "filled": 12,
+            "remaining": 244,
+            "status": "playing",
+            "physicalEvents": 13
+          },
+          {
+            "id": "P2",
+            "filled": 73,
+            "remaining": 183,
+            "status": "playing",
+            "physicalEvents": 67
+          },
+          {
+            "id": "P4",
+            "filled": 77,
+            "remaining": 179,
+            "status": "playing",
+            "physicalEvents": 5
+          },
+          {
+            "id": "P5",
+            "filled": 108,
+            "remaining": 148,
+            "status": "playing",
+            "physicalEvents": 35
+          },
+          {
+            "id": "P6",
+            "filled": 164,
+            "remaining": 92,
+            "status": "playing",
+            "physicalEvents": 62
+          },
+          {
+            "id": "P8",
+            "filled": 183,
+            "remaining": 73,
+            "status": "playing",
+            "physicalEvents": 22
+          },
+          {
+            "id": "P7",
+            "filled": 220,
+            "remaining": 36,
+            "status": "playing",
+            "physicalEvents": 41
+          },
+          {
+            "id": "P3",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 43
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "bridge-08",
+        "mode": "bridge",
+        "number": 8,
+        "name": "玫瑰花窗",
+        "seconds": 18.8,
+        "turns": [
+          {
+            "id": "P12",
+            "filled": 36,
+            "remaining": 220,
+            "status": "playing",
+            "physicalEvents": 39
+          },
+          {
+            "id": "P11",
+            "filled": 69,
+            "remaining": 187,
+            "status": "playing",
+            "physicalEvents": 37
+          },
+          {
+            "id": "P5",
+            "filled": 77,
+            "remaining": 179,
+            "status": "playing",
+            "physicalEvents": 9
+          },
+          {
+            "id": "P13",
+            "filled": 108,
+            "remaining": 148,
+            "status": "playing",
+            "physicalEvents": 35
+          },
+          {
+            "id": "P2",
+            "filled": 111,
+            "remaining": 145,
+            "status": "playing",
+            "physicalEvents": 5
+          },
+          {
+            "id": "P3",
+            "filled": 121,
+            "remaining": 135,
+            "status": "playing",
+            "physicalEvents": 13
+          },
+          {
+            "id": "P10",
+            "filled": 124,
+            "remaining": 132,
+            "status": "playing",
+            "physicalEvents": 5
+          },
+          {
+            "id": "P6",
+            "filled": 125,
+            "remaining": 131,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "P8",
+            "filled": 126,
+            "remaining": 130,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "P4",
+            "filled": 140,
+            "remaining": 116,
+            "status": "playing",
+            "physicalEvents": 17
+          },
+          {
+            "id": "P1",
+            "filled": 156,
+            "remaining": 100,
+            "status": "playing",
+            "physicalEvents": 19
+          },
+          {
+            "id": "P9",
+            "filled": 231,
+            "remaining": 25,
+            "status": "playing",
+            "physicalEvents": 84
+          },
+          {
+            "id": "P7",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 29
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "trays-02",
+        "mode": "trays",
+        "number": 2,
+        "name": "花瓣拼盘",
+        "seconds": 5.1,
+        "turns": [
+          {
+            "id": "T1",
+            "filled": 16,
+            "remaining": 48,
+            "status": "playing",
+            "physicalEvents": 18
+          },
+          {
+            "id": "T2",
+            "filled": 32,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 18
+          },
+          {
+            "id": "T4",
+            "filled": 48,
+            "remaining": 16,
+            "status": "playing",
+            "physicalEvents": 18
+          },
+          {
+            "id": "T3",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 18
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "trays-03",
+        "mode": "trays",
+        "number": 3,
+        "name": "莓果双拼",
+        "seconds": 4.9,
+        "turns": [
+          {
+            "id": "T1",
+            "filled": 8,
+            "remaining": 56,
+            "status": "playing",
+            "physicalEvents": 9
+          },
+          {
+            "id": "T3",
+            "filled": 48,
+            "remaining": 16,
+            "status": "playing",
+            "physicalEvents": 43
+          },
+          {
+            "id": "T2",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 18
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "trays-04",
+        "mode": "trays",
+        "number": 4,
+        "name": "兔耳糖盒",
+        "seconds": 7,
+        "turns": [
+          {
+            "id": "T1",
+            "filled": 8,
+            "remaining": 56,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T5",
+            "filled": 16,
+            "remaining": 48,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T3",
+            "filled": 24,
+            "remaining": 40,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T2",
+            "filled": 32,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T6",
+            "filled": 40,
+            "remaining": 24,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T7",
+            "filled": 48,
+            "remaining": 16,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T4",
+            "filled": 56,
+            "remaining": 8,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T8",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 10
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "trays-05",
+        "mode": "trays",
+        "number": 5,
+        "name": "生日蛋糕",
+        "seconds": 7.1,
+        "turns": [
+          {
+            "id": "T7",
+            "filled": 8,
+            "remaining": 56,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T3",
+            "filled": 16,
+            "remaining": 48,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T8",
+            "filled": 24,
+            "remaining": 40,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T4",
+            "filled": 32,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T1",
+            "filled": 40,
+            "remaining": 24,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T5",
+            "filled": 48,
+            "remaining": 16,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T2",
+            "filled": 56,
+            "remaining": 8,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "T6",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 10
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "trays-06",
+        "mode": "trays",
+        "number": 6,
+        "name": "草莓盆栽",
+        "seconds": 16.6,
+        "turns": [
+          {
+            "id": "T7",
+            "filled": 32,
+            "remaining": 224,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T1",
+            "filled": 64,
+            "remaining": 192,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T5",
+            "filled": 96,
+            "remaining": 160,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T6",
+            "filled": 128,
+            "remaining": 128,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T4",
+            "filled": 160,
+            "remaining": 96,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T3",
+            "filled": 192,
+            "remaining": 64,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T2",
+            "filled": 224,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T8",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 34
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "trays-07",
+        "mode": "trays",
+        "number": 7,
+        "name": "喵爪礼盒",
+        "seconds": 16.6,
+        "turns": [
+          {
+            "id": "T5",
+            "filled": 32,
+            "remaining": 224,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T7",
+            "filled": 64,
+            "remaining": 192,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T8",
+            "filled": 96,
+            "remaining": 160,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T1",
+            "filled": 128,
+            "remaining": 128,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T2",
+            "filled": 160,
+            "remaining": 96,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T3",
+            "filled": 192,
+            "remaining": 64,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T4",
+            "filled": 224,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T6",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 34
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "trays-08",
+        "mode": "trays",
+        "number": 8,
+        "name": "游乐城堡",
+        "seconds": 17,
+        "turns": [
+          {
+            "id": "T7",
+            "filled": 32,
+            "remaining": 224,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T3",
+            "filled": 64,
+            "remaining": 192,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T4",
+            "filled": 96,
+            "remaining": 160,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T5",
+            "filled": 128,
+            "remaining": 128,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T1",
+            "filled": 160,
+            "remaining": 96,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T6",
+            "filled": 192,
+            "remaining": 64,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T2",
+            "filled": 224,
+            "remaining": 32,
+            "status": "playing",
+            "physicalEvents": 34
+          },
+          {
+            "id": "T8",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 34
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "loop-02",
+        "mode": "loop",
+        "number": 2,
+        "name": "彩虹阶梯",
+        "seconds": 9.3,
+        "turns": [
+          {
+            "id": "L1P1",
+            "filled": 12,
+            "remaining": 52,
+            "status": "playing",
+            "physicalEvents": 30
+          },
+          {
+            "id": "L2P1",
+            "filled": 36,
+            "remaining": 28,
+            "status": "playing",
+            "physicalEvents": 55
+          },
+          {
+            "id": "L1P2",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 61
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "loop-03",
+        "mode": "loop",
+        "number": 3,
+        "name": "甜蜜接力",
+        "seconds": 11.1,
+        "turns": [
+          {
+            "id": "L2P1",
+            "filled": 16,
+            "remaining": 64,
+            "status": "playing",
+            "physicalEvents": 52
+          },
+          {
+            "id": "L2P2",
+            "filled": 32,
+            "remaining": 48,
+            "status": "playing",
+            "physicalEvents": 36
+          },
+          {
+            "id": "L3P1",
+            "filled": 64,
+            "remaining": 16,
+            "status": "playing",
+            "physicalEvents": 54
+          },
+          {
+            "id": "L1P1",
+            "filled": 80,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 36
+          }
+        ],
+        "ledger": {
+          "total": 80,
+          "filled": 80,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "loop-04",
+        "mode": "loop",
+        "number": 4,
+        "name": "小鱼糖盒",
+        "seconds": 12.7,
+        "turns": [
+          {
+            "id": "L2P1",
+            "filled": 0,
+            "remaining": 64,
+            "status": "playing",
+            "physicalEvents": 5
+          },
+          {
+            "id": "L3P1",
+            "filled": 0,
+            "remaining": 64,
+            "status": "playing",
+            "physicalEvents": 11
+          },
+          {
+            "id": "L3P2",
+            "filled": 4,
+            "remaining": 60,
+            "status": "playing",
+            "physicalEvents": 9
+          },
+          {
+            "id": "L3P3",
+            "filled": 35,
+            "remaining": 29,
+            "status": "playing",
+            "physicalEvents": 63
+          },
+          {
+            "id": "L1P1",
+            "filled": 45,
+            "remaining": 19,
+            "status": "playing",
+            "physicalEvents": 28
+          },
+          {
+            "id": "L1P2",
+            "filled": 45,
+            "remaining": 19,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "L3P4",
+            "filled": 45,
+            "remaining": 19,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "L1P3",
+            "filled": 45,
+            "remaining": 19,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L1P4",
+            "filled": 47,
+            "remaining": 17,
+            "status": "playing",
+            "physicalEvents": 7
+          },
+          {
+            "id": "L1P5",
+            "filled": 60,
+            "remaining": 4,
+            "status": "playing",
+            "physicalEvents": 26
+          },
+          {
+            "id": "L1P6",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 11
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "loop-05",
+        "mode": "loop",
+        "number": 5,
+        "name": "热气球",
+        "seconds": 15,
+        "turns": [
+          {
+            "id": "L3P1",
+            "filled": 0,
+            "remaining": 64,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "L2P1",
+            "filled": 0,
+            "remaining": 64,
+            "status": "playing",
+            "physicalEvents": 11
+          },
+          {
+            "id": "L2P2",
+            "filled": 19,
+            "remaining": 45,
+            "status": "playing",
+            "physicalEvents": 42
+          },
+          {
+            "id": "L1P1",
+            "filled": 25,
+            "remaining": 39,
+            "status": "playing",
+            "physicalEvents": 17
+          },
+          {
+            "id": "L3P2",
+            "filled": 39,
+            "remaining": 25,
+            "status": "playing",
+            "physicalEvents": 36
+          },
+          {
+            "id": "L1P2",
+            "filled": 42,
+            "remaining": 22,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "L1P3",
+            "filled": 48,
+            "remaining": 16,
+            "status": "playing",
+            "physicalEvents": 16
+          },
+          {
+            "id": "L1P4",
+            "filled": 49,
+            "remaining": 15,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L3P3",
+            "filled": 50,
+            "remaining": 14,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L3P4",
+            "filled": 50,
+            "remaining": 14,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L3P5",
+            "filled": 51,
+            "remaining": 13,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L1P5",
+            "filled": 51,
+            "remaining": 13,
+            "status": "playing",
+            "physicalEvents": 6
+          },
+          {
+            "id": "L2P3",
+            "filled": 51,
+            "remaining": 13,
+            "status": "playing",
+            "physicalEvents": 6
+          },
+          {
+            "id": "L2P4",
+            "filled": 64,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 23
+          }
+        ],
+        "ledger": {
+          "total": 64,
+          "filled": 64,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "loop-06",
+        "mode": "loop",
+        "number": 6,
+        "name": "雏菊糖盒",
+        "seconds": 37.8,
+        "turns": [
+          {
+            "id": "L4P1",
+            "filled": 0,
+            "remaining": 256,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L1P1",
+            "filled": 0,
+            "remaining": 256,
+            "status": "playing",
+            "physicalEvents": 6
+          },
+          {
+            "id": "L1P2",
+            "filled": 4,
+            "remaining": 252,
+            "status": "playing",
+            "physicalEvents": 14
+          },
+          {
+            "id": "L3P1",
+            "filled": 41,
+            "remaining": 215,
+            "status": "playing",
+            "physicalEvents": 84
+          },
+          {
+            "id": "L2P1",
+            "filled": 76,
+            "remaining": 180,
+            "status": "playing",
+            "physicalEvents": 76
+          },
+          {
+            "id": "L3P2",
+            "filled": 102,
+            "remaining": 154,
+            "status": "playing",
+            "physicalEvents": 55
+          },
+          {
+            "id": "L1P3",
+            "filled": 102,
+            "remaining": 154,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L4P2",
+            "filled": 102,
+            "remaining": 154,
+            "status": "playing",
+            "physicalEvents": 8
+          },
+          {
+            "id": "L4P3",
+            "filled": 190,
+            "remaining": 66,
+            "status": "playing",
+            "physicalEvents": 200
+          },
+          {
+            "id": "L4P4",
+            "filled": 244,
+            "remaining": 12,
+            "status": "playing",
+            "physicalEvents": 108
+          },
+          {
+            "id": "L3P3",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 27
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "loop-07",
+        "mode": "loop",
+        "number": 7,
+        "name": "灯塔糖盒",
+        "seconds": 35.9,
+        "turns": [
+          {
+            "id": "L3P1",
+            "filled": 14,
+            "remaining": 242,
+            "status": "playing",
+            "physicalEvents": 31
+          },
+          {
+            "id": "L2P1",
+            "filled": 14,
+            "remaining": 242,
+            "status": "playing",
+            "physicalEvents": 5
+          },
+          {
+            "id": "L3P2",
+            "filled": 14,
+            "remaining": 242,
+            "status": "playing",
+            "physicalEvents": 10
+          },
+          {
+            "id": "L3P3",
+            "filled": 14,
+            "remaining": 242,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L4P1",
+            "filled": 18,
+            "remaining": 238,
+            "status": "playing",
+            "physicalEvents": 25
+          },
+          {
+            "id": "L4P2",
+            "filled": 72,
+            "remaining": 184,
+            "status": "playing",
+            "physicalEvents": 120
+          },
+          {
+            "id": "L2P2",
+            "filled": 139,
+            "remaining": 117,
+            "status": "playing",
+            "physicalEvents": 146
+          },
+          {
+            "id": "L4P3",
+            "filled": 203,
+            "remaining": 53,
+            "status": "playing",
+            "physicalEvents": 135
+          },
+          {
+            "id": "L1P1",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 98
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      },
+      {
+        "id": "loop-08",
+        "mode": "loop",
+        "number": 8,
+        "name": "糖果烟花",
+        "seconds": 40.9,
+        "turns": [
+          {
+            "id": "L2P1",
+            "filled": 1,
+            "remaining": 255,
+            "status": "playing",
+            "physicalEvents": 4
+          },
+          {
+            "id": "L4P1",
+            "filled": 1,
+            "remaining": 255,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "L1P1",
+            "filled": 1,
+            "remaining": 255,
+            "status": "playing",
+            "physicalEvents": 6
+          },
+          {
+            "id": "L1P2",
+            "filled": 1,
+            "remaining": 255,
+            "status": "playing",
+            "physicalEvents": 3
+          },
+          {
+            "id": "L1P3",
+            "filled": 17,
+            "remaining": 239,
+            "status": "playing",
+            "physicalEvents": 40
+          },
+          {
+            "id": "L4P2",
+            "filled": 62,
+            "remaining": 194,
+            "status": "playing",
+            "physicalEvents": 101
+          },
+          {
+            "id": "L4P3",
+            "filled": 62,
+            "remaining": 194,
+            "status": "playing",
+            "physicalEvents": 18
+          },
+          {
+            "id": "L4P4",
+            "filled": 62,
+            "remaining": 194,
+            "status": "playing",
+            "physicalEvents": 5
+          },
+          {
+            "id": "L4P5",
+            "filled": 86,
+            "remaining": 170,
+            "status": "playing",
+            "physicalEvents": 54
+          },
+          {
+            "id": "L4P6",
+            "filled": 112,
+            "remaining": 144,
+            "status": "playing",
+            "physicalEvents": 42
+          },
+          {
+            "id": "L3P1",
+            "filled": 176,
+            "remaining": 80,
+            "status": "playing",
+            "physicalEvents": 147
+          },
+          {
+            "id": "L2P2",
+            "filled": 232,
+            "remaining": 24,
+            "status": "playing",
+            "physicalEvents": 120
+          },
+          {
+            "id": "L3P2",
+            "filled": 232,
+            "remaining": 24,
+            "status": "playing",
+            "physicalEvents": 17
+          },
+          {
+            "id": "L3P3",
+            "filled": 256,
+            "remaining": 0,
+            "status": "won",
+            "physicalEvents": 44
+          }
+        ],
+        "ledger": {
+          "total": 256,
+          "filled": 256,
+          "empty": 0,
+          "stock": 0,
+          "working": 0,
+          "stockBoxes": 0,
+          "activeBoxes": 0,
+          "byColor": {
+            "need": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            },
+            "remaining": {
+              "R": 0,
+              "Y": 0,
+              "G": 0,
+              "B": 0
+            }
+          },
+          "buffer": 0,
+          "pending": 0,
+          "undockedTrays": 0
+        },
+        "collected": true,
+        "runtime": {
+          "/candy-workshop/style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48",
+          "/candy-workshop/app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+          "/candy-workshop/engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+          "/candy-workshop/storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+          "/candy-workshop/levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+          "/candy-workshop/render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+        }
+      }
+    ],
+    "checks": {
+      "firstThreeModesPlayable": true,
+      "collection24SurvivesReload": true,
+      "persistedCollectionIds": [
+        "bridge-01",
+        "bridge-02",
+        "bridge-03",
+        "bridge-04",
+        "bridge-05",
+        "bridge-06",
+        "bridge-07",
+        "bridge-08",
+        "loop-01",
+        "loop-02",
+        "loop-03",
+        "loop-04",
+        "loop-05",
+        "loop-06",
+        "loop-07",
+        "loop-08",
+        "trays-01",
+        "trays-02",
+        "trays-03",
+        "trays-04",
+        "trays-05",
+        "trays-06",
+        "trays-07",
+        "trays-08"
+      ],
+      "eachModeShowsEightCollectedGifts": true,
+      "collectedGiftCanBeInspected": true,
+      "runtimeSingleVersionAndFinalHashesMatch": true
+    },
+    "passed": true,
+    "sourceSHA256": {
+      "app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+      "render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07",
+      "engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+      "levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+      "storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+      "style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48"
+    },
+    "runtime": {
+      "/candy-workshop/style.css": [
+        "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48"
+      ],
+      "/candy-workshop/app.mjs": [
+        "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334"
+      ],
+      "/candy-workshop/engine.mjs": [
+        "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503"
+      ],
+      "/candy-workshop/storage.mjs": [
+        "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f"
+      ],
+      "/candy-workshop/levels.mjs": [
+        "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453"
+      ],
+      "/candy-workshop/render.mjs": [
+        "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+      ]
+    },
+    "errors": [],
+    "failed": [],
+    "requestFailures": [],
+    "consoleErrors": []
+  },
+  "lifecycle": {
+    "date": "2026-10-23T08:05:52.016Z",
+    "base": "http://127.0.0.1:4195/candy-workshop/",
+    "checks": [
+      {
+        "id": "bridge-refresh-during-filling",
+        "passed": true,
+        "cursorBefore": 2,
+        "events": 20,
+        "filled": 16
+      },
+      {
+        "id": "bridge-undo-during-filling",
+        "passed": true
+      },
+      {
+        "id": "bridge-order-help-levels-hint",
+        "passed": true
+      },
+      {
+        "id": "trays-refresh-during-filling",
+        "passed": true,
+        "cursorBefore": 2,
+        "events": 18,
+        "filled": 16
+      },
+      {
+        "id": "trays-undo-during-filling",
+        "passed": true
+      },
+      {
+        "id": "trays-order-help-levels-hint",
+        "passed": true
+      },
+      {
+        "id": "loop-refresh-during-filling",
+        "passed": true,
+        "cursorBefore": 2,
+        "events": 36,
+        "filled": 16
+      },
+      {
+        "id": "loop-undo-during-filling",
+        "passed": true
+      },
+      {
+        "id": "loop-order-help-levels-hint",
+        "passed": true
+      },
+      {
+        "id": "bridge-stuck-undo",
+        "passed": true,
+        "level": "bridge-03",
+        "path": [
+          "P1",
+          "P3"
+        ]
+      },
+      {
+        "id": "trays-stuck-undo",
+        "passed": true,
+        "level": "trays-02",
+        "path": [
+          "T2",
+          "T3"
+        ]
+      },
+      {
+        "id": "loop-stuck-undo",
+        "passed": true,
+        "level": "loop-01",
+        "path": [
+          "L2P1"
+        ]
+      },
+      {
+        "id": "sound-persistence-and-legacy-keys",
+        "passed": true
+      },
+      {
+        "id": "return-to-original-hub",
+        "passed": true
+      }
+    ],
+    "errors": [],
+    "passed": true,
+    "sourceSHA256": {
+      "app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+      "render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07",
+      "engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+      "levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+      "storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+      "style.css": "d1f8ca1526f980313200120552130706c23f005c8932f7f448682f52a28d9c48"
+    }
+  },
+  "localReleaseSmoke": {
+    "base": "http://127.0.0.1:4195/click-move-lab/dist/",
+    "date": "2026-10-23T08:08:24.215Z",
+    "version": "r14",
+    "checks": [
+      {
+        "id": "catalog",
+        "games": 27,
+        "candyVersions": 5
+      },
+      {
+        "id": "bridge-first-level",
+        "clicks": 4,
+        "allResourcesConsumed": true,
+        "collected": true
+      },
+      {
+        "id": "trays-first-level",
+        "clicks": 4,
+        "allResourcesConsumed": true,
+        "collected": true
+      },
+      {
+        "id": "loop-first-level",
+        "clicks": 3,
+        "allResourcesConsumed": true,
+        "collected": true
+      },
+      {
+        "id": "collection-reload-and-hub-return",
+        "collected": 3
+      },
+      {
+        "id": "preserved-entry-candybatch",
+        "loaded": true
+      },
+      {
+        "id": "preserved-entry-candytrials",
+        "loaded": true
+      },
+      {
+        "id": "preserved-entry-bobofactory",
+        "loaded": true
+      },
+      {
+        "id": "preserved-entry-bobopacking",
+        "loaded": true
+      }
+    ],
+    "errors": [],
+    "failed": [],
+    "passed": true
+  },
+  "finalLayout": {
+    "errors": [],
+    "evidence": [
+      {
+        "mode": "bridge",
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "controls": [
+          {
+            "id": "P1",
+            "x": 12,
+            "y": 467,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P2",
+            "x": 85.796875,
+            "y": 467,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P3",
+            "x": 159.59375,
+            "y": 467,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P4",
+            "x": 233.390625,
+            "y": 467,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P5",
+            "x": 307.1875,
+            "y": 467,
+            "w": 70.8125,
+            "h": 78
+          },
+          {
+            "id": "P6",
+            "x": 12,
+            "y": 548,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P7",
+            "x": 85.796875,
+            "y": 548,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P8",
+            "x": 159.59375,
+            "y": 548,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P9",
+            "x": 233.390625,
+            "y": 548,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P10",
+            "x": 307.1875,
+            "y": 548,
+            "w": 70.8125,
+            "h": 78
+          },
+          {
+            "id": "P11",
+            "x": 12,
+            "y": 629,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P12",
+            "x": 85.796875,
+            "y": 629,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "P13",
+            "x": 159.59375,
+            "y": 629,
+            "w": 70.796875,
+            "h": 78
+          },
+          {
+            "id": "undo",
+            "x": 12,
+            "y": 715,
+            "w": 118.65625,
+            "h": 40
+          },
+          {
+            "id": "restart",
+            "x": 135.65625,
+            "y": 715,
+            "w": 118.671875,
+            "h": 40
+          },
+          {
+            "id": "hint",
+            "x": 259.328125,
+            "y": 715,
+            "w": 118.65625,
+            "h": 40
+          }
+        ]
+      },
+      {
+        "mode": "bridge",
+        "width": 320,
+        "height": 680,
+        "pageWidth": 320,
+        "pageHeight": 779,
+        "controls": [
+          {
+            "id": "P1",
+            "x": 9,
+            "y": 467,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P2",
+            "x": 70,
+            "y": 467,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P3",
+            "x": 131,
+            "y": 467,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P4",
+            "x": 192,
+            "y": 467,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P5",
+            "x": 253,
+            "y": 467,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P6",
+            "x": 9,
+            "y": 548,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P7",
+            "x": 70,
+            "y": 548,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P8",
+            "x": 131,
+            "y": 548,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P9",
+            "x": 192,
+            "y": 548,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P10",
+            "x": 253,
+            "y": 548,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P11",
+            "x": 9,
+            "y": 629,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P12",
+            "x": 70,
+            "y": 629,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "P13",
+            "x": 131,
+            "y": 629,
+            "w": 58,
+            "h": 78
+          },
+          {
+            "id": "undo",
+            "x": 9,
+            "y": 715,
+            "w": 97.328125,
+            "h": 40
+          },
+          {
+            "id": "restart",
+            "x": 111.328125,
+            "y": 715,
+            "w": 97.328125,
+            "h": 40
+          },
+          {
+            "id": "hint",
+            "x": 213.65625,
+            "y": 715,
+            "w": 97.34375,
+            "h": 40
+          }
+        ]
+      },
+      {
+        "mode": "bridge",
+        "width": 430,
+        "height": 932,
+        "pageWidth": 430,
+        "pageHeight": 932,
+        "controls": [
+          {
+            "id": "P1",
+            "x": 12,
+            "y": 467,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P2",
+            "x": 93.796875,
+            "y": 467,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P3",
+            "x": 175.59375,
+            "y": 467,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P4",
+            "x": 257.390625,
+            "y": 467,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P5",
+            "x": 339.1875,
+            "y": 467,
+            "w": 78.8125,
+            "h": 78
+          },
+          {
+            "id": "P6",
+            "x": 12,
+            "y": 548,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P7",
+            "x": 93.796875,
+            "y": 548,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P8",
+            "x": 175.59375,
+            "y": 548,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P9",
+            "x": 257.390625,
+            "y": 548,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P10",
+            "x": 339.1875,
+            "y": 548,
+            "w": 78.8125,
+            "h": 78
+          },
+          {
+            "id": "P11",
+            "x": 12,
+            "y": 629,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P12",
+            "x": 93.796875,
+            "y": 629,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "P13",
+            "x": 175.59375,
+            "y": 629,
+            "w": 78.796875,
+            "h": 78
+          },
+          {
+            "id": "undo",
+            "x": 12,
+            "y": 715,
+            "w": 132,
+            "h": 40
+          },
+          {
+            "id": "restart",
+            "x": 149,
+            "y": 715,
+            "w": 132,
+            "h": 40
+          },
+          {
+            "id": "hint",
+            "x": 286,
+            "y": 715,
+            "w": 132,
+            "h": 40
+          }
+        ]
+      },
+      {
+        "mode": "trays",
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 903,
+        "controls": [
+          {
+            "id": "T1",
+            "x": 12,
+            "y": 581.5,
+            "w": 88.5,
+            "h": 102.46875
+          },
+          {
+            "id": "T2",
+            "x": 104.5,
+            "y": 581.5,
+            "w": 88.5,
+            "h": 102.46875
+          },
+          {
+            "id": "T3",
+            "x": 197,
+            "y": 581.5,
+            "w": 88.5,
+            "h": 102.46875
+          },
+          {
+            "id": "T4",
+            "x": 289.5,
+            "y": 581.5,
+            "w": 88.5,
+            "h": 102.46875
+          },
+          {
+            "id": "T5",
+            "x": 12,
+            "y": 687.96875,
+            "w": 88.5,
+            "h": 102.46875
+          },
+          {
+            "id": "T6",
+            "x": 104.5,
+            "y": 687.96875,
+            "w": 88.5,
+            "h": 102.46875
+          },
+          {
+            "id": "T7",
+            "x": 197,
+            "y": 687.96875,
+            "w": 88.5,
+            "h": 102.46875
+          },
+          {
+            "id": "T8",
+            "x": 289.5,
+            "y": 687.96875,
+            "w": 88.5,
+            "h": 102.46875
+          },
+          {
+            "id": "undo",
+            "x": 12,
+            "y": 799.4375,
+            "w": 118.65625,
+            "h": 40
+          },
+          {
+            "id": "restart",
+            "x": 135.65625,
+            "y": 799.4375,
+            "w": 118.671875,
+            "h": 40
+          },
+          {
+            "id": "hint",
+            "x": 259.328125,
+            "y": 799.4375,
+            "w": 118.65625,
+            "h": 40
+          }
+        ]
+      },
+      {
+        "mode": "loop",
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 918,
+        "controls": [
+          {
+            "id": "L1P1",
+            "x": 12,
+            "y": 581.5,
+            "w": 87.75,
+            "h": 223
+          },
+          {
+            "id": "L2P1",
+            "x": 104.75,
+            "y": 581.5,
+            "w": 87.75,
+            "h": 223
+          },
+          {
+            "id": "L3P1",
+            "x": 197.5,
+            "y": 581.5,
+            "w": 87.75,
+            "h": 223
+          },
+          {
+            "id": "L4P1",
+            "x": 290.25,
+            "y": 581.5,
+            "w": 87.75,
+            "h": 223
+          },
+          {
+            "id": "undo",
+            "x": 12,
+            "y": 813.5,
+            "w": 118.65625,
+            "h": 40
+          },
+          {
+            "id": "restart",
+            "x": 135.65625,
+            "y": 813.5,
+            "w": 118.671875,
+            "h": 40
+          },
+          {
+            "id": "hint",
+            "x": 259.328125,
+            "y": 813.5,
+            "w": 118.65625,
+            "h": 40
+          }
+        ]
+      }
+    ]
+  },
+  "runtimeSHA256": {
+    "app.mjs": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334",
+    "render.mjs": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07",
+    "engine.mjs": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503",
+    "levels.mjs": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453",
+    "storage.mjs": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f",
+    "style.css": "9c56255a1a9ad5a1f2081f606373b30ffe4832d18cb2c131227b8851823a0c7e"
+  },
+  "finalCSSChange": "After all 24 real-click completions: dense stock cards 78px, separate number/flavour lines, remove sticky tools on short screens. Final screenshots reviewed at 320/390/430 and three first levels replayed from the build.",
+  "ownerFunAcceptance": "pending",
+  "physicalPhoneAndWeChat": "not tested"
+}

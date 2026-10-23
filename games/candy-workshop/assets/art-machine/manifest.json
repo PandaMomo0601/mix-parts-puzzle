@@ -1,0 +1,323 @@
+{
+  "resourceId": "RES-WORKSHOP-MACHINE-01",
+  "version": "0.1",
+  "status": "integrated-for-playable-trial; internal-composition-review-passed; owner-acceptance-pending",
+  "createdAt": "2026-10-23",
+  "figmaFileKey": "AcluGjqwpP0OsFcpwQwG8J",
+  "figmaPageId": "175:89",
+  "originalNodeId": "175:90",
+  "registryCardId": "176:99",
+  "generator": "OpenAI built-in image_gen.imagegen",
+  "pipeline": "Generate transparent original -> upload full original to existing Figma file -> native clipping components -> Figma PNG exports -> runtime; no raster redraw by code",
+  "source": {
+    "file": "source/machine-atlas-v0.1.png",
+    "nodeId": "175:90",
+    "imageHash": "d0d7097e357f6cc726896cb0ed09f2dac2ec65ba",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 1604006,
+    "sha256": "305a57ff4af49c59f19f3819c44a190cf59983d4961aba09a7c58b5a86ab76a6",
+    "remoteOriginalRoundtripMatched": true
+  },
+  "promptBrief": "Production orthographic transparent candy factory atlas: ivory enamel, mint machines, subtle gold trim, upper-left studio light. 2x2 isolated elements: top-left horizontal dark teal conveyor with cream rails, top-right filling bridge with eight dispensing mouths, bottom-left open canister with short bottom spout, bottom-right lift gate. No text/candy/characters/logos/scene background. Exact 1536x1024 landscape; intended for raster game component composition.",
+  "assets": [
+    {
+      "file": "belt.png",
+      "nodeId": "176:89",
+      "dimensions": [
+        744,
+        280
+      ],
+      "sourceCropXYWH": [
+        16,
+        88,
+        744,
+        280
+      ],
+      "bytes": 190558,
+      "sha256": "7a3a54798e5e8b928a3e08c46b27618bc4682807ba3ffa863e8e8f26d7289e73",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "file": "belt-tile.png",
+      "nodeId": "176:91",
+      "dimensions": [
+        96,
+        280
+      ],
+      "sourceCropXYWH": [
+        320,
+        88,
+        96,
+        280
+      ],
+      "bytes": 21555,
+      "sha256": "e01c733fa813e5d5ec7041f84e18a9afe2db8846a052e3abef26f15aa0670473",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "file": "bridge.png",
+      "nodeId": "176:93",
+      "dimensions": [
+        760,
+        240
+      ],
+      "sourceCropXYWH": [
+        768,
+        104,
+        760,
+        240
+      ],
+      "bytes": 190237,
+      "sha256": "e76923cb2098e4792fb4fb5d6c58bbc916c0718a50fa1db416765788656e5ee5",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "file": "hopper.png",
+      "nodeId": "176:95",
+      "dimensions": [
+        480,
+        536
+      ],
+      "sourceCropXYWH": [
+        144,
+        440,
+        480,
+        536
+      ],
+      "bytes": 276695,
+      "sha256": "545680b4ce7824256e7443384b9baa1e8ecec9199fc07130e5b70a1b28ad7db6",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "file": "gate.png",
+      "nodeId": "176:97",
+      "dimensions": [
+        728,
+        336
+      ],
+      "sourceCropXYWH": [
+        784,
+        544,
+        728,
+        336
+      ],
+      "bytes": 170193,
+      "sha256": "e0004c06cdec8389a699ca722f5825f9164fce12209553e2d94626de25e7814e",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "file": "loop.png",
+      "resourceId": "RES-WORKSHOP-LOOP-01",
+      "version": "0.1",
+      "nodeId": "179:765",
+      "imageHash": "006d0c51eea1baa37b0f268dd5b805cd4e733bbb",
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 1222704,
+      "sha256": "1bc9de8f06a251fb56ed1d94a84451637e2377acf568368c147c6bf93fd9410c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentCenter": true,
+      "remoteOriginalRoundtripMatched": true,
+      "promptBrief": "Single perfectly overhead continuous racetrack oval candy conveyor, dark teal tread, cream enamel and gold rails, transparent center and exterior, empty tread, no candy/text/arrows/environment. Polished tactile mint candy factory style, upper-left light."
+    },
+    {
+      "file": "beam.png",
+      "resourceId": "RES-WORKSHOP-BRIDGE-02",
+      "version": "0.1",
+      "nodeId": "183:4077",
+      "dimensions": [
+        1496,
+        400
+      ],
+      "sourceCropXYWH": [
+        20,
+        88,
+        1496,
+        400
+      ],
+      "bytes": 424614,
+      "sha256": "77fb8a7aaa0f34ef78b9136f4e283605aa0086a7ee1b61da5563d5baf3845d50",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "file": "nozzle.png",
+      "resourceId": "RES-WORKSHOP-BRIDGE-02",
+      "version": "0.1",
+      "nodeId": "183:4079",
+      "dimensions": [
+        272,
+        432
+      ],
+      "sourceCropXYWH": [
+        640,
+        536,
+        272,
+        432
+      ],
+      "bytes": 153007,
+      "sha256": "86ecb0fde88d519db3e61c602aa99a76e471b75388ea0d323fce69fdef4e086e",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    }
+  ],
+  "usage": {
+    "belt": "Horizontal belt; preserve rails and alpha; use belt-tile for loop tread. Rotate complete sprite 90deg for vertical belt.",
+    "bridge": "Horizontal filling bridge. Mouths face lower image edge; align actual filling targets immediately below mouths.",
+    "hopper": "Canister cavity centered near 50%,40%; outflow at lower edge. Overlay existing colored candy sprite; never recolor the whole bitmap.",
+    "gate": "Use above belt; lift bar only when batch is released. Keep gate movement separate from target selection.",
+    "perspective": "Straight overhead motif, softly modelled shallow sides. Reuse existing 256px candy/socket identical geometry.",
+    "loop": "Continuous oval belt; original image tread center roughly x105..1675/y185..675; scale and animate candy centers along its visible actual tread, not through center hole. Source original is the runtime PNG.",
+    "variableBridge": "Use beam plus one nozzle per target column. Repeat registered raster nozzle; scale uniformly to about0.72 cell width. Candy starts at nozzle center x50%,y89% and lands into aligned socket. Retain old eight-mouth bridge only for historical or fixed-eight layouts."
+  },
+  "qa": {
+    "alphaVerified": true,
+    "originalRoundtripShaVerified": true,
+    "compositionReview": "Passed final real-browser composition review: bridge level 8 at 320/390/430px, trays and loop level 8 at 390px. Dense packet quantity and flavor labels are separated; the 320px toolbar follows the third packet row without overlap. B conveyor label contrast and C gate bounds pass. Candy/socket/giftbox bitmap combinations remain coherent. This is screenshot and layout evidence, not owner playtest, real-device validation or animation acceptance.",
+    "ownerAcceptance": "pending",
+    "reviewEvidence": [
+      "output/playwright/bridge-first.png",
+      "output/playwright/browser-trays-01-start.png",
+      "output/playwright/browser-loop-01-start.png",
+      "output/playwright/browser-bridge-01-complete.png",
+      "output/playwright/debug.png",
+      "output/playwright/final-bridge-8-390.png",
+      "output/playwright/final-trays-8-390.png",
+      "output/playwright/final-loop-8-390.png",
+      "output/playwright/final-bridge-8-320.png",
+      "output/playwright/final-bridge-8-430.png"
+    ],
+    "openVisualBlockers": [],
+    "finalLayoutEvidence": "output/playwright/final-layout.json",
+    "shortViewportBehavior": "At 320x680 the full document is 779px high; stock ends at y707 and toolbar starts y715. Natural page scrolling is intentional, without overlapping fixed controls.",
+    "finalEvidence": [
+      {
+        "file": "output/playwright/final-bridge-8-320.png",
+        "sha256": "65d57e3a4e5d35a7a325ce33eeb8a5e99c7fcf08a468fe939a30ab7832f1f423"
+      },
+      {
+        "file": "output/playwright/final-bridge-8-390.png",
+        "sha256": "245dbf080a64cddcd0ed3a6fe2956a81c614a9df499689cb6da9ca0008c8d1a1"
+      },
+      {
+        "file": "output/playwright/final-bridge-8-430.png",
+        "sha256": "f5b44e3f2f2cb66c717aa3fc62e7afa40cbe9a2c47ede06405c7fb6d8c7e9238"
+      },
+      {
+        "file": "output/playwright/final-trays-8-390.png",
+        "sha256": "f5344a74533b550260352c4707e12a3a9e878d3d9b19bc3bd27c3f2633e504b6"
+      },
+      {
+        "file": "output/playwright/final-loop-8-390.png",
+        "sha256": "9686584f99de7a2b3146f814549b4000e1fc18b9c5365be71e430f6a0a7ac282"
+      },
+      {
+        "file": "output/playwright/final-layout.json",
+        "sha256": "93b2ecbc72659043bbafaea33afc873d8563334633fd8c6a8f2c234f42988833"
+      }
+    ]
+  },
+  "additionalSources": [
+    {
+      "resourceId": "RES-WORKSHOP-BRIDGE-02",
+      "version": "0.1",
+      "file": "source/beam-nozzle-atlas-v0.1.png",
+      "nodeId": "183:760",
+      "imageHash": "07d785f28e296143a610017852bfaa503803c049",
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1362470,
+      "sha256": "349f30a5f9d74d6e6a24ea3bd520ade110fc36783a396306945925a701169a55",
+      "remoteOriginalRoundtripMatched": true,
+      "promptBrief": "Transparent overhead 2-part candy factory atlas. Top: long glossy mint/ivory/gold gantry beam with blank continuous lower rail, absolutely no built-in nozzles. Bottom: one individual matching mint/gold dispensing nozzle with dark circular downward opening. Soft upper-left light, no candy/text/environment. Game repeats nozzle per target column."
+    }
+  ],
+  "design": {
+    "pageId": "175:89",
+    "screens": {
+      "bridge": "178:89",
+      "trays": "178:610",
+      "loop": "178:1038",
+      "complete": "184:760",
+      "collection": "184:1061",
+      "stop": "184:2452"
+    },
+    "specNodeId": "185:1776",
+    "status": "editable proposals; actual level drawings/counts differ; not owner-approved pixel baseline",
+    "viewportWidths": [
+      320,
+      390,
+      430
+    ],
+    "denseInventory": {
+      "trigger": "hopper count >8",
+      "columns": 5,
+      "cardHeightPx": 78,
+      "imageHeightPx": [
+        44,
+        48
+      ],
+      "countFontPx": [
+        16,
+        18
+      ],
+      "flavorFontPx": 11,
+      "minimumTargetPx": 44,
+      "sceneMaxHeightPx": 280,
+      "scrollPolicy": "whole page on short screens; no hidden stock inner-scroll; tool row follows stock in normal page flow to avoid covering the third row"
+    }
+  },
+  "runtimeUsage": {
+    "deliveredAssetPngCount": 8,
+    "additionalSourceAtlasPngCount": 2,
+    "generatedOriginalCount": 3,
+    "preloadedMachineAssetCount": 7,
+    "drawnMachineAssetCount": 6,
+    "drawn": [
+      "belt-tile.png",
+      "beam.png",
+      "nozzle.png",
+      "hopper.png",
+      "gate.png",
+      "loop.png"
+    ],
+    "preloadedButNotDrawn": [
+      "belt.png"
+    ],
+    "retainedHistoricalNotLoaded": [
+      "bridge.png"
+    ],
+    "evidence": "render.mjs loadArt and scene functions; app.mjs packet images"
+  }
+}

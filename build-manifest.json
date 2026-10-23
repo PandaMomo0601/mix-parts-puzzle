@@ -1,11 +1,13 @@
 {
-  "version": "r13",
-  "games": 26,
-  "newGames": 2,
+  "version": "r14",
+  "games": 27,
+  "newGames": 1,
   "updatedGames": 0,
-  "newLevels": 0,
-  "candyDemoVersions": 4,
-  "candyDemoLevels": 159,
+  "newLevels": 24,
+  "candyDemoVersions": 5,
+  "candyDemoLevels": 183,
+  "candyWorkshopModes": 3,
+  "candyWorkshopLevels": 24,
   "boboFactoryLevels": 105,
   "boboPackingLevels": 36,
   "candyBatchLevels": 6,
@@ -20,8 +22,8 @@
     },
     {
       "name": "catalog.js",
-      "bytes": 5638,
-      "sha256": "af7f997b93fccf3fb81add87f12c505d9814767ca20bc5cdc9b714373b505dac"
+      "bytes": 5921,
+      "sha256": "3e536c3a3ad692b571f1b3a027ec5246be570ff47afc99c7c77ec5ba543a77d5"
     },
     {
       "name": "games/arithmetic.js",
@@ -734,6 +736,276 @@
       "sha256": "02343e655e905b6ffaa8de469b94bdf876952eaa749d630464f3f3a35c558f8e"
     },
     {
+      "name": "games/candy-workshop/app.mjs",
+      "bytes": 17251,
+      "sha256": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/beam.png",
+      "bytes": 424614,
+      "sha256": "77fb8a7aaa0f34ef78b9136f4e283605aa0086a7ee1b61da5563d5baf3845d50"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/belt-tile.png",
+      "bytes": 21555,
+      "sha256": "e01c733fa813e5d5ec7041f84e18a9afe2db8846a052e3abef26f15aa0670473"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/belt.png",
+      "bytes": 190558,
+      "sha256": "7a3a54798e5e8b928a3e08c46b27618bc4682807ba3ffa863e8e8f26d7289e73"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/bridge.png",
+      "bytes": 190237,
+      "sha256": "e76923cb2098e4792fb4fb5d6c58bbc916c0718a50fa1db416765788656e5ee5"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/gate.png",
+      "bytes": 170193,
+      "sha256": "e0004c06cdec8389a699ca722f5825f9164fce12209553e2d94626de25e7814e"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/hopper.png",
+      "bytes": 276695,
+      "sha256": "545680b4ce7824256e7443384b9baa1e8ecec9199fc07130e5b70a1b28ad7db6"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/loop.png",
+      "bytes": 1222704,
+      "sha256": "1bc9de8f06a251fb56ed1d94a84451637e2377acf568368c147c6bf93fd9410c"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/manifest.json",
+      "bytes": 10897,
+      "sha256": "64699ea26ae2460a23a7aea561754ae4ccab88fce9f48ed714f3832e34d15367"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/nozzle.png",
+      "bytes": 153007,
+      "sha256": "86ecb0fde88d519db3e61c602aa99a76e471b75388ea0d323fce69fdef4e086e"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/source/beam-nozzle-atlas-v0.1.png",
+      "bytes": 1362470,
+      "sha256": "349f30a5f9d74d6e6a24ea3bd520ade110fc36783a396306945925a701169a55"
+    },
+    {
+      "name": "games/candy-workshop/assets/art-machine/source/machine-atlas-v0.1.png",
+      "bytes": 1604006,
+      "sha256": "305a57ff4af49c59f19f3819c44a190cf59983d4961aba09a7c58b5a86ab76a6"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/barrier.png",
+      "bytes": 71402,
+      "sha256": "e2f8d9f05cc405bb5fe2dc9b6283df447ad236a814d305c47ba0714617b65463"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/board-frame.png",
+      "bytes": 326387,
+      "sha256": "8b8a7c41bc06e9bd68e6836830df42efd5eb6d5981413d2b8b2d27cf8e5a369a"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/button-paper.png",
+      "bytes": 208193,
+      "sha256": "830348bcf40eadb5dc61589b25fc5b9d5a5c324e4e4d782221a2d12f586fcfc4"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/button-primary.png",
+      "bytes": 225627,
+      "sha256": "c62a06a7c6c41da30c819c3e661413aeb8ce310f3306113bc67f2059eea3d453"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/candy-blue.png",
+      "bytes": 52984,
+      "sha256": "b851579feb10a850e7c07accf3b1dc91cdfddaf0ecbc9e32baea234a075d57f8"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/candy-coral.png",
+      "bytes": 57176,
+      "sha256": "19bc12acd9d050f2c3f9fc78039407e4bf63f2893776c91b589d7a37ab96d09e"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/candy-gold.png",
+      "bytes": 53364,
+      "sha256": "d3274fa3f9507a82b089ffc556765ae3dcaa3f29722f7636ce80dded0eb23e95"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/candy-mint.png",
+      "bytes": 62161,
+      "sha256": "3112b8a1750aad24c7e6ec0bf427afe2bd5346cdc184bc2174a92dbad48bda27"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/manifest.json",
+      "bytes": 16341,
+      "sha256": "24601b06f8943e1f6dc81f191304444392326f88c2072455012617a77dff7c0a"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/panel-paper.png",
+      "bytes": 455449,
+      "sha256": "da8c12bad708d4a23baed6852870c9ce3c300250c68f852d6c5904c54dad4953"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/socket-blue.png",
+      "bytes": 95041,
+      "sha256": "897e8166298144ccda0ea6560470ed6e863386845f108c568be888b5f242cf42"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/socket-coral.png",
+      "bytes": 93631,
+      "sha256": "f0fb4017e79ee8e4acc658a44f4095ac49ca4d3d95e9778230507e56bb80fdc3"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/socket-gold.png",
+      "bytes": 92096,
+      "sha256": "d03285311786a86521774fea26712e50156e9272fa57d8eaf13e7022f6f32710"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/socket-mint.png",
+      "bytes": 93992,
+      "sha256": "dcaa000c196cca067608831590b29676125ff903b8f41cdd14417041860fd089"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/source/paper-ui-atlas.png",
+      "bytes": 1784506,
+      "sha256": "a92a4ebb8f90e624ce6669aadceb1ba969fb59fa17cca41c24d3bbcc653bac31"
+    },
+    {
+      "name": "games/candy-workshop/assets/art/source/topdown-candy-socket-atlas.png",
+      "bytes": 1900624,
+      "sha256": "e4b2b6f5917264e30c43c57eecf79a230b6223a4e371004f3c018af259c66293"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/ATTRIBUTION.txt",
+      "bytes": 707,
+      "sha256": "b3ac3cd51acf859a2b1e8aa943e6d2532694e8afc6c95c7b24a98d14ac589ba1"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/LICENSE-CC-BY-3.0.txt",
+      "bytes": 19467,
+      "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/LICENSE-kenney-impact-sounds.txt",
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/LICENSE-kenney-interface-sounds.txt",
+      "bytes": 574,
+      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/LICENSE-kenney-music-jingles.txt",
+      "bytes": 482,
+      "sha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/blocked.wav",
+      "bytes": 18160,
+      "sha256": "ab4309762c11ef3e94ad2ef194608e387a0fad7be1d3059c24e92499526de6ea"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/box.wav",
+      "bytes": 46896,
+      "sha256": "d8e50fb87d665aca89ce531557359086638e91e1822e622465b0cc6c80485a3e"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/confirm.wav",
+      "bytes": 25608,
+      "sha256": "5d56969f00811879c18b35c447872169601518555b16fc2c5cb31eb8819bd1c4"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/land.wav",
+      "bytes": 19416,
+      "sha256": "f834588049948a382c7098756cc44599318d127794801ccd0c29b24e84dfa7d8"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/manifest.json",
+      "bytes": 6383,
+      "sha256": "4cac9b3116bf5cf5f7c7afaeab3c4a607f40057d3e0270c8b815fe010c2ecd6a"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/move.wav",
+      "bytes": 18112,
+      "sha256": "9d45ad3fa23add4a93c899b49b33278a808cec940b7bb3e0c679d2454fb72e9c"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/music.mp3",
+      "bytes": 2532513,
+      "sha256": "5b916bdf95661a45782f97009db6ef1dd1864522f3d3db79503d005524ac5730"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/pack.wav",
+      "bytes": 13078,
+      "sha256": "e288384faba621a69db98f407fdd699b9258d82d1d5305696bf622d65f166f40"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/soft.wav",
+      "bytes": 20860,
+      "sha256": "fea74f70fa9965845e79cd4ed22755b18053d49ec6953f77c9c5b93e4b054424"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/tap.wav",
+      "bytes": 928,
+      "sha256": "92eeb83a79b700372922f277647db78b744884c8b246dca5c673c5b4087095a3"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/undo.wav",
+      "bytes": 5678,
+      "sha256": "c5c97e52b5edea971cb7907ec29a8d6cbee0767a0c4369ada68ffb3cd33bf1ae"
+    },
+    {
+      "name": "games/candy-workshop/assets/audio/win.wav",
+      "bytes": 140672,
+      "sha256": "53ef34e62dc00df6d02f61f9bffb13bdcbbb7853ad6188c7b286385c05803689"
+    },
+    {
+      "name": "games/candy-workshop/assets/noto-sans-sc.woff2",
+      "bytes": 145336,
+      "sha256": "dd7e2f00d6d0a82541105fda5cb113f7b460d6a83091a060dce3c8381b8abce8"
+    },
+    {
+      "name": "games/candy-workshop/audio.mjs",
+      "bytes": 9746,
+      "sha256": "16ae43eef6dc5314240dd827e644d4da4c03e4c0d6b1f66825c8fb4a8eb468d7"
+    },
+    {
+      "name": "games/candy-workshop/engine.mjs",
+      "bytes": 11104,
+      "sha256": "b003f1d40f5964f474f3fa99c068944c155eea115fb114329208c6f6d7395503"
+    },
+    {
+      "name": "games/candy-workshop/index.html",
+      "bytes": 677,
+      "sha256": "10b4e3a6464093eb2d60321c87035c56c1f5184fa2211e48a936063a82b5e2e9"
+    },
+    {
+      "name": "games/candy-workshop/levels.mjs",
+      "bytes": 332551,
+      "sha256": "8ca45a96dcb9821e98ff3d27136b8d94d9da01379e3b23515ff3abe975483453"
+    },
+    {
+      "name": "games/candy-workshop/licenses/NotoSansSC-OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "name": "games/candy-workshop/render.mjs",
+      "bytes": 10459,
+      "sha256": "13bc328aa032f0e358516186740929dde8f1900feee3893c6420157d0747dc07"
+    },
+    {
+      "name": "games/candy-workshop/storage.mjs",
+      "bytes": 2162,
+      "sha256": "44465d1d929d5df1e2a658e3e2ad32e80d2d878e430cacb136af8749ea8a2b8f"
+    },
+    {
+      "name": "games/candy-workshop/style.css",
+      "bytes": 9727,
+      "sha256": "9c56255a1a9ad5a1f2081f606373b30ffe4832d18cb2c131227b8851823a0c7e"
+    },
+    {
       "name": "games/color.js",
       "bytes": 12662,
       "sha256": "5c61dc1d1b339109ea0c27c07235ae624aaca9f3b36eaae3031a06d791e1b9e0"
@@ -805,8 +1077,8 @@
     },
     {
       "name": "index.html",
-      "bytes": 11663,
-      "sha256": "14636670fbdf380572d9af14c8d20a887c58fd9d13000e412d26d86debcf5cad"
+      "bytes": 12184,
+      "sha256": "0f54b7c77b41a925b0f919c035fe0a1ad2f80a3b977f24ab1b11fb4aca46ff7f"
     },
     {
       "name": "play.css",
@@ -816,7 +1088,7 @@
     {
       "name": "play.html",
       "bytes": 1492,
-      "sha256": "ff3e9829ba56572d2ce58dcc1ab8be8400e45adceadcd5943cd6de5411750f57"
+      "sha256": "997b94842d52f8a492e8a113a3fa2eee048333892056edfb31588b25360d15d9"
     },
     {
       "name": "player.js",

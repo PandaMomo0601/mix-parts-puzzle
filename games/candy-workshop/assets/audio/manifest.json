@@ -1,0 +1,162 @@
+{
+  "version": "audio-1",
+  "bgm": {
+    "file": "music.mp3",
+    "source": "https://opengameart.org/content/happy-tune",
+    "author": "syncopika",
+    "license": "CC-BY-3.0",
+    "sha256": "5b916bdf95661a45782f97009db6ef1dd1864522f3d3db79503d005524ac5730",
+    "bytes": 2532513,
+    "playbackEdits": "0.8-second linear overlap crossfade; gain attenuation"
+  },
+  "samples": [
+    {
+      "event": "tap",
+      "source": "click_003.ogg",
+      "sourceSha256": "2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292",
+      "file": "tap.wav",
+      "sha256": "92eeb83a79b700372922f277647db78b744884c8b246dca5c673c5b4087095a3",
+      "bytes": 928,
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationSec": 0.010022675736961452,
+      "attenuationDb": -1.638779925721444,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "move",
+      "source": "pluck_001.ogg",
+      "sourceSha256": "be97ec4893a02d6eccfb678daa76c83e34cb2583b834ec2593d2641def739fa4",
+      "file": "move.wav",
+      "sha256": "9d45ad3fa23add4a93c899b49b33278a808cec940b7bb3e0c679d2454fb72e9c",
+      "bytes": 18112,
+      "sampleRate": 44100,
+      "channels": 2,
+      "durationSec": 0.10242630385487528,
+      "attenuationDb": -3.4256836839683524,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "land",
+      "source": "drop_001.ogg",
+      "sourceSha256": "692ee3a6f1821402ca649ff735bee9591dc4846c8098fc7d6a90fd15fa57c1af",
+      "file": "land.wav",
+      "sha256": "f834588049948a382c7098756cc44599318d127794801ccd0c29b24e84dfa7d8",
+      "bytes": 19416,
+      "sampleRate": 44100,
+      "channels": 2,
+      "durationSec": 0.10981859410430839,
+      "attenuationDb": -2.1096414898845923,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "pack",
+      "source": "close_001.ogg",
+      "sourceSha256": "44af8249b933e0fd35ec957a638bb1a0b01f85b53fbe9674bf77bd3ca3168ef4",
+      "file": "pack.wav",
+      "sha256": "e288384faba621a69db98f407fdd699b9258d82d1d5305696bf622d65f166f40",
+      "bytes": 13078,
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationSec": 0.14777777777777779,
+      "attenuationDb": -2.0809846111976364,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "confirm",
+      "source": "confirmation_001.ogg",
+      "sourceSha256": "063564703b6094d70718a3e787a55cc9141611e4ecd6b6637f8828f79b4a8c3a",
+      "file": "confirm.wav",
+      "sha256": "5d56969f00811879c18b35c447872169601518555b16fc2c5cb31eb8819bd1c4",
+      "bytes": 25608,
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationSec": 0.28984126984126984,
+      "attenuationDb": -2.070215516144969,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "undo",
+      "source": "back_001.ogg",
+      "sourceSha256": "07db973f79f6ae0f2edc34561e7592e24d0577455919fb602cb8ecc0da991dcf",
+      "file": "undo.wav",
+      "sha256": "c5c97e52b5edea971cb7907ec29a8d6cbee0767a0c4369ada68ffb3cd33bf1ae",
+      "bytes": 5678,
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationSec": 0.06387755102040817,
+      "attenuationDb": -2.0443713718489995,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "blocked",
+      "source": "error_004.ogg",
+      "sourceSha256": "0b574cea597d96507e782ae9764f88482ce49f46e931e57054bf7150047f2d69",
+      "file": "blocked.wav",
+      "sha256": "ab4309762c11ef3e94ad2ef194608e387a0fad7be1d3059c24e92499526de6ea",
+      "bytes": 18160,
+      "sampleRate": 44100,
+      "channels": 2,
+      "durationSec": 0.10269841269841269,
+      "attenuationDb": -1.748982692772074,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "soft",
+      "source": "impactSoft_medium_000.ogg",
+      "sourceSha256": "7d3ba0bb5e60a11b5d3e558c141303dcf494256675fbf753c0d252d2cf0481e3",
+      "file": "soft.wav",
+      "sha256": "fea74f70fa9965845e79cd4ed22755b18053d49ec6953f77c9c5b93e4b054424",
+      "bytes": 20860,
+      "sampleRate": 44100,
+      "channels": 2,
+      "durationSec": 0.11800453514739229,
+      "attenuationDb": -2.038874088600186,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "box",
+      "source": "impactWood_light_000.ogg",
+      "sourceSha256": "eb45e35b4bed784d3f120de4afec4b0d6ac09d9e143cce8cfcb7d739e1b1f3c3",
+      "file": "box.wav",
+      "sha256": "d8e50fb87d665aca89ce531557359086638e91e1822e622465b0cc6c80485a3e",
+      "bytes": 46896,
+      "sampleRate": 44100,
+      "channels": 2,
+      "durationSec": 0.2656009070294785,
+      "attenuationDb": -1.8818970863066962,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    },
+    {
+      "event": "win",
+      "source": "jingles_PIZZI10.ogg",
+      "sourceSha256": "baf50beffc4cc2dbb92c9d596a22732a8b5249c7648b681c0df6d0af6c561478",
+      "file": "win.wav",
+      "sha256": "53ef34e62dc00df6d02f61f9bffb13bdcbbb7853ad6188c7b286385c05803689",
+      "bytes": 140672,
+      "sampleRate": 44100,
+      "channels": 2,
+      "durationSec": 0.7972108843537415,
+      "attenuationDb": 0.0,
+      "changes": "官方OGG解码为PCM16 WAV；只衰减使采样峰值不高于-3dBFS，未更改音高、速度或时长。"
+    }
+  ],
+  "registration": {
+    "notionCase": "4014af51282e8185979efd0f4b93d9fc",
+    "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+    "figmaMusicCard": "114:209",
+    "figmaSfxCard": "114:220",
+    "sourceZipFileId": "f647c965-1e61-43a8-8cd0-dbcf83b1d4e9",
+    "musicFileId": "7c03dc65-4cb9-434f-a462-720a47ffa3e6"
+  },
+  "subjectiveListening": "pending",
+  "runtimeEvents": [
+    "tap",
+    "move",
+    "land",
+    "pack",
+    "undo",
+    "blocked",
+    "win"
+  ]
+}
