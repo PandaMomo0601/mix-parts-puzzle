@@ -1,0 +1,365 @@
+{
+  "base": "http://127.0.0.1:4194",
+  "engine": "installed Chrome",
+  "levels": [
+    {
+      "id": "ribbon",
+      "seconds": 4.325,
+      "turns": [
+        {
+          "id": "R0",
+          "filled": 16,
+          "remaining": 0
+        },
+        {
+          "id": "Y1",
+          "filled": 16,
+          "remaining": 0
+        },
+        {
+          "id": "B2",
+          "filled": 16,
+          "remaining": 0
+        },
+        {
+          "id": "G3",
+          "filled": 16,
+          "remaining": 0
+        }
+      ],
+      "ledger": {
+        "total": 64,
+        "filled": 64,
+        "empty": 0,
+        "stock": 0,
+        "working": 0,
+        "stockBoxes": 0,
+        "activeBoxes": 0,
+        "doneBoxes": 4
+      },
+      "autoResumes": 0
+    },
+    {
+      "id": "weave",
+      "seconds": 11.215,
+      "turns": [
+        {
+          "id": "R0",
+          "filled": 10,
+          "remaining": 20
+        },
+        {
+          "id": "B2",
+          "filled": 10,
+          "remaining": 20
+        },
+        {
+          "id": "Y3",
+          "filled": 10,
+          "remaining": 20
+        },
+        {
+          "id": "Y4",
+          "filled": 20,
+          "remaining": 10
+        },
+        {
+          "id": "B1",
+          "filled": 30,
+          "remaining": 0
+        }
+      ],
+      "ledger": {
+        "total": 80,
+        "filled": 80,
+        "empty": 0,
+        "stock": 0,
+        "working": 0,
+        "stockBoxes": 0,
+        "activeBoxes": 0,
+        "doneBoxes": 5
+      },
+      "autoResumes": 10
+    },
+    {
+      "id": "cherry",
+      "seconds": 17.418,
+      "turns": [
+        {
+          "id": "Y2",
+          "filled": 46,
+          "remaining": 2
+        },
+        {
+          "id": "R1",
+          "filled": 22,
+          "remaining": 0
+        },
+        {
+          "id": "B5",
+          "filled": 9,
+          "remaining": 0
+        },
+        {
+          "id": "R0",
+          "filled": 17,
+          "remaining": 1
+        },
+        {
+          "id": "Y3",
+          "filled": 26,
+          "remaining": 11
+        },
+        {
+          "id": "B6",
+          "filled": 7,
+          "remaining": 7
+        },
+        {
+          "id": "G4",
+          "filled": 17,
+          "remaining": 0
+        }
+      ],
+      "ledger": {
+        "total": 144,
+        "filled": 144,
+        "empty": 0,
+        "stock": 0,
+        "working": 0,
+        "stockBoxes": 0,
+        "activeBoxes": 0,
+        "doneBoxes": 7
+      },
+      "autoResumes": 18
+    },
+    {
+      "id": "butterfly",
+      "seconds": 32.721,
+      "turns": [
+        {
+          "id": "B6",
+          "filled": 92,
+          "remaining": 2
+        },
+        {
+          "id": "R0",
+          "filled": 40,
+          "remaining": 15
+        },
+        {
+          "id": "Y3",
+          "filled": 34,
+          "remaining": 0
+        },
+        {
+          "id": "G5",
+          "filled": 11,
+          "remaining": 0
+        },
+        {
+          "id": "B7",
+          "filled": 18,
+          "remaining": 20
+        },
+        {
+          "id": "R1",
+          "filled": 30,
+          "remaining": 17
+        },
+        {
+          "id": "Y2",
+          "filled": 18,
+          "remaining": 8
+        },
+        {
+          "id": "G4",
+          "filled": 13,
+          "remaining": 0
+        }
+      ],
+      "ledger": {
+        "total": 256,
+        "filled": 256,
+        "empty": 0,
+        "stock": 0,
+        "working": 0,
+        "stockBoxes": 0,
+        "activeBoxes": 0,
+        "doneBoxes": 8
+      },
+      "autoResumes": 38
+    },
+    {
+      "id": "garden",
+      "seconds": 49.32,
+      "turns": [
+        {
+          "id": "B6",
+          "filled": 76,
+          "remaining": 28
+        },
+        {
+          "id": "G5",
+          "filled": 100,
+          "remaining": 38
+        },
+        {
+          "id": "Y2",
+          "filled": 37,
+          "remaining": 10
+        },
+        {
+          "id": "R1",
+          "filled": 19,
+          "remaining": 1
+        },
+        {
+          "id": "G4",
+          "filled": 11,
+          "remaining": 26
+        },
+        {
+          "id": "Y3",
+          "filled": 21,
+          "remaining": 12
+        },
+        {
+          "id": "B7",
+          "filled": 40,
+          "remaining": 16
+        },
+        {
+          "id": "R0",
+          "filled": 20,
+          "remaining": 0
+        }
+      ],
+      "ledger": {
+        "total": 324,
+        "filled": 324,
+        "empty": 0,
+        "stock": 0,
+        "working": 0,
+        "stockBoxes": 0,
+        "activeBoxes": 0,
+        "doneBoxes": 8
+      },
+      "autoResumes": 63
+    },
+    {
+      "id": "rocket",
+      "seconds": 51.398,
+      "turns": [
+        {
+          "id": "B7",
+          "filled": 138,
+          "remaining": 0
+        },
+        {
+          "id": "B6",
+          "filled": 43,
+          "remaining": 91
+        },
+        {
+          "id": "R0",
+          "filled": 35,
+          "remaining": 79
+        },
+        {
+          "id": "R1",
+          "filled": 60,
+          "remaining": 42
+        },
+        {
+          "id": "Y2",
+          "filled": 56,
+          "remaining": 36
+        },
+        {
+          "id": "G4",
+          "filled": 9,
+          "remaining": 36
+        },
+        {
+          "id": "G5",
+          "filled": 3,
+          "remaining": 36
+        },
+        {
+          "id": "Y3",
+          "filled": 56,
+          "remaining": 0
+        }
+      ],
+      "ledger": {
+        "total": 400,
+        "filled": 400,
+        "empty": 0,
+        "stock": 0,
+        "working": 0,
+        "stockBoxes": 0,
+        "activeBoxes": 0,
+        "doneBoxes": 8
+      },
+      "autoResumes": 91
+    }
+  ],
+  "checks": {
+    "collectionSurvivesReload": true,
+    "collectionReplay": true,
+    "deadlockAndUndo": true,
+    "midFlightReload": {
+      "from": 1,
+      "to": 16
+    },
+    "rapidLaunchUndo": true,
+    "audioSettingsPersist": true,
+    "legacyStorageUnchanged": true,
+    "oldTrialsLoads": true
+  },
+  "postFixFirstLevel": {
+    "id": "ribbon",
+    "seconds": 4.545,
+    "turns": [
+      {
+        "id": "R0",
+        "filled": 16,
+        "remaining": 0
+      },
+      {
+        "id": "Y1",
+        "filled": 16,
+        "remaining": 0
+      },
+      {
+        "id": "B2",
+        "filled": 16,
+        "remaining": 0
+      },
+      {
+        "id": "G3",
+        "filled": 16,
+        "remaining": 0
+      }
+    ],
+    "ledger": {
+      "total": 64,
+      "filled": 64,
+      "empty": 0,
+      "stock": 0,
+      "working": 0,
+      "stockBoxes": 0,
+      "activeBoxes": 0,
+      "doneBoxes": 4
+    },
+    "autoResumes": 0
+  },
+  "errors": [],
+  "failed": [],
+  "passed": true,
+  "release": "r12",
+  "rulesTestsPassed": 12,
+  "sourceAssetsUnchanged": 35,
+  "verificationScope": "Chrome mobile viewport; six real button completions before collection-resume UI fix; first level and lifecycle flows rerun after fix. No physical phone or owner acceptance."
+}

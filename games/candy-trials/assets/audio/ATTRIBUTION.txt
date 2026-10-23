@@ -1,0 +1,12 @@
+Music: "happy tune" by syncopika
+https://opengameart.org/content/happy-tune
+Licensed under Creative Commons Attribution 3.0 Unported:
+https://creativecommons.org/licenses/by/3.0/
+Original MP3 is unmodified. Playback applies 0.8-second linear crossfade between repetitions and volume attenuation.
+
+Sound effects by Kenney (Interface Sounds, Impact Sounds, Music Jingles).
+https://kenney.nl/assets/interface-sounds
+https://kenney.nl/assets/impact-sounds
+https://kenney.nl/assets/music-jingles
+Licensed CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+Official OGG samples decoded to PCM16 WAV and attenuated to sample peaks at or below -3 dBFS. Pitch, speed and duration were not edited.

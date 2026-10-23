@@ -1,0 +1,584 @@
+{
+  "version": "r12",
+  "games": 24,
+  "newGames": 2,
+  "updatedGames": 0,
+  "newLevels": 6,
+  "candyBatchLevels": 6,
+  "candyTrialsHistoricalLevels": 12,
+  "partsclearLevels": 105,
+  "partsLevels": 120,
+  "files": [
+    {
+      "name": "catalog.css",
+      "bytes": 3576,
+      "sha256": "f91dfef49566442b98afcd09522cabc430b57313b72883155e1e6acb165777ef"
+    },
+    {
+      "name": "catalog.js",
+      "bytes": 5138,
+      "sha256": "43d0f373ad0e701adc33f57c36312120015409b1ac33619705fd957934555e53"
+    },
+    {
+      "name": "games/arithmetic.js",
+      "bytes": 10422,
+      "sha256": "71824dd90a01303103f45dfd05692f21824b21e0a625b9272f124fd34db3561c"
+    },
+    {
+      "name": "games/bigpair.js",
+      "bytes": 10741,
+      "sha256": "2abf6764ccf64c0636c1d8f3dbfd65ee48426406050d72b186c4959e8ea14da4"
+    },
+    {
+      "name": "games/burstclear.js",
+      "bytes": 12090,
+      "sha256": "88f9bd8121acbe653a6208321bf4bcb4188eb87b3b695a92abeebeaeb7027d29"
+    },
+    {
+      "name": "games/candy-batch/app.mjs",
+      "bytes": 17131,
+      "sha256": "0097b1f400c89b5f2e6095493d33fdfd9fc876302b03928bb2e10b2ac628c09e"
+    },
+    {
+      "name": "games/candy-batch/assets/art/barrier.png",
+      "bytes": 71402,
+      "sha256": "e2f8d9f05cc405bb5fe2dc9b6283df447ad236a814d305c47ba0714617b65463"
+    },
+    {
+      "name": "games/candy-batch/assets/art/board-frame.png",
+      "bytes": 326387,
+      "sha256": "8b8a7c41bc06e9bd68e6836830df42efd5eb6d5981413d2b8b2d27cf8e5a369a"
+    },
+    {
+      "name": "games/candy-batch/assets/art/button-paper.png",
+      "bytes": 208193,
+      "sha256": "830348bcf40eadb5dc61589b25fc5b9d5a5c324e4e4d782221a2d12f586fcfc4"
+    },
+    {
+      "name": "games/candy-batch/assets/art/button-primary.png",
+      "bytes": 225627,
+      "sha256": "c62a06a7c6c41da30c819c3e661413aeb8ce310f3306113bc67f2059eea3d453"
+    },
+    {
+      "name": "games/candy-batch/assets/art/candy-blue.png",
+      "bytes": 52984,
+      "sha256": "b851579feb10a850e7c07accf3b1dc91cdfddaf0ecbc9e32baea234a075d57f8"
+    },
+    {
+      "name": "games/candy-batch/assets/art/candy-coral.png",
+      "bytes": 57176,
+      "sha256": "19bc12acd9d050f2c3f9fc78039407e4bf63f2893776c91b589d7a37ab96d09e"
+    },
+    {
+      "name": "games/candy-batch/assets/art/candy-gold.png",
+      "bytes": 53364,
+      "sha256": "d3274fa3f9507a82b089ffc556765ae3dcaa3f29722f7636ce80dded0eb23e95"
+    },
+    {
+      "name": "games/candy-batch/assets/art/candy-mint.png",
+      "bytes": 62161,
+      "sha256": "3112b8a1750aad24c7e6ec0bf427afe2bd5346cdc184bc2174a92dbad48bda27"
+    },
+    {
+      "name": "games/candy-batch/assets/art/manifest.json",
+      "bytes": 16341,
+      "sha256": "24601b06f8943e1f6dc81f191304444392326f88c2072455012617a77dff7c0a"
+    },
+    {
+      "name": "games/candy-batch/assets/art/panel-paper.png",
+      "bytes": 455449,
+      "sha256": "da8c12bad708d4a23baed6852870c9ce3c300250c68f852d6c5904c54dad4953"
+    },
+    {
+      "name": "games/candy-batch/assets/art/socket-blue.png",
+      "bytes": 95041,
+      "sha256": "897e8166298144ccda0ea6560470ed6e863386845f108c568be888b5f242cf42"
+    },
+    {
+      "name": "games/candy-batch/assets/art/socket-coral.png",
+      "bytes": 93631,
+      "sha256": "f0fb4017e79ee8e4acc658a44f4095ac49ca4d3d95e9778230507e56bb80fdc3"
+    },
+    {
+      "name": "games/candy-batch/assets/art/socket-gold.png",
+      "bytes": 92096,
+      "sha256": "d03285311786a86521774fea26712e50156e9272fa57d8eaf13e7022f6f32710"
+    },
+    {
+      "name": "games/candy-batch/assets/art/socket-mint.png",
+      "bytes": 93992,
+      "sha256": "dcaa000c196cca067608831590b29676125ff903b8f41cdd14417041860fd089"
+    },
+    {
+      "name": "games/candy-batch/assets/art/source/paper-ui-atlas.png",
+      "bytes": 1784506,
+      "sha256": "a92a4ebb8f90e624ce6669aadceb1ba969fb59fa17cca41c24d3bbcc653bac31"
+    },
+    {
+      "name": "games/candy-batch/assets/art/source/topdown-candy-socket-atlas.png",
+      "bytes": 1900624,
+      "sha256": "e4b2b6f5917264e30c43c57eecf79a230b6223a4e371004f3c018af259c66293"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/ATTRIBUTION.txt",
+      "bytes": 707,
+      "sha256": "b3ac3cd51acf859a2b1e8aa943e6d2532694e8afc6c95c7b24a98d14ac589ba1"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/LICENSE-CC-BY-3.0.txt",
+      "bytes": 19467,
+      "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/LICENSE-kenney-impact-sounds.txt",
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/LICENSE-kenney-interface-sounds.txt",
+      "bytes": 574,
+      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/LICENSE-kenney-music-jingles.txt",
+      "bytes": 482,
+      "sha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/blocked.wav",
+      "bytes": 18160,
+      "sha256": "ab4309762c11ef3e94ad2ef194608e387a0fad7be1d3059c24e92499526de6ea"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/box.wav",
+      "bytes": 46896,
+      "sha256": "d8e50fb87d665aca89ce531557359086638e91e1822e622465b0cc6c80485a3e"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/confirm.wav",
+      "bytes": 25608,
+      "sha256": "5d56969f00811879c18b35c447872169601518555b16fc2c5cb31eb8819bd1c4"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/land.wav",
+      "bytes": 19416,
+      "sha256": "f834588049948a382c7098756cc44599318d127794801ccd0c29b24e84dfa7d8"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/manifest.json",
+      "bytes": 6383,
+      "sha256": "4cac9b3116bf5cf5f7c7afaeab3c4a607f40057d3e0270c8b815fe010c2ecd6a"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/move.wav",
+      "bytes": 18112,
+      "sha256": "9d45ad3fa23add4a93c899b49b33278a808cec940b7bb3e0c679d2454fb72e9c"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/music.mp3",
+      "bytes": 2532513,
+      "sha256": "5b916bdf95661a45782f97009db6ef1dd1864522f3d3db79503d005524ac5730"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/pack.wav",
+      "bytes": 13078,
+      "sha256": "e288384faba621a69db98f407fdd699b9258d82d1d5305696bf622d65f166f40"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/soft.wav",
+      "bytes": 20860,
+      "sha256": "fea74f70fa9965845e79cd4ed22755b18053d49ec6953f77c9c5b93e4b054424"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/tap.wav",
+      "bytes": 928,
+      "sha256": "92eeb83a79b700372922f277647db78b744884c8b246dca5c673c5b4087095a3"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/undo.wav",
+      "bytes": 5678,
+      "sha256": "c5c97e52b5edea971cb7907ec29a8d6cbee0767a0c4369ada68ffb3cd33bf1ae"
+    },
+    {
+      "name": "games/candy-batch/assets/audio/win.wav",
+      "bytes": 140672,
+      "sha256": "53ef34e62dc00df6d02f61f9bffb13bdcbbb7853ad6188c7b286385c05803689"
+    },
+    {
+      "name": "games/candy-batch/assets/hero.webp",
+      "bytes": 1397014,
+      "sha256": "c88aa9c2745cc37bf49dad5bfe96231c2d936527ef1f062be7024849f40e3e09"
+    },
+    {
+      "name": "games/candy-batch/assets/noto-sans-sc.woff2",
+      "bytes": 145336,
+      "sha256": "dd7e2f00d6d0a82541105fda5cb113f7b460d6a83091a060dce3c8381b8abce8"
+    },
+    {
+      "name": "games/candy-batch/audio.mjs",
+      "bytes": 9746,
+      "sha256": "16ae43eef6dc5314240dd827e644d4da4c03e4c0d6b1f66825c8fb4a8eb468d7"
+    },
+    {
+      "name": "games/candy-batch/engine.mjs",
+      "bytes": 6225,
+      "sha256": "535f108cb1eba3a767b39d3233ccaddbc324439f73f2da6a0497b69091439963"
+    },
+    {
+      "name": "games/candy-batch/index.html",
+      "bytes": 682,
+      "sha256": "9809f2317a587157af31e0123b8ab29f02221b22be82e2a869c097cd59bf0a6c"
+    },
+    {
+      "name": "games/candy-batch/levels.mjs",
+      "bytes": 6876,
+      "sha256": "1323e9163b7d7cc77f2cd5740c96364bc013a3d04804c88ee9d67d92aabb5a70"
+    },
+    {
+      "name": "games/candy-batch/licenses/NotoSansSC-OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "name": "games/candy-batch/storage.mjs",
+      "bytes": 2465,
+      "sha256": "61549eb05d2e5770e9dea7177047ba9f2136d033a1a0b543d46c9a6d198bd0d5"
+    },
+    {
+      "name": "games/candy-batch/style.css",
+      "bytes": 11396,
+      "sha256": "77f16b06d0c83c781766850544657a94be0865ed1039ae33586175e048e2b7cd"
+    },
+    {
+      "name": "games/candy-trials/app.mjs",
+      "bytes": 26300,
+      "sha256": "d022b1c2da94081120969b570f9cb55d28e2173c6f917f0fe374c4392f9954db"
+    },
+    {
+      "name": "games/candy-trials/assets/art/barrier.png",
+      "bytes": 71402,
+      "sha256": "e2f8d9f05cc405bb5fe2dc9b6283df447ad236a814d305c47ba0714617b65463"
+    },
+    {
+      "name": "games/candy-trials/assets/art/board-frame.png",
+      "bytes": 326387,
+      "sha256": "8b8a7c41bc06e9bd68e6836830df42efd5eb6d5981413d2b8b2d27cf8e5a369a"
+    },
+    {
+      "name": "games/candy-trials/assets/art/button-paper.png",
+      "bytes": 208193,
+      "sha256": "830348bcf40eadb5dc61589b25fc5b9d5a5c324e4e4d782221a2d12f586fcfc4"
+    },
+    {
+      "name": "games/candy-trials/assets/art/button-primary.png",
+      "bytes": 225627,
+      "sha256": "c62a06a7c6c41da30c819c3e661413aeb8ce310f3306113bc67f2059eea3d453"
+    },
+    {
+      "name": "games/candy-trials/assets/art/candy-blue.png",
+      "bytes": 52984,
+      "sha256": "b851579feb10a850e7c07accf3b1dc91cdfddaf0ecbc9e32baea234a075d57f8"
+    },
+    {
+      "name": "games/candy-trials/assets/art/candy-coral.png",
+      "bytes": 57176,
+      "sha256": "19bc12acd9d050f2c3f9fc78039407e4bf63f2893776c91b589d7a37ab96d09e"
+    },
+    {
+      "name": "games/candy-trials/assets/art/candy-gold.png",
+      "bytes": 53364,
+      "sha256": "d3274fa3f9507a82b089ffc556765ae3dcaa3f29722f7636ce80dded0eb23e95"
+    },
+    {
+      "name": "games/candy-trials/assets/art/candy-mint.png",
+      "bytes": 62161,
+      "sha256": "3112b8a1750aad24c7e6ec0bf427afe2bd5346cdc184bc2174a92dbad48bda27"
+    },
+    {
+      "name": "games/candy-trials/assets/art/manifest.json",
+      "bytes": 16341,
+      "sha256": "24601b06f8943e1f6dc81f191304444392326f88c2072455012617a77dff7c0a"
+    },
+    {
+      "name": "games/candy-trials/assets/art/panel-paper.png",
+      "bytes": 455449,
+      "sha256": "da8c12bad708d4a23baed6852870c9ce3c300250c68f852d6c5904c54dad4953"
+    },
+    {
+      "name": "games/candy-trials/assets/art/socket-blue.png",
+      "bytes": 95041,
+      "sha256": "897e8166298144ccda0ea6560470ed6e863386845f108c568be888b5f242cf42"
+    },
+    {
+      "name": "games/candy-trials/assets/art/socket-coral.png",
+      "bytes": 93631,
+      "sha256": "f0fb4017e79ee8e4acc658a44f4095ac49ca4d3d95e9778230507e56bb80fdc3"
+    },
+    {
+      "name": "games/candy-trials/assets/art/socket-gold.png",
+      "bytes": 92096,
+      "sha256": "d03285311786a86521774fea26712e50156e9272fa57d8eaf13e7022f6f32710"
+    },
+    {
+      "name": "games/candy-trials/assets/art/socket-mint.png",
+      "bytes": 93992,
+      "sha256": "dcaa000c196cca067608831590b29676125ff903b8f41cdd14417041860fd089"
+    },
+    {
+      "name": "games/candy-trials/assets/art/source/paper-ui-atlas.png",
+      "bytes": 1784506,
+      "sha256": "a92a4ebb8f90e624ce6669aadceb1ba969fb59fa17cca41c24d3bbcc653bac31"
+    },
+    {
+      "name": "games/candy-trials/assets/art/source/topdown-candy-socket-atlas.png",
+      "bytes": 1900624,
+      "sha256": "e4b2b6f5917264e30c43c57eecf79a230b6223a4e371004f3c018af259c66293"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/ATTRIBUTION.txt",
+      "bytes": 707,
+      "sha256": "b3ac3cd51acf859a2b1e8aa943e6d2532694e8afc6c95c7b24a98d14ac589ba1"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/LICENSE-CC-BY-3.0.txt",
+      "bytes": 19467,
+      "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/LICENSE-kenney-impact-sounds.txt",
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/LICENSE-kenney-interface-sounds.txt",
+      "bytes": 574,
+      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/LICENSE-kenney-music-jingles.txt",
+      "bytes": 482,
+      "sha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/blocked.wav",
+      "bytes": 18160,
+      "sha256": "ab4309762c11ef3e94ad2ef194608e387a0fad7be1d3059c24e92499526de6ea"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/box.wav",
+      "bytes": 46896,
+      "sha256": "d8e50fb87d665aca89ce531557359086638e91e1822e622465b0cc6c80485a3e"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/confirm.wav",
+      "bytes": 25608,
+      "sha256": "5d56969f00811879c18b35c447872169601518555b16fc2c5cb31eb8819bd1c4"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/land.wav",
+      "bytes": 19416,
+      "sha256": "f834588049948a382c7098756cc44599318d127794801ccd0c29b24e84dfa7d8"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/manifest.json",
+      "bytes": 6383,
+      "sha256": "4cac9b3116bf5cf5f7c7afaeab3c4a607f40057d3e0270c8b815fe010c2ecd6a"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/move.wav",
+      "bytes": 18112,
+      "sha256": "9d45ad3fa23add4a93c899b49b33278a808cec940b7bb3e0c679d2454fb72e9c"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/music.mp3",
+      "bytes": 2532513,
+      "sha256": "5b916bdf95661a45782f97009db6ef1dd1864522f3d3db79503d005524ac5730"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/pack.wav",
+      "bytes": 13078,
+      "sha256": "e288384faba621a69db98f407fdd699b9258d82d1d5305696bf622d65f166f40"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/soft.wav",
+      "bytes": 20860,
+      "sha256": "fea74f70fa9965845e79cd4ed22755b18053d49ec6953f77c9c5b93e4b054424"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/tap.wav",
+      "bytes": 928,
+      "sha256": "92eeb83a79b700372922f277647db78b744884c8b246dca5c673c5b4087095a3"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/undo.wav",
+      "bytes": 5678,
+      "sha256": "c5c97e52b5edea971cb7907ec29a8d6cbee0767a0c4369ada68ffb3cd33bf1ae"
+    },
+    {
+      "name": "games/candy-trials/assets/audio/win.wav",
+      "bytes": 140672,
+      "sha256": "53ef34e62dc00df6d02f61f9bffb13bdcbbb7853ad6188c7b286385c05803689"
+    },
+    {
+      "name": "games/candy-trials/assets/hero.webp",
+      "bytes": 1397014,
+      "sha256": "c88aa9c2745cc37bf49dad5bfe96231c2d936527ef1f062be7024849f40e3e09"
+    },
+    {
+      "name": "games/candy-trials/assets/noto-sans-sc.woff2",
+      "bytes": 145336,
+      "sha256": "dd7e2f00d6d0a82541105fda5cb113f7b460d6a83091a060dce3c8381b8abce8"
+    },
+    {
+      "name": "games/candy-trials/audio.mjs",
+      "bytes": 9746,
+      "sha256": "16ae43eef6dc5314240dd827e644d4da4c03e4c0d6b1f66825c8fb4a8eb468d7"
+    },
+    {
+      "name": "games/candy-trials/engine.mjs",
+      "bytes": 8645,
+      "sha256": "d157b1dfaf8609d55706a8b5976ef31aba4dceec01c412951fa554c29790c9b5"
+    },
+    {
+      "name": "games/candy-trials/index.html",
+      "bytes": 655,
+      "sha256": "288fbc89c206ad803d3864f1bc498cc9c71115cf7060242800cf855e1769776c"
+    },
+    {
+      "name": "games/candy-trials/levels.mjs",
+      "bytes": 31901,
+      "sha256": "2dccf5ba1817c3dd3a8b9328795f838ae5461263881fabf6adc0bb0e63a353f6"
+    },
+    {
+      "name": "games/candy-trials/licenses/NotoSansSC-OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "name": "games/candy-trials/storage.mjs",
+      "bytes": 1658,
+      "sha256": "c452d49f3684885d71f55c0b208ecb6db75a13142752deda6ee59024c984b0de"
+    },
+    {
+      "name": "games/candy-trials/style.css",
+      "bytes": 11114,
+      "sha256": "02343e655e905b6ffaa8de469b94bdf876952eaa749d630464f3f3a35c558f8e"
+    },
+    {
+      "name": "games/color.js",
+      "bytes": 12662,
+      "sha256": "5c61dc1d1b339109ea0c27c07235ae624aaca9f3b36eaae3031a06d791e1b9e0"
+    },
+    {
+      "name": "games/fitclear.js",
+      "bytes": 14480,
+      "sha256": "1d0c5af8b616baa29202c7eb756ac5a2512fff40aa3bc62303ad062d587b9058"
+    },
+    {
+      "name": "games/fitlock.js",
+      "bytes": 14476,
+      "sha256": "fb85d8fc72d7e5542cdde82ce84093f35de0a961ee4d5b3d25b696681ab6f8b2"
+    },
+    {
+      "name": "games/lineclear.js",
+      "bytes": 12671,
+      "sha256": "bac1643124051cad7bcce9b63da8966570e76450368067f5d4d1b9ec2619cb5d"
+    },
+    {
+      "name": "games/merge.js",
+      "bytes": 8669,
+      "sha256": "9271e0a4412e476f92ffda9e313a4536b16d1724a0e650ecd2493c18aeb189e6"
+    },
+    {
+      "name": "games/pairclear.js",
+      "bytes": 10050,
+      "sha256": "fdeced688c0ac950041199ede0cccd734f4c837ab080c9c5aef45205a3d73e53"
+    },
+    {
+      "name": "games/parts.html",
+      "bytes": 138857,
+      "sha256": "d1a86d15e4cceaeac2a43df4c2afe98d9fa70d0897cf252049a0c09d0fe81fe4"
+    },
+    {
+      "name": "games/partsclear.js",
+      "bytes": 217822,
+      "sha256": "faa8b78897bced49ed54e1bc020b87d3d9b75780fbe06dbfb0d443fbca7e6b3d"
+    },
+    {
+      "name": "games/partsfusion.js",
+      "bytes": 12474,
+      "sha256": "0becd4f7f9fd6d89e935662f3e9a31cc1c2c5a0f88a7a8c1bd0334d5917e1693"
+    },
+    {
+      "name": "games/partsmerge.js",
+      "bytes": 11596,
+      "sha256": "7567f62db3adb39c0677010f5bb2a7e6cb45d55e32d1391b80a7d6a0c6f3651d"
+    },
+    {
+      "name": "games/push.js",
+      "bytes": 11190,
+      "sha256": "1ffb1240632df109ef7343dc965583102127cc9337b610d1709212154c3f5942"
+    },
+    {
+      "name": "games/round1.html",
+      "bytes": 39357,
+      "sha256": "49f1679134d698f7dc06701cf35686aee04857d9a3a3053787fc4c205729052e"
+    },
+    {
+      "name": "games/round2.html",
+      "bytes": 139499,
+      "sha256": "c50734bbc495b14107f064d1da1e5a1a1b32ef138ec3468f5bf5101c3e681b80"
+    },
+    {
+      "name": "games/round3.html",
+      "bytes": 46164,
+      "sha256": "f3871bf36afc30a1fd00d67ffe018017d2f535b634f657bd01e5f5a08a4c4073"
+    },
+    {
+      "name": "index.html",
+      "bytes": 10859,
+      "sha256": "288aff5cb259f4f94d280bfe4f5b559e34c2ba0b78f7d460b60aed63663e9a00"
+    },
+    {
+      "name": "play.css",
+      "bytes": 3735,
+      "sha256": "73b02844874dc11202ffe45045286489ac9826bf97ac6b7727db57eebbd21467"
+    },
+    {
+      "name": "play.html",
+      "bytes": 1492,
+      "sha256": "ba5d5148c644d5348672dd7c19fba3649ed5284ac6ae80ae17d2d8c7b48b5614"
+    },
+    {
+      "name": "player.js",
+      "bytes": 7952,
+      "sha256": "06d826649ece151a7bafb581c912ea4e3dfe5516aa305106e8c11fc6f5654743"
+    }
+  ],
+  "legacy": [
+    {
+      "source": "parts-lab/拆东补西120关.html",
+      "published": "games/parts.html",
+      "sha256": "d1a86d15e4cceaeac2a43df4c2afe98d9fa70d0897cf252049a0c09d0fe81fe4",
+      "unchanged": true
+    },
+    {
+      "source": "prototype-lab/试玩合集.html",
+      "published": "games/round1.html",
+      "sha256": "49f1679134d698f7dc06701cf35686aee04857d9a3a3053787fc4c205729052e",
+      "unchanged": true
+    },
+    {
+      "source": "single-action-lab/单操作试玩02.html",
+      "published": "games/round2.html",
+      "sha256": "c50734bbc495b14107f064d1da1e5a1a1b32ef138ec3468f5bf5101c3e681b80",
+      "unchanged": true
+    },
+    {
+      "source": "lottery-lab/抽签试玩03.html",
+      "published": "games/round3.html",
+      "sha256": "f3871bf36afc30a1fd00d67ffe018017d2f535b634f657bd01e5f5a08a4c4073",
+      "unchanged": true
+    }
+  ]
+}
