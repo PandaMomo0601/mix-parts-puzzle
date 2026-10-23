@@ -1,0 +1,455 @@
+{
+  "version": "typewriter-art-0.1",
+  "createdAt": "2026-10-23",
+  "status": "integrated-for-playable-trial; internal-runtime-composition-review-passed; owner-acceptance-pending",
+  "figmaFileKey": "AcluGjqwpP0OsFcpwQwG8J",
+  "figmaPageId": "189:1747",
+  "pipeline": "Generate transparent original -> full original upload to existing Figma -> native clipping components -> PNG exports -> runtime. Bitmap placement, stretch, reflection and clipping only; no procedural replacement artwork.",
+  "sources": [
+    {
+      "resourceId": "RES-TYPEWRITER-COVER-01",
+      "nodeId": "190:89",
+      "imageHash": "80f8027ea3050805c1c379002e680d66425fa052",
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "version": "0.1",
+      "promptBrief": "Opaque mint slide-cover with ivory and gold housing, a dark dispensing recess, true transparent outer silhouette; hides future sugar blocks. No embedded candy or text.",
+      "remoteOriginalRoundtripMatched": true,
+      "file": "source/queue-cover-original-v0.1.png",
+      "bytes": 1223372,
+      "sha256": "d4132e54e33ea5fd834aa671834b0fef7b98e6e663bfe3c05074b0702b4833a2",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:89",
+      "imageHash": "d2ea377e1645103cab13f099df45e7e83bf5f2c3",
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "version": "0.1",
+      "promptBrief": "Orthographic transparent candy factory machine atlas: square sugar-block receiving cavity, horizontal and vertical pipes, elbow, single nozzle and joint. Ivory enamel, mint and subtle gold, matched upper-left lighting; no pot, text or scene.",
+      "remoteOriginalRoundtripMatched": true,
+      "file": "source/fixed-slot-pipe-atlas-v0.1.png",
+      "bytes": 1565668,
+      "sha256": "74493298916e99a308a1a18f1a90819f04a697433cddb162f1f17965df22c279",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "resourceId": "RES-TYPEWRITER-QUEUE-COVER",
+      "sourceResourceId": "RES-TYPEWRITER-COVER-01",
+      "nodeId": "191:89",
+      "sourceCropXYWH": [
+        192,
+        40,
+        640,
+        1460
+      ],
+      "runtimeDrawn": true,
+      "runtimePreloaded": true,
+      "file": "queue-cover.png",
+      "bytes": 690077,
+      "sha256": "d43c4032bb779ef66194e73241cd82631c087b920cb8bf3bb521daf35786916b",
+      "dimensions": [
+        640,
+        1460
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-SLOT",
+      "sourceResourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:5064",
+      "sourceCropXYWH": [
+        88,
+        80,
+        344,
+        400
+      ],
+      "runtimeDrawn": true,
+      "runtimePreloaded": true,
+      "file": "slot.png",
+      "bytes": 147285,
+      "sha256": "1dade529220f238001bb4d89cf13d0f3594a4d4ea0ca448582abd2c8d55c807f",
+      "dimensions": [
+        344,
+        400
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-PIPE-H",
+      "sourceResourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:5066",
+      "sourceCropXYWH": [
+        528,
+        184,
+        512,
+        160
+      ],
+      "runtimeDrawn": false,
+      "runtimePreloaded": true,
+      "file": "pipe-h.png",
+      "bytes": 86734,
+      "sha256": "9762e3047747e411b239beb8ffa3b0bd61aed5ccb9cec18a51d012e14b60117d",
+      "dimensions": [
+        512,
+        160
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-PIPE-V",
+      "sourceResourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:5068",
+      "sourceCropXYWH": [
+        1232,
+        24,
+        160,
+        448
+      ],
+      "runtimeDrawn": false,
+      "runtimePreloaded": true,
+      "file": "pipe-v.png",
+      "bytes": 64915,
+      "sha256": "af059d24b97f3f963861b2dea22ed476da6b426abb93e5c684be60cb5f6d1659",
+      "dimensions": [
+        160,
+        448
+      ],
+      "alphaExtrema": [
+        0,
+        253
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-ELBOW",
+      "sourceResourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:5070",
+      "sourceCropXYWH": [
+        80,
+        576,
+        400,
+        384
+      ],
+      "runtimeDrawn": true,
+      "runtimePreloaded": true,
+      "file": "elbow.png",
+      "bytes": 127712,
+      "sha256": "0b42a12e6f08fa6d1c3e6b155d28a28684fbea6aa2ca684f4c8903e2c706c40c",
+      "dimensions": [
+        400,
+        384
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-NOZZLE",
+      "sourceResourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:5072",
+      "sourceCropXYWH": [
+        696,
+        520,
+        200,
+        436
+      ],
+      "runtimeDrawn": true,
+      "runtimePreloaded": true,
+      "file": "nozzle.png",
+      "bytes": 104189,
+      "sha256": "6c68e762201354cb034ba4d58c9e8eb24b59d5b6fcc055c125b3bcaad0dfd8a4",
+      "dimensions": [
+        200,
+        436
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-JOINT",
+      "sourceResourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:5074",
+      "sourceCropXYWH": [
+        1160,
+        640,
+        248,
+        248
+      ],
+      "runtimeDrawn": true,
+      "runtimePreloaded": true,
+      "file": "joint.png",
+      "bytes": 80082,
+      "sha256": "a359ecdd71488bf94ae2d918764ec610e887340b418a71ca792a74a1c94eb142",
+      "dimensions": [
+        248,
+        248
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-PIPE-H-TILE",
+      "sourceResourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:5076",
+      "sourceCropXYWH": [
+        640,
+        210,
+        192,
+        106
+      ],
+      "runtimeDrawn": true,
+      "runtimePreloaded": true,
+      "file": "pipe-h-tile.png",
+      "bytes": 21619,
+      "sha256": "5a315c0d9f788ccdf8125ef01007635ab9ce8bfea4999f376d59d159956f24c6",
+      "dimensions": [
+        192,
+        106
+      ],
+      "alphaExtrema": [
+        208,
+        254
+      ]
+    },
+    {
+      "resourceId": "RES-TYPEWRITER-PIPE-V-TILE",
+      "sourceResourceId": "RES-TYPEWRITER-MACHINE-01",
+      "nodeId": "192:5078",
+      "sourceCropXYWH": [
+        1268,
+        128,
+        80,
+        192
+      ],
+      "runtimeDrawn": true,
+      "runtimePreloaded": true,
+      "file": "pipe-v-tile.png",
+      "bytes": 15320,
+      "sha256": "e86d4a20f7cad107b38614ad0a4ccdb188aa04e8a401305479566d66eeaa8aa0",
+      "dimensions": [
+        80,
+        192
+      ],
+      "alphaExtrema": [
+        63,
+        253
+      ]
+    }
+  ],
+  "counts": {
+    "newOriginals": 2,
+    "newDeliveredPNGs": 9,
+    "newPreloadedPNGs": 9,
+    "newActuallyDrawnPNGs": 7,
+    "sharedDrawnPNGs": 13
+  },
+  "reuse": {
+    "artManifest": "../art/manifest.json",
+    "assets": [
+      {
+        "resourceId": "RES-TRIAL-CANDY-CORAL",
+        "nodeId": "151:90",
+        "file": "../art/candy-coral.png",
+        "sha256": "19bc12acd9d050f2c3f9fc78039407e4bf63f2893776c91b589d7a37ab96d09e"
+      },
+      {
+        "resourceId": "RES-TRIAL-SOCKET-CORAL",
+        "nodeId": "151:92",
+        "file": "../art/socket-coral.png",
+        "sha256": "f0fb4017e79ee8e4acc658a44f4095ac49ca4d3d95e9778230507e56bb80fdc3"
+      },
+      {
+        "resourceId": "RES-TRIAL-CANDY-GOLD",
+        "nodeId": "151:94",
+        "file": "../art/candy-gold.png",
+        "sha256": "d3274fa3f9507a82b089ffc556765ae3dcaa3f29722f7636ce80dded0eb23e95"
+      },
+      {
+        "resourceId": "RES-TRIAL-SOCKET-GOLD",
+        "nodeId": "151:96",
+        "file": "../art/socket-gold.png",
+        "sha256": "d03285311786a86521774fea26712e50156e9272fa57d8eaf13e7022f6f32710"
+      },
+      {
+        "resourceId": "RES-TRIAL-CANDY-MINT",
+        "nodeId": "151:98",
+        "file": "../art/candy-mint.png",
+        "sha256": "3112b8a1750aad24c7e6ec0bf427afe2bd5346cdc184bc2174a92dbad48bda27"
+      },
+      {
+        "resourceId": "RES-TRIAL-SOCKET-MINT",
+        "nodeId": "151:100",
+        "file": "../art/socket-mint.png",
+        "sha256": "dcaa000c196cca067608831590b29676125ff903b8f41cdd14417041860fd089"
+      },
+      {
+        "resourceId": "RES-TRIAL-CANDY-BLUE",
+        "nodeId": "151:102",
+        "file": "../art/candy-blue.png",
+        "sha256": "b851579feb10a850e7c07accf3b1dc91cdfddaf0ecbc9e32baea234a075d57f8"
+      },
+      {
+        "resourceId": "RES-TRIAL-SOCKET-BLUE",
+        "nodeId": "151:104",
+        "file": "../art/socket-blue.png",
+        "sha256": "897e8166298144ccda0ea6560470ed6e863386845f108c568be888b5f242cf42"
+      },
+      {
+        "resourceId": "RES-TRIAL-BOARD-FRAME",
+        "nodeId": "151:106",
+        "file": "../art/board-frame.png",
+        "sha256": "8b8a7c41bc06e9bd68e6836830df42efd5eb6d5981413d2b8b2d27cf8e5a369a"
+      },
+      {
+        "resourceId": "RES-TRIAL-PANEL-PAPER",
+        "nodeId": "151:108",
+        "file": "../art/panel-paper.png",
+        "sha256": "da8c12bad708d4a23baed6852870c9ce3c300250c68f852d6c5904c54dad4953"
+      },
+      {
+        "resourceId": "RES-TRIAL-BUTTON-PRIMARY",
+        "nodeId": "151:110",
+        "file": "../art/button-primary.png",
+        "sha256": "c62a06a7c6c41da30c819c3e661413aeb8ce310f3306113bc67f2059eea3d453"
+      },
+      {
+        "resourceId": "RES-TRIAL-BUTTON-PAPER",
+        "nodeId": "151:112",
+        "file": "../art/button-paper.png",
+        "sha256": "830348bcf40eadb5dc61589b25fc5b9d5a5c324e4e4d782221a2d12f586fcfc4"
+      },
+      {
+        "resourceId": "RES-WORKSHOP-MACHINE-01/belt-tile",
+        "nodeId": "176:91",
+        "sourceNodeId": "175:90",
+        "file": "../art-machine/belt-tile.png",
+        "sha256": "e01c733fa813e5d5ec7041f84e18a9afe2db8846a052e3abef26f15aa0670473"
+      }
+    ],
+    "audioManifest": "../audio/manifest.json",
+    "audioPlayback": "../audio/playback-typewriter.json",
+    "music": {
+      "resourceId": "RES-PACK-V2-AUDIO-01",
+      "nodeId": "114:209"
+    },
+    "effects": {
+      "resourceId": "RES-PACK-V2-AUDIO-02",
+      "nodeId": "114:220"
+    },
+    "originalAudioBytesChanged": false
+  },
+  "design": {
+    "status": "editable-compositions-created; internal-visual-review-passed; owner-acceptance-pending",
+    "pageId": "189:1747",
+    "screens": {
+      "home": "195:16444",
+      "play": "195:15882",
+      "collection": "195:17523",
+      "completion": "195:21970",
+      "blocked": "195:22257"
+    },
+    "machineComposite": "195:15678",
+    "spec": "195:22486",
+    "prototype": "Navigation destinations structurally assigned; interactive Figma click-through not yet verified. Runtime animation is not represented by static frames.",
+    "resumeState": "200:8878",
+    "evidenceArea": "200:8893",
+    "visualReview": "Home, play, collection, completion and blocked compositions reviewed; fixed atlas sampling on stretched bitmap instances and multiline text height. Resume variant and distinct real screenshot evidence area reviewed. Runtime resources unchanged."
+  },
+  "qa": {
+    "internalCompositionReview": "passed: source cavity/candy alignment, independent connected pipes, elbows and sliding nozzles at empty/active/concurrent poses in real browser",
+    "applicationEvidence": [
+      {
+        "file": "output/playwright/art-pipes-active-2.png",
+        "sha256": "d463261ca3edd68b03444c832a62dfb575eb2f1f9428696b44a53afe2e31caa8",
+        "dimensions": [
+          780,
+          1688
+        ],
+        "kind": "real-browser-screenshot; not editable design source"
+      },
+      {
+        "file": "output/playwright/art-pipes-parallel-2.png",
+        "sha256": "bf54432d486b1f4508ac3f0faafaa8f2276a46ce0131c254ba9f6cae78d5c15d",
+        "dimensions": [
+          780,
+          1688
+        ],
+        "kind": "real-browser-screenshot; not editable design source"
+      },
+      {
+        "file": "output/playwright/collection.png",
+        "sha256": "455fcd0f6bb483f76583861e3cdfcb0b8defbda686155ac0c970dd9bb2106f30",
+        "dimensions": [
+          390,
+          1206
+        ],
+        "kind": "real-browser-screenshot; not editable design source",
+        "figmaNodeId": "199:13840"
+      },
+      {
+        "file": "output/playwright/06-collected.png",
+        "sha256": "bb7346d5a320409bddf644506e5cec9a2d4fa20235263d9ab66bf966ee0b6494",
+        "dimensions": [
+          390,
+          844
+        ],
+        "kind": "real-browser-screenshot; not editable design source",
+        "figmaNodeId": "199:8865"
+      },
+      {
+        "file": "output/playwright/layout-320.png",
+        "sha256": "e5fc6fcbdfcfbcd4483c1ff210fc91c8879db6ae0d5c8d208680aa012abe7ce1",
+        "dimensions": [
+          320,
+          603
+        ],
+        "kind": "real-browser-screenshot; not editable design source",
+        "figmaNodeId": "199:13841"
+      },
+      {
+        "file": "output/playwright/02-concurrent.png",
+        "sha256": "5a5e85a5ec776aedcac86cb8c2543347ce9197aab1401749c8a30331219ca036",
+        "dimensions": [
+          390,
+          844
+        ],
+        "kind": "real-browser-screenshot; not editable design source",
+        "figmaNodeId": "199:13842"
+      }
+    ],
+    "browserErrors": [],
+    "ownerAcceptance": "pending",
+    "wechatDeviceAcceptance": "not performed",
+    "note": "Root independently reviewed art-pipes-active-2.png. These screenshots cover visible regions and internal visual review only. Eight-level gameplay/audio/lifecycle results are owned by root QA."
+  },
+  "frozen": "2026-10-23; all referenced original and export bytes fixed; no further artwork or runtime edits planned"
+}

@@ -1,0 +1,500 @@
+{
+  "version": "0.1",
+  "createdAt": "2026-10-23",
+  "figmaFileKey": "AcluGjqwpP0OsFcpwQwG8J",
+  "figmaPageId": "148:89",
+  "exportContainerId": "151:89",
+  "combinationReviewNodeId": "153:89",
+  "pipeline": "Imagegen originals -> complete raw PNG upload to Figma -> native Figma clipping crops/export -> engine assets. No raster redraw by code.",
+  "sources": [
+    {
+      "resourceId": "RES-TRIAL-ART-01",
+      "file": "source/topdown-candy-socket-atlas.png",
+      "nodeId": "149:89",
+      "imageHash": "99d47452e2d68ecc6e109352ddce3083b505295b",
+      "promptBrief": "Production transparent sprite atlas, orthographic directly overhead. Four rounded square fruit candy drops in coral, lemon gold, mint apple green, blueberry cyan. Four matching shallow cream paper sockets. Same perspective, light and geometry; candy centered in cavity without border overlap.",
+      "sha256": "e4b2b6f5917264e30c43c57eecf79a230b6223a4e371004f3c018af259c66293",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "version": "0.1",
+      "status": "selected-for-playable-trial; owner-acceptance-pending",
+      "prompt": "Use case: stylized-concept. Create a production 2D MOBILE CANDY PUZZLE SPRITE ATLAS on genuine transparent alpha. One landscape sheet, intended 1536 x 1024, exact regular layout: FOUR equal columns and TWO equal rows, each cell 384 x 512. Every sprite is isolated with generous transparent padding, centered in its cell. No text, labels, numbers, arrows, letters, logos, floor, perspective background, or decorative scattered items. Orthographic DIRECTLY OVERHEAD camera, zero isometric perspective, all squares perfectly parallel to image edges, same light from upper left. Top row: four single glossy soft hard-candy rounded-square gems (not cubes), in order coral strawberry red, warm lemon gold yellow, mint apple green, blueberry cyan blue. Each candy should occupy about 270 x 270 px within the 384-wide cell; surface gently domed, refined translucent sugar material, soft edge highlights, tiny internal facets, commercially polished friendly casual game look, like appetizing glassy fruit drops. No faces, no symbols. Bottom row: exactly four EMPTY square candy sockets in matching colors under their candy column, all same geometry, each around 330 x 330 px. These are shallow press-moulded cream paper trays with a narrow matte cream rim and a colored soft interior, overhead square shape, interior cavity around 280 x 280 px sized to fit the candy from directly above. Rims shallow and thin, no tall front wall, no visible sides, no skew, no separate lid, no contents. Shadows contained in the sprite footprint; no heavy dark borders. It must be possible to place the matching top-row candy centered over the corresponding bottom-row socket without any perspective or scale mismatch. Candy diameter 270, cavity diameter280, tray outer330. Top row centers y256; bottom row centers y768. Column centers x192,576,960,1344. Consistent sizes across all colors. Clean alpha outside each sprite."
+    },
+    {
+      "resourceId": "RES-TRIAL-UI-01",
+      "file": "source/paper-ui-atlas.png",
+      "nodeId": "149:90",
+      "imageHash": "9c89694c4cfba11782644c388d7dd2a070192610",
+      "promptBrief": "Production transparent hand-painted game UI atlas, directly overhead cream paper square gift box, cream stationery panel, mint primary button and cream secondary button, subtle gold edge. No text, no icons, quiet centers and stretchable plain edges.",
+      "sha256": "a92a4ebb8f90e624ce6669aadceb1ba969fb59fa17cca41c24d3bbcc653bac31",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "version": "0.1",
+      "status": "selected-for-playable-trial; owner-acceptance-pending",
+      "prompt": "Use case: ui-mockup. A professional hand-painted illustrated mobile CANDY FACTORY GAME UI ASSET SHEET, genuine transparent background, no text, no symbols, no letters, no numbers, no icons, no candy, no characters. All elements viewed perfectly straight-on/directly overhead, not tilted or isometric. Consistent warm cream paper, soft mint green, subtle golden embossing, polished tactile casual puzzle-game quality. Landscape canvas 1536 x 1024. Four separate UI assets in exact 2x2 grid, center at (384,256),(1152,256),(384,768),(1152,768), generous transparent gaps, each fully visible. TOP LEFT: empty square cream paper gift-box board, rounded corners, thick layered paper lip about 35 px, inside a calm light vanilla matte parchment plane, straight overhead square, outer dimensions about420x420. Subtle fold seams only near corners, no grid or objects. This should be stretchable using nine-slice with plain long edges and a quiet empty center. TOP RIGHT: empty rectangular cream stationery panel about640x390, soft rolled paper border 24px and delicate warm golden inner trim, matte smooth center for game copy. BOTTOM LEFT: a long rounded rectangular MINT GREEN PRIMARY BUTTON plate about600x180, handcrafted glazed thick mint enamel top, small cream rim, soft gold base lip and contained contact shadow, blank center. No decorative candies. BOTTOM RIGHT: matching long CREAM SECONDARY BUTTON plate about600x180, warm cream glazed top, golden base lip and contained contact shadow, blank center. All outlines clean, material-rich but restrained highlights, readable quiet centers, isolated on true alpha. The square box has only a very shallow lip; no visible front wall, perspective convergence, tilted horizon or extraneous ribbons. Smooth clean sprite silhouettes with no textures in transparent padding. These are finished raster game assets, not a webpage mockup."
+    }
+  ],
+  "assets": [
+    {
+      "file": "candy-coral.png",
+      "resourceId": "RES-TRIAL-CANDY-CORAL",
+      "sourceResourceId": "RES-TRIAL-ART-01",
+      "nodeId": "151:90",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        57,
+        125,
+        355,
+        420
+      ],
+      "fitWithinPixels": [
+        176,
+        176
+      ],
+      "visibleAlpha32Bounds": [
+        40,
+        41,
+        216,
+        215
+      ],
+      "sha256": "19bc12acd9d050f2c3f9fc78039407e4bf63f2893776c91b589d7a37ab96d09e"
+    },
+    {
+      "file": "socket-coral.png",
+      "resourceId": "RES-TRIAL-SOCKET-CORAL",
+      "sourceResourceId": "RES-TRIAL-ART-01",
+      "nodeId": "151:92",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        39,
+        536,
+        375,
+        865
+      ],
+      "fitWithinPixels": [
+        240,
+        240
+      ],
+      "visibleAlpha32Bounds": [
+        8,
+        10,
+        248,
+        245
+      ],
+      "sha256": "f0fb4017e79ee8e4acc658a44f4095ac49ca4d3d95e9778230507e56bb80fdc3"
+    },
+    {
+      "file": "candy-gold.png",
+      "resourceId": "RES-TRIAL-CANDY-GOLD",
+      "sourceResourceId": "RES-TRIAL-ART-01",
+      "nodeId": "151:94",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        432,
+        125,
+        729,
+        420
+      ],
+      "fitWithinPixels": [
+        176,
+        176
+      ],
+      "visibleAlpha32Bounds": [
+        40,
+        41,
+        216,
+        216
+      ],
+      "sha256": "d3274fa3f9507a82b089ffc556765ae3dcaa3f29722f7636ce80dded0eb23e95"
+    },
+    {
+      "file": "socket-gold.png",
+      "resourceId": "RES-TRIAL-SOCKET-GOLD",
+      "sourceResourceId": "RES-TRIAL-ART-01",
+      "nodeId": "151:96",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        414,
+        536,
+        750,
+        865
+      ],
+      "fitWithinPixels": [
+        240,
+        240
+      ],
+      "visibleAlpha32Bounds": [
+        8,
+        10,
+        248,
+        245
+      ],
+      "sha256": "d03285311786a86521774fea26712e50156e9272fa57d8eaf13e7022f6f32710"
+    },
+    {
+      "file": "candy-mint.png",
+      "resourceId": "RES-TRIAL-CANDY-MINT",
+      "sourceResourceId": "RES-TRIAL-ART-01",
+      "nodeId": "151:98",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        808,
+        125,
+        1107,
+        420
+      ],
+      "fitWithinPixels": [
+        176,
+        176
+      ],
+      "visibleAlpha32Bounds": [
+        40,
+        41,
+        216,
+        215
+      ],
+      "sha256": "3112b8a1750aad24c7e6ec0bf427afe2bd5346cdc184bc2174a92dbad48bda27"
+    },
+    {
+      "file": "socket-mint.png",
+      "resourceId": "RES-TRIAL-SOCKET-MINT",
+      "sourceResourceId": "RES-TRIAL-ART-01",
+      "nodeId": "151:100",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        789,
+        536,
+        1125,
+        865
+      ],
+      "fitWithinPixels": [
+        240,
+        240
+      ],
+      "visibleAlpha32Bounds": [
+        8,
+        10,
+        248,
+        245
+      ],
+      "sha256": "dcaa000c196cca067608831590b29676125ff903b8f41cdd14417041860fd089"
+    },
+    {
+      "file": "candy-blue.png",
+      "resourceId": "RES-TRIAL-CANDY-BLUE",
+      "sourceResourceId": "RES-TRIAL-ART-01",
+      "nodeId": "151:102",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        1183,
+        125,
+        1481,
+        420
+      ],
+      "fitWithinPixels": [
+        176,
+        176
+      ],
+      "visibleAlpha32Bounds": [
+        40,
+        41,
+        216,
+        215
+      ],
+      "sha256": "b851579feb10a850e7c07accf3b1dc91cdfddaf0ecbc9e32baea234a075d57f8"
+    },
+    {
+      "file": "socket-blue.png",
+      "resourceId": "RES-TRIAL-SOCKET-BLUE",
+      "sourceResourceId": "RES-TRIAL-ART-01",
+      "nodeId": "151:104",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        1163,
+        536,
+        1500,
+        865
+      ],
+      "fitWithinPixels": [
+        240,
+        240
+      ],
+      "visibleAlpha32Bounds": [
+        8,
+        10,
+        248,
+        245
+      ],
+      "sha256": "897e8166298144ccda0ea6560470ed6e863386845f108c568be888b5f242cf42"
+    },
+    {
+      "file": "board-frame.png",
+      "resourceId": "RES-TRIAL-BOARD-FRAME",
+      "sourceResourceId": "RES-TRIAL-UI-01",
+      "nodeId": "151:106",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        47,
+        58,
+        613,
+        613
+      ],
+      "fitWithinPixels": [
+        496,
+        496
+      ],
+      "visibleAlpha32Bounds": [
+        8,
+        13,
+        504,
+        499
+      ],
+      "sha256": "8b8a7c41bc06e9bd68e6836830df42efd5eb6d5981413d2b8b2d27cf8e5a369a"
+    },
+    {
+      "file": "panel-paper.png",
+      "resourceId": "RES-TRIAL-PANEL-PAPER",
+      "sourceResourceId": "RES-TRIAL-UI-01",
+      "nodeId": "151:108",
+      "dimensions": [
+        768,
+        480
+      ],
+      "sourceCrop": [
+        670,
+        83,
+        1492,
+        593
+      ],
+      "fitWithinPixels": [
+        752,
+        464
+      ],
+      "visibleAlpha32Bounds": [
+        10,
+        8,
+        758,
+        472
+      ],
+      "sha256": "da8c12bad708d4a23baed6852870c9ce3c300250c68f852d6c5904c54dad4953"
+    },
+    {
+      "file": "button-primary.png",
+      "resourceId": "RES-TRIAL-BUTTON-PRIMARY",
+      "sourceResourceId": "RES-TRIAL-UI-01",
+      "nodeId": "151:110",
+      "dimensions": [
+        768,
+        256
+      ],
+      "sourceCrop": [
+        30,
+        708,
+        748,
+        935
+      ],
+      "fitWithinPixels": [
+        736,
+        232
+      ],
+      "visibleAlpha32Bounds": [
+        17,
+        12,
+        751,
+        244
+      ],
+      "sha256": "c62a06a7c6c41da30c819c3e661413aeb8ce310f3306113bc67f2059eea3d453"
+    },
+    {
+      "file": "button-paper.png",
+      "resourceId": "RES-TRIAL-BUTTON-PAPER",
+      "sourceResourceId": "RES-TRIAL-UI-01",
+      "nodeId": "151:112",
+      "dimensions": [
+        768,
+        256
+      ],
+      "sourceCrop": [
+        784,
+        708,
+        1505,
+        935
+      ],
+      "fitWithinPixels": [
+        736,
+        232
+      ],
+      "visibleAlpha32Bounds": [
+        16,
+        12,
+        752,
+        244
+      ],
+      "sha256": "830348bcf40eadb5dc61589b25fc5b9d5a5c324e4e4d782221a2d12f586fcfc4"
+    },
+    {
+      "file": "barrier.png",
+      "resourceId": "RES-TRIAL-BARRIER",
+      "sourceResourceId": "RES-TRIAL-UI-01",
+      "nodeId": "151:114",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceCrop": [
+        47,
+        58,
+        613,
+        613
+      ],
+      "fitWithinPixels": [
+        224,
+        224
+      ],
+      "visibleAlpha32Bounds": [
+        16,
+        18,
+        240,
+        238
+      ],
+      "sha256": "e2f8d9f05cc405bb5fe2dc9b6283df447ad236a814d305c47ba0714617b65463"
+    }
+  ],
+  "usage": {
+    "candySocketOverlay": "Both PNGs are 256x256. Render at identical width/height and position. Candy body is 176px wide, socket 240px wide, cavity approximately 190px. Do not scale candy independently.",
+    "boardNineSlice": {
+      "sourcePixels": [
+        512,
+        512
+      ],
+      "slice": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "recommendedRenderedBorderPixels": [
+        24,
+        28
+      ],
+      "contentMinimumInsetPixelsAt384": 45
+    },
+    "panelNineSlice": {
+      "sourcePixels": [
+        768,
+        480
+      ],
+      "slice": [
+        64,
+        64,
+        64,
+        64
+      ]
+    },
+    "buttons": "768x256 source. Prefer approximately 3:1 aspect ratio. For nine-slice try top/right/bottom/left 80/144/88/144 px and inspect labels visually.",
+    "barrier": "256x256 cream board miniature, derived from same registered UI source. Use same game cell canvas.",
+    "colors": [
+      "coral",
+      "gold",
+      "mint",
+      "blue"
+    ]
+  },
+  "qa": {
+    "resourceSelfReview": "passed",
+    "evidenceFigmaNodeId": "153:89",
+    "checks": [
+      "4 color empty and filled sockets viewed at 128px with identical-size overlay",
+      "3x3 and 5x5 full candy boxes viewed at 384px",
+      "All alpha>32 visible bounds inside canvas; no material edge clipping",
+      "All sprite crops preserve original aspect ratio; same orthographic overhead view"
+    ],
+    "ownerAcceptance": "pending",
+    "applicationIntegrationAcceptance": "resource visual self-review passed for visible regions of the four browser screenshots; user experience acceptance pending",
+    "applicationIntegrationEvidenceNodeId": "156:89",
+    "applicationIntegrationEvidence": [
+      {
+        "path": "qa/output/p2-collection-390.png",
+        "figmaNodeId": "156:93",
+        "dimensions": [
+          390,
+          844
+        ],
+        "sha256": "6dcf5ac909d0b8371417b19c00a0ec1fae54bda8b1431f2eb25b48ec6edeca63"
+      },
+      {
+        "path": "qa/output/p3-play-320.png",
+        "figmaNodeId": "156:94",
+        "dimensions": [
+          305,
+          705
+        ],
+        "sha256": "61462d826f87754534c50b5a9c3bdfa5cac93e355919acc6118c9845f23e532b"
+      },
+      {
+        "path": "qa/output/t3-play-430.png",
+        "figmaNodeId": "156:95",
+        "dimensions": [
+          415,
+          899
+        ],
+        "sha256": "ec5d6b90f417e600584514acddb0a2ccc8f9a62b2866e79da1103ba0f5eaa3c1"
+      },
+      {
+        "path": "qa/output/collection-12-430.png",
+        "figmaNodeId": "158:91",
+        "dimensions": [
+          415,
+          899
+        ],
+        "sha256": "b7ac0117742f160374f447553961a6fabd5e00ca394da47819ad8a9b2722d4f8"
+      }
+    ],
+    "applicationIntegrationNotes": [
+      "All visible candy/socket/box geometry retains the same overhead view and proportional fit.",
+      "No visible material border clipping, overlay mismatch, or inappropriate stretching in retained screenshots.",
+      "Earlier fullPage screenshots had capture cropping; only normal viewport replacement screenshots are retained as integration evidence.",
+      "Screenshots cover their visible regions only; scrolling offscreen regions is outside this resource screenshot review.",
+      "These are browser playable-trial checks, not WeChat device or final owner acceptance."
+    ]
+  },
+  "figmaRegistryCardId": "154:89",
+  "fontReuse": {
+    "family": "NotoSansSC",
+    "runtimePath": "assets/noto-sans-sc.woff2",
+    "provenance": "Existing registered font original and license reused; this trial regenerates only the runtime subset. No new source-font entry."
+  }
+}

@@ -1,11 +1,12 @@
 {
-  "version": "r14",
-  "games": 27,
+  "version": "r15",
+  "games": 28,
   "newGames": 1,
   "updatedGames": 0,
-  "newLevels": 24,
-  "candyDemoVersions": 5,
-  "candyDemoLevels": 183,
+  "newLevels": 8,
+  "candyDemoVersions": 6,
+  "candyDemoLevels": 191,
+  "candyTypewriterLevels": 8,
   "candyWorkshopModes": 3,
   "candyWorkshopLevels": 24,
   "boboFactoryLevels": 105,
@@ -22,8 +23,8 @@
     },
     {
       "name": "catalog.js",
-      "bytes": 5921,
-      "sha256": "3e536c3a3ad692b571f1b3a027ec5246be570ff47afc99c7c77ec5ba543a77d5"
+      "bytes": 6200,
+      "sha256": "5e531f4d6fdaf2e4d67283b28803b2803338e00b7a5ad70f0a4de5a1997c02f1"
     },
     {
       "name": "games/arithmetic.js",
@@ -736,6 +737,291 @@
       "sha256": "02343e655e905b6ffaa8de469b94bdf876952eaa749d630464f3f3a35c558f8e"
     },
     {
+      "name": "games/candy-typewriter/app.mjs",
+      "bytes": 16357,
+      "sha256": "5f47920919d96137fdb988912971a796bc2bc0dc21d1a713aec789396af5d972"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-machine/belt-tile.png",
+      "bytes": 21555,
+      "sha256": "e01c733fa813e5d5ec7041f84e18a9afe2db8846a052e3abef26f15aa0670473"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/elbow.png",
+      "bytes": 127712,
+      "sha256": "0b42a12e6f08fa6d1c3e6b155d28a28684fbea6aa2ca684f4c8903e2c706c40c"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/joint.png",
+      "bytes": 80082,
+      "sha256": "a359ecdd71488bf94ae2d918764ec610e887340b418a71ca792a74a1c94eb142"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/manifest.json",
+      "bytes": 13832,
+      "sha256": "dbc4d49f03f2c2bd1cd4020b31327bcfe8d39d3be54f7b882ea365766915a241"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/nozzle.png",
+      "bytes": 104189,
+      "sha256": "6c68e762201354cb034ba4d58c9e8eb24b59d5b6fcc055c125b3bcaad0dfd8a4"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/pipe-h-tile.png",
+      "bytes": 21619,
+      "sha256": "5a315c0d9f788ccdf8125ef01007635ab9ce8bfea4999f376d59d159956f24c6"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/pipe-h.png",
+      "bytes": 86734,
+      "sha256": "9762e3047747e411b239beb8ffa3b0bd61aed5ccb9cec18a51d012e14b60117d"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/pipe-v-tile.png",
+      "bytes": 15320,
+      "sha256": "e86d4a20f7cad107b38614ad0a4ccdb188aa04e8a401305479566d66eeaa8aa0"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/pipe-v.png",
+      "bytes": 64915,
+      "sha256": "af059d24b97f3f963861b2dea22ed476da6b426abb93e5c684be60cb5f6d1659"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/queue-cover.png",
+      "bytes": 690077,
+      "sha256": "d43c4032bb779ef66194e73241cd82631c087b920cb8bf3bb521daf35786916b"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/slot.png",
+      "bytes": 147285,
+      "sha256": "1dade529220f238001bb4d89cf13d0f3594a4d4ea0ca448582abd2c8d55c807f"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/source/fixed-slot-pipe-atlas-v0.1.png",
+      "bytes": 1565668,
+      "sha256": "74493298916e99a308a1a18f1a90819f04a697433cddb162f1f17965df22c279"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art-typewriter/source/queue-cover-original-v0.1.png",
+      "bytes": 1223372,
+      "sha256": "d4132e54e33ea5fd834aa671834b0fef7b98e6e663bfe3c05074b0702b4833a2"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/barrier.png",
+      "bytes": 71402,
+      "sha256": "e2f8d9f05cc405bb5fe2dc9b6283df447ad236a814d305c47ba0714617b65463"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/board-frame.png",
+      "bytes": 326387,
+      "sha256": "8b8a7c41bc06e9bd68e6836830df42efd5eb6d5981413d2b8b2d27cf8e5a369a"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/button-paper.png",
+      "bytes": 208193,
+      "sha256": "830348bcf40eadb5dc61589b25fc5b9d5a5c324e4e4d782221a2d12f586fcfc4"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/button-primary.png",
+      "bytes": 225627,
+      "sha256": "c62a06a7c6c41da30c819c3e661413aeb8ce310f3306113bc67f2059eea3d453"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/candy-blue.png",
+      "bytes": 52984,
+      "sha256": "b851579feb10a850e7c07accf3b1dc91cdfddaf0ecbc9e32baea234a075d57f8"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/candy-coral.png",
+      "bytes": 57176,
+      "sha256": "19bc12acd9d050f2c3f9fc78039407e4bf63f2893776c91b589d7a37ab96d09e"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/candy-gold.png",
+      "bytes": 53364,
+      "sha256": "d3274fa3f9507a82b089ffc556765ae3dcaa3f29722f7636ce80dded0eb23e95"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/candy-mint.png",
+      "bytes": 62161,
+      "sha256": "3112b8a1750aad24c7e6ec0bf427afe2bd5346cdc184bc2174a92dbad48bda27"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/manifest.json",
+      "bytes": 16341,
+      "sha256": "24601b06f8943e1f6dc81f191304444392326f88c2072455012617a77dff7c0a"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/panel-paper.png",
+      "bytes": 455449,
+      "sha256": "da8c12bad708d4a23baed6852870c9ce3c300250c68f852d6c5904c54dad4953"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/socket-blue.png",
+      "bytes": 95041,
+      "sha256": "897e8166298144ccda0ea6560470ed6e863386845f108c568be888b5f242cf42"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/socket-coral.png",
+      "bytes": 93631,
+      "sha256": "f0fb4017e79ee8e4acc658a44f4095ac49ca4d3d95e9778230507e56bb80fdc3"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/socket-gold.png",
+      "bytes": 92096,
+      "sha256": "d03285311786a86521774fea26712e50156e9272fa57d8eaf13e7022f6f32710"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/socket-mint.png",
+      "bytes": 93992,
+      "sha256": "dcaa000c196cca067608831590b29676125ff903b8f41cdd14417041860fd089"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/source/paper-ui-atlas.png",
+      "bytes": 1784506,
+      "sha256": "a92a4ebb8f90e624ce6669aadceb1ba969fb59fa17cca41c24d3bbcc653bac31"
+    },
+    {
+      "name": "games/candy-typewriter/assets/art/source/topdown-candy-socket-atlas.png",
+      "bytes": 1900624,
+      "sha256": "e4b2b6f5917264e30c43c57eecf79a230b6223a4e371004f3c018af259c66293"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/ATTRIBUTION.txt",
+      "bytes": 707,
+      "sha256": "b3ac3cd51acf859a2b1e8aa943e6d2532694e8afc6c95c7b24a98d14ac589ba1"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/LICENSE-CC-BY-3.0.txt",
+      "bytes": 19467,
+      "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/LICENSE-kenney-impact-sounds.txt",
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/LICENSE-kenney-interface-sounds.txt",
+      "bytes": 574,
+      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/LICENSE-kenney-music-jingles.txt",
+      "bytes": 482,
+      "sha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/blocked.wav",
+      "bytes": 18160,
+      "sha256": "ab4309762c11ef3e94ad2ef194608e387a0fad7be1d3059c24e92499526de6ea"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/box.wav",
+      "bytes": 46896,
+      "sha256": "d8e50fb87d665aca89ce531557359086638e91e1822e622465b0cc6c80485a3e"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/confirm.wav",
+      "bytes": 25608,
+      "sha256": "5d56969f00811879c18b35c447872169601518555b16fc2c5cb31eb8819bd1c4"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/land.wav",
+      "bytes": 19416,
+      "sha256": "f834588049948a382c7098756cc44599318d127794801ccd0c29b24e84dfa7d8"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/manifest.json",
+      "bytes": 6383,
+      "sha256": "4cac9b3116bf5cf5f7c7afaeab3c4a607f40057d3e0270c8b815fe010c2ecd6a"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/move.wav",
+      "bytes": 18112,
+      "sha256": "9d45ad3fa23add4a93c899b49b33278a808cec940b7bb3e0c679d2454fb72e9c"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/music.mp3",
+      "bytes": 2532513,
+      "sha256": "5b916bdf95661a45782f97009db6ef1dd1864522f3d3db79503d005524ac5730"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/pack.wav",
+      "bytes": 13078,
+      "sha256": "e288384faba621a69db98f407fdd699b9258d82d1d5305696bf622d65f166f40"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/playback-typewriter.json",
+      "bytes": 1032,
+      "sha256": "3014245c6dc083a3372291b1727562d46e059acac5ff3370620c48c82a0934d6"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/soft.wav",
+      "bytes": 20860,
+      "sha256": "fea74f70fa9965845e79cd4ed22755b18053d49ec6953f77c9c5b93e4b054424"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/tap.wav",
+      "bytes": 928,
+      "sha256": "92eeb83a79b700372922f277647db78b744884c8b246dca5c673c5b4087095a3"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/undo.wav",
+      "bytes": 5678,
+      "sha256": "c5c97e52b5edea971cb7907ec29a8d6cbee0767a0c4369ada68ffb3cd33bf1ae"
+    },
+    {
+      "name": "games/candy-typewriter/assets/audio/win.wav",
+      "bytes": 140672,
+      "sha256": "53ef34e62dc00df6d02f61f9bffb13bdcbbb7853ad6188c7b286385c05803689"
+    },
+    {
+      "name": "games/candy-typewriter/assets/noto-sans-sc.woff2",
+      "bytes": 145336,
+      "sha256": "dd7e2f00d6d0a82541105fda5cb113f7b460d6a83091a060dce3c8381b8abce8"
+    },
+    {
+      "name": "games/candy-typewriter/audio.mjs",
+      "bytes": 15404,
+      "sha256": "167e8330ce1e798ff0675647446c6ba55f5e0ffb9d94597be20babe83022150d"
+    },
+    {
+      "name": "games/candy-typewriter/engine.mjs",
+      "bytes": 12991,
+      "sha256": "87095db8c18aa7cd5a440136d5606f19c7ecbe3afcecbf19b4f03ed7c6e5fbe7"
+    },
+    {
+      "name": "games/candy-typewriter/index.html",
+      "bytes": 671,
+      "sha256": "c5f48dcc2fb8be00807d22c15fa5c6201028ffd99ed9ef03a767bbe79b008eab"
+    },
+    {
+      "name": "games/candy-typewriter/levels.mjs",
+      "bytes": 94455,
+      "sha256": "dd7f06f4e0b51d092a9a7887ef0c25135b47e50cfeb732a810cdc58d6e5ac6b7"
+    },
+    {
+      "name": "games/candy-typewriter/licenses/NotoSansSC-OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "name": "games/candy-typewriter/render.mjs",
+      "bytes": 5992,
+      "sha256": "0a6325c8d83c545481ccfd8f133eba8997931f9ab186d8e2c8ff31dc9b887d45"
+    },
+    {
+      "name": "games/candy-typewriter/storage.mjs",
+      "bytes": 3510,
+      "sha256": "35c96d11b4cba44920b7edc698138e583dcc2c79210784909b41f74a935fe257"
+    },
+    {
+      "name": "games/candy-typewriter/style.css",
+      "bytes": 13362,
+      "sha256": "dc53afa96d0da2be4b643ad6d489d72d1022f46cd77fb2901e820ef53ca538b1"
+    },
+    {
       "name": "games/candy-workshop/app.mjs",
       "bytes": 17251,
       "sha256": "3f43c4382546f708747414c4fd4d90b44d521eb1abd25563beb130885bb5c334"
@@ -1077,8 +1363,8 @@
     },
     {
       "name": "index.html",
-      "bytes": 12184,
-      "sha256": "0f54b7c77b41a925b0f919c035fe0a1ad2f80a3b977f24ab1b11fb4aca46ff7f"
+      "bytes": 12734,
+      "sha256": "8f70c8b94feab0bf4c00fc962a9721403cfcb90b446d224c5b50423e40362cdd"
     },
     {
       "name": "play.css",
@@ -1088,7 +1374,7 @@
     {
       "name": "play.html",
       "bytes": 1492,
-      "sha256": "997b94842d52f8a492e8a113a3fa2eee048333892056edfb31588b25360d15d9"
+      "sha256": "0a15c2eb52800847691d760fd0946ea2aaa8a4a609eb19de07361bd098fb405c"
     },
     {
       "name": "player.js",

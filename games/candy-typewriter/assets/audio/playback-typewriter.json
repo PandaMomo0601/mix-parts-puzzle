@@ -1,0 +1,34 @@
+{
+  "version": "typewriter-audio-1",
+  "sourceAssets": "manifest.json",
+  "sourceBytesChanged": false,
+  "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+  "musicResource": {
+    "id": "RES-PACK-V2-AUDIO-01",
+    "node": "114:209"
+  },
+  "effectsResource": {
+    "id": "RES-PACK-V2-AUDIO-02",
+    "node": "114:220"
+  },
+  "mix": {
+    "voices": 16,
+    "master": 0.8,
+    "effects": 0.3,
+    "effectWeight": 2,
+    "music": 0.26,
+    "duckDb": -3,
+    "duckAttack": 0.03,
+    "duckHold": 0.2,
+    "duckRelease": 0.35,
+    "voiceFade": 0.004,
+    "crossfade": 0.8
+  },
+  "events": {
+    "land": "One land event per actual landing; tap + quiet drop layers; colour pitch .97/.99/1.01/1.03; stereo pan +/- .25",
+    "row": "One row-return event per advanceStart; pack + wooden impact",
+    "music": "Original happy tune with continuous loop, 0.8s crossfade and -3dB ducking"
+  },
+  "verification": "qa/audio-evidence.json; generated QA recordings do not replace licensed original assets",
+  "subjectiveListening": "pending owner phone playtest"
+}
