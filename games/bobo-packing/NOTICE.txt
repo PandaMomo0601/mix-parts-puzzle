@@ -1,0 +1,19 @@
+BOBO PACKING CO. / 啵啵打包厂 — 1.0.2
+
+Original game code, mosaic illustrations, SVG icon, musical composition,
+synthesis and sound effects were created for this project. The cover artwork
+was generated for this project using OpenAI Image Generation.
+No competitor artwork, audio recordings or third-party samples are included.
+Offline typography bundles subsets of Noto Sans SC and Noto Sans Symbols 2.
+Copyright notices, SIL Open Font License 1.1 and fixed source provenance are
+in licenses/. No external font requests are made.
+
+Formal specification, provenance, resource originals, design source and QA:
+https://app.notion.com/p/4014af51282e8185979efd0f4b93d9fc
+Figma production page:
+https://www.figma.com/design/AcluGjqwpP0OsFcpwQwG8J?node-id=56-89
+
+Local runtime: Python 3 (standard library) or any static HTTP server.
+Development verification: Node.js 22+; npm test; npm run check.
+No install step, API keys, login, external runtime requests or paid services.
+Use HTTP(S), not file://, because the game uses JavaScript modules.

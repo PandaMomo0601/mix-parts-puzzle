@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff1d4"><meta name="description" content="给糖果让个路，把甜蜜装进盒子。啵啵打包厂，一款关于顺序与空位的糖果消除游戏。">
+<title>啵啵打包厂 · 拆东补西</title>
+<link rel="stylesheet" href="./style.css"><link rel="preload" href="./assets/hero.webp" as="image">
+</head>
+<body>
+<main id="app" aria-label="啵啵打包厂">
+<section id="home" class="screen home">
+<img class="cover" src="./assets/hero.webp" alt="亮晶晶的糖果装进珊瑚色纸盒，薄荷小工人在温暖的糖果工厂里等你">
+<div class="home-heading"><span class="eyebrow">拆东补西 · 糖果工坊</span><h1>啵啵<br><span>打包厂</span></h1><p>让个路，甜蜜就到位。</p></div>
+<div class="home-bottom"><button class="button primary start-game" id="start">开工装糖 <span aria-hidden="true">→</span></button><p id="home-progress">你的第一份甜蜜订单</p><div class="home-links"><button id="home-levels" class="text-button">订单簿</button><span>·</span><button id="home-help" class="text-button">怎么玩</button><span>·</span><button id="home-settings" class="text-button">设置</button></div></div>
+</section>
+<section id="game" class="screen game" hidden aria-label="糖果装盒工位">
+<div class="game-scenery" aria-hidden="true"></div>
+<header class="game-header"><button class="round-button" id="menu" aria-label="打开订单簿"><span class="icon" data-icon="menu"></span></button><div class="order-ticket"><span id="chapter-name">新手工坊</span><h2 id="level-number">第 01 单</h2><div class="ticket-dots" aria-hidden="true"></div></div><button class="round-button" id="settings" aria-label="设置与暂停"><span class="icon" data-icon="settings"></span></button></header>
+<div class="order-progress"><span>今日装糖</span><div class="progress-track"><i id="progress-fill"></i></div><strong id="progress-count">0 / 2</strong></div>
+<div class="instruction"><span class="instruction-dot" aria-hidden="true"></span><p id="instruction" role="status" aria-live="polite" aria-atomic="true">轻点糖果，沿箭头滑进同色纸托</p><button id="help" aria-label="查看玩法说明">?</button></div>
+<div class="board-wrap"><div id="board" class="board" role="group" aria-label="糖果棋盘" aria-describedby="board-caption"><canvas id="board-canvas" aria-hidden="true"></canvas><div id="piece-controls" class="piece-controls"></div><span id="board-caption" class="sr-only"></span></div></div>
+<div class="dispatch" aria-label="装盒进度"><canvas id="dispatch-canvas" aria-hidden="true"></canvas><div><span class="dispatch-tag">甜蜜出货中</span><p id="dispatch-text">每一颗，都有好去处</p></div></div>
+<nav class="tools" aria-label="工位工具"><button id="undo" class="tool-button"><span class="tool-icon" data-icon="undo"></span><strong>撤回</strong><small>换个顺序</small></button><button id="hint" class="tool-button"><span class="tool-icon" data-icon="bulb"></span><strong>提示</strong><small>帮我看看</small></button><button id="restart" class="tool-button"><span class="tool-icon" data-icon="retry"></span><strong>重开</strong><small>重新装糖</small></button></nav>
+</section>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+<div id="loading" class="loading" role="status"><span class="loading-candy"></span><strong>正在打开糖果工厂</strong><p>美好的一天，从一颗糖开始</p></div>
+</main>
+<script type="module" src="./app.mjs"></script>
+<noscript>这是一款互动糖果游戏，请在浏览器中启用 JavaScript 后游玩。</noscript>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "art": [
+    {
+      "file": "assets/hero.webp",
+      "sha256": "c88aa9c2745cc37bf49dad5bfe96231c2d936527ef1f062be7024849f40e3e09",
+      "bytes": 1397014,
+      "figmaNode": "104:94",
+      "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+      "kind": "approved-cover",
+      "status": "Registered in Figma before integration; runtime and sprite QA verified; owner acceptance pending"
+    },
+    {
+      "file": "assets/candy-atlas.png",
+      "sha256": "78976525ddeddc45aa5b4366587bab89ab6077895938eda3f0e1ff0950851da1",
+      "bytes": 1781719,
+      "figmaNode": "104:95",
+      "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+      "kind": "candy",
+      "status": "Registered in Figma before integration; runtime and sprite QA verified; owner acceptance pending"
+    },
+    {
+      "file": "assets/tray-atlas.png",
+      "sha256": "a11f281fa48a79594a23098f6f6dff81799da07a358b1629594a93722a91168a",
+      "bytes": 1998765,
+      "figmaNode": "105:89",
+      "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+      "kind": "tray",
+      "status": "Registered in Figma before integration; runtime and sprite QA verified; owner acceptance pending"
+    },
+    {
+      "file": "assets/factory-workbench.png",
+      "sha256": "2532fa25e47b0b2277704759336b8e418e2d4bb3c1c2842fbbbcdba7b69bfbe3",
+      "bytes": 2019027,
+      "figmaNode": "108:89",
+      "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+      "kind": "scene",
+      "status": "Registered in Figma before integration; runtime and sprite QA verified; owner acceptance pending"
+    },
+    {
+      "file": "assets/shipping-atlas.png",
+      "sha256": "c8144c960e96240d1a83e0933fd1ccb0dcde32313fd85a6319e294f7780ef636",
+      "bytes": 1273525,
+      "figmaNode": "113:99",
+      "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+      "kind": "shipping",
+      "status": "Registered in Figma before integration; runtime and sprite QA verified; owner acceptance pending"
+    },
+    {
+      "file": "assets/mascot-atlas.png",
+      "sha256": "23fa02c2e32495d1c0294ed1342fb11a0d28ac7f3c337dcb75464cedbb63b994",
+      "bytes": 1979553,
+      "figmaNode": "113:97",
+      "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+      "kind": "mascot",
+      "status": "Registered in Figma before integration; runtime and sprite QA verified; owner acceptance pending"
+    }
+  ],
+  "font": {
+    "allChineseSourceCharsCovered": true,
+    "missing": [],
+    "file": "assets/noto-sans-sc.woff2",
+    "bytes": 158388,
+    "sha256": "e789bef919d3972a38574abdaa6e5611cf7454fccac971c250e129cb17ad550e",
+    "fontSource": "Noto Sans SC variable font",
+    "sourceCommit": "a85815a42757630ce188fdad368c2dfc444d4773",
+    "license": "licenses/NotoSansSC-OFL.txt"
+  },
+  "audioManifest": "assets/audio/manifest.json",
+  "ui": {
+    "figmaFile": "AcluGjqwpP0OsFcpwQwG8J",
+    "page": "104:89",
+    "screens": [
+      "110:89",
+      "110:90",
+      "110:91",
+      "110:92",
+      "122:217",
+      "122:478",
+      "122:692",
+      "122:909"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "base": "http://127.0.0.1:4194",
+  "version": "r13",
+  "checks": [
+    {
+      "game": "bobopacking",
+      "version": "1.0.2",
+      "firstLevelClicks": 11,
+      "collectedAfterReload": 1,
+      "serviceWorkerScope": "/games/bobo-packing/"
+    },
+    {
+      "game": "bobofactory",
+      "version": "2.0.1",
+      "firstLevelClicks": 2,
+      "completedAfterReload": 1
+    },
+    {
+      "game": "candytrials",
+      "mode": "queue",
+      "firstLevelActions": 4
+    },
+    {
+      "game": "candytrials",
+      "mode": "tile",
+      "firstLevelActions": 2
+    },
+    {
+      "game": "candytrials",
+      "mode": "tilt",
+      "firstLevelActions": 2
+    },
+    {
+      "game": "candybatch",
+      "firstLevelClicks": 4,
+      "collected": 1
+    }
+  ],
+  "errors": [],
+  "bad": [],
+  "passed": true
+}

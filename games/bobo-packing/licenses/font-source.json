@@ -1,0 +1,60 @@
+{
+  "commit": "a85815a42757630ce188fdad368c2dfc444d4773",
+  "files": [
+    {
+      "name": "NotoSansSC[wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+      "bytes": 17772300,
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
+    },
+    {
+      "name": "OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssc/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "name": "METADATA.pb",
+      "url": "https://raw.githubusercontent.com/google/fonts/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssc/METADATA.pb",
+      "bytes": 1296,
+      "sha256": "c6c4bdb785793b2de1da177caeeffcd0c90d7680bdab2de8f88ab45007bc59bc"
+    }
+  ],
+  "subset": {
+    "name": "noto-sans-sc-bobo.woff2",
+    "bytes": 154732,
+    "sha256": "99b61f6fcc4a8108d8024805ac038d952a6530a405bb756c4a80963df4ac61f3",
+    "glyphs": 901,
+    "characters": 492,
+    "missing": [
+      "ᴗ",
+      "✦"
+    ],
+    "axis": [
+      [
+        "wght",
+        100.0,
+        900.0
+      ]
+    ],
+    "tool": "fonttools 4.60.1; brotli 1.2.0"
+  },
+  "symbols_source": [
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssymbols2/NotoSansSymbols2-Regular.ttf",
+      "sha256": "7d5fb73b7ca67a6798101741f5d280a3d016a56a197afcd4199dbb57b4b82a21",
+      "bytes": 1233128
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssymbols2/OFL.txt",
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+      "bytes": 4383
+    }
+  ],
+  "symbols_subset": {
+    "bytes": 2484,
+    "sha256": "529fb08b20536b68d484cbd90fb5973623a49b624aaed1ac8a74eee33f1d929d",
+    "characters": "✦"
+  },
+  "coverage_note": "Original ᴗ removed from CSS; ︶ included. ✦ provided by bundled Symbols 2."
+}

@@ -1,9 +1,13 @@
 {
-  "version": "r12",
-  "games": 24,
+  "version": "r13",
+  "games": 26,
   "newGames": 2,
   "updatedGames": 0,
-  "newLevels": 6,
+  "newLevels": 0,
+  "candyDemoVersions": 4,
+  "candyDemoLevels": 159,
+  "boboFactoryLevels": 105,
+  "boboPackingLevels": 36,
   "candyBatchLevels": 6,
   "candyTrialsHistoricalLevels": 12,
   "partsclearLevels": 105,
@@ -16,8 +20,8 @@
     },
     {
       "name": "catalog.js",
-      "bytes": 5138,
-      "sha256": "43d0f373ad0e701adc33f57c36312120015409b1ac33619705fd957934555e53"
+      "bytes": 5638,
+      "sha256": "af7f997b93fccf3fb81add87f12c505d9814767ca20bc5cdc9b714373b505dac"
     },
     {
       "name": "games/arithmetic.js",
@@ -28,6 +32,271 @@
       "name": "games/bigpair.js",
       "bytes": 10741,
       "sha256": "2abf6764ccf64c0636c1d8f3dbfd65ee48426406050d72b186c4959e8ea14da4"
+    },
+    {
+      "name": "games/bobo-factory/app.mjs",
+      "bytes": 21427,
+      "sha256": "1cdaff4f4d48fb3af85475d4c31d1506053ea14e683cbfce07b2e9a433083d5a"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/ATTRIBUTION.txt",
+      "bytes": 707,
+      "sha256": "b3ac3cd51acf859a2b1e8aa943e6d2532694e8afc6c95c7b24a98d14ac589ba1"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/LICENSE-CC-BY-3.0.txt",
+      "bytes": 19467,
+      "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/LICENSE-kenney-impact-sounds.txt",
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/LICENSE-kenney-interface-sounds.txt",
+      "bytes": 574,
+      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/LICENSE-kenney-music-jingles.txt",
+      "bytes": 482,
+      "sha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/blocked.wav",
+      "bytes": 18160,
+      "sha256": "ab4309762c11ef3e94ad2ef194608e387a0fad7be1d3059c24e92499526de6ea"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/box.wav",
+      "bytes": 46896,
+      "sha256": "d8e50fb87d665aca89ce531557359086638e91e1822e622465b0cc6c80485a3e"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/confirm.wav",
+      "bytes": 25608,
+      "sha256": "5d56969f00811879c18b35c447872169601518555b16fc2c5cb31eb8819bd1c4"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/land.wav",
+      "bytes": 19416,
+      "sha256": "f834588049948a382c7098756cc44599318d127794801ccd0c29b24e84dfa7d8"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/manifest.json",
+      "bytes": 6383,
+      "sha256": "4cac9b3116bf5cf5f7c7afaeab3c4a607f40057d3e0270c8b815fe010c2ecd6a"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/move.wav",
+      "bytes": 18112,
+      "sha256": "9d45ad3fa23add4a93c899b49b33278a808cec940b7bb3e0c679d2454fb72e9c"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/music.mp3",
+      "bytes": 2532513,
+      "sha256": "5b916bdf95661a45782f97009db6ef1dd1864522f3d3db79503d005524ac5730"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/pack.wav",
+      "bytes": 13078,
+      "sha256": "e288384faba621a69db98f407fdd699b9258d82d1d5305696bf622d65f166f40"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/soft.wav",
+      "bytes": 20860,
+      "sha256": "fea74f70fa9965845e79cd4ed22755b18053d49ec6953f77c9c5b93e4b054424"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/tap.wav",
+      "bytes": 928,
+      "sha256": "92eeb83a79b700372922f277647db78b744884c8b246dca5c673c5b4087095a3"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/undo.wav",
+      "bytes": 5678,
+      "sha256": "c5c97e52b5edea971cb7907ec29a8d6cbee0767a0c4369ada68ffb3cd33bf1ae"
+    },
+    {
+      "name": "games/bobo-factory/assets/audio/win.wav",
+      "bytes": 140672,
+      "sha256": "53ef34e62dc00df6d02f61f9bffb13bdcbbb7853ad6188c7b286385c05803689"
+    },
+    {
+      "name": "games/bobo-factory/assets/candy-atlas.png",
+      "bytes": 1781719,
+      "sha256": "78976525ddeddc45aa5b4366587bab89ab6077895938eda3f0e1ff0950851da1"
+    },
+    {
+      "name": "games/bobo-factory/assets/factory-workbench.png",
+      "bytes": 2019027,
+      "sha256": "2532fa25e47b0b2277704759336b8e418e2d4bb3c1c2842fbbbcdba7b69bfbe3"
+    },
+    {
+      "name": "games/bobo-factory/assets/hero.webp",
+      "bytes": 1397014,
+      "sha256": "c88aa9c2745cc37bf49dad5bfe96231c2d936527ef1f062be7024849f40e3e09"
+    },
+    {
+      "name": "games/bobo-factory/assets/manifest.json",
+      "bytes": 2949,
+      "sha256": "ca8165e3496d007de6cf4029cd0a7f0e3cb4be2f5e4c098e87bcc7126d6b7d8f"
+    },
+    {
+      "name": "games/bobo-factory/assets/mascot-atlas.png",
+      "bytes": 1979553,
+      "sha256": "23fa02c2e32495d1c0294ed1342fb11a0d28ac7f3c337dcb75464cedbb63b994"
+    },
+    {
+      "name": "games/bobo-factory/assets/noto-sans-sc.woff2",
+      "bytes": 158388,
+      "sha256": "e789bef919d3972a38574abdaa6e5611cf7454fccac971c250e129cb17ad550e"
+    },
+    {
+      "name": "games/bobo-factory/assets/shipping-atlas.png",
+      "bytes": 1273525,
+      "sha256": "c8144c960e96240d1a83e0933fd1ccb0dcde32313fd85a6319e294f7780ef636"
+    },
+    {
+      "name": "games/bobo-factory/assets/tray-atlas.png",
+      "bytes": 1998765,
+      "sha256": "a11f281fa48a79594a23098f6f6dff81799da07a358b1629594a93722a91168a"
+    },
+    {
+      "name": "games/bobo-factory/audio.mjs",
+      "bytes": 9746,
+      "sha256": "16ae43eef6dc5314240dd827e644d4da4c03e4c0d6b1f66825c8fb4a8eb468d7"
+    },
+    {
+      "name": "games/bobo-factory/engine.mjs",
+      "bytes": 12794,
+      "sha256": "4c048fca2fca1d2e837d663e0548363acc846a4460b0a95d1d5d0e782d8e7ef8"
+    },
+    {
+      "name": "games/bobo-factory/index.html",
+      "bytes": 3892,
+      "sha256": "14947271a9600f0a0a46db9c706bee0e9d9f6b76fe22e16abf5a25f90ca27eec"
+    },
+    {
+      "name": "games/bobo-factory/levels.mjs",
+      "bytes": 285443,
+      "sha256": "eeda417483cdb5aa57d91c142c69f040c8c15463642eb6665f532721b57a9d30"
+    },
+    {
+      "name": "games/bobo-factory/licenses/NotoSansSC-OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "name": "games/bobo-factory/renderer.mjs",
+      "bytes": 8574,
+      "sha256": "f1c704ab8a941a448acce4b914efc3936714072fd8e4a05f7b3fe9b3fd7c5b15"
+    },
+    {
+      "name": "games/bobo-factory/storage.mjs",
+      "bytes": 7569,
+      "sha256": "23ea37e1c6adff76e58fd20ce401cce1e95ef45400013417fac6a5fb08257b1c"
+    },
+    {
+      "name": "games/bobo-factory/style.css",
+      "bytes": 14025,
+      "sha256": "a7f50d48a4fbcdf6781eba42555eb45637fa6065791a69339b17766589642d3a"
+    },
+    {
+      "name": "games/bobo-packing/NOTICE.txt",
+      "bytes": 1043,
+      "sha256": "0d90ace9b74b7ca358adaaf3bcf199510f470124b0398b0ad880e07169217856"
+    },
+    {
+      "name": "games/bobo-packing/app.mjs",
+      "bytes": 22877,
+      "sha256": "b706e461b09fb3064a146280e13a0d1955519b110bea6fba4cf1558515b9d335"
+    },
+    {
+      "name": "games/bobo-packing/assets/bobo-groove.m4a",
+      "bytes": 1050490,
+      "sha256": "80dbb8c7ca5e246f971033f905beec2f4c313afe747268bd9eaa4f09d2135150"
+    },
+    {
+      "name": "games/bobo-packing/assets/hero.webp",
+      "bytes": 1397014,
+      "sha256": "c88aa9c2745cc37bf49dad5bfe96231c2d936527ef1f062be7024849f40e3e09"
+    },
+    {
+      "name": "games/bobo-packing/assets/icon.svg",
+      "bytes": 544,
+      "sha256": "e9b6064a901ba0048415595885c85e51911535f6e67cc764cb07b0d82eec9477"
+    },
+    {
+      "name": "games/bobo-packing/assets/noto-sans-sc-bobo.woff2",
+      "bytes": 154732,
+      "sha256": "99b61f6fcc4a8108d8024805ac038d952a6530a405bb756c4a80963df4ac61f3"
+    },
+    {
+      "name": "games/bobo-packing/assets/noto-symbols-bobo.woff2",
+      "bytes": 2484,
+      "sha256": "529fb08b20536b68d484cbd90fb5973623a49b624aaed1ac8a74eee33f1d929d"
+    },
+    {
+      "name": "games/bobo-packing/audio.mjs",
+      "bytes": 1728,
+      "sha256": "1ab55f5bc6fe0d021c9eae106ded41763b7f821f06d1df60ba4b0b8b2232dfef"
+    },
+    {
+      "name": "games/bobo-packing/engine.mjs",
+      "bytes": 2931,
+      "sha256": "1f99792096ee4dfa18d8e3d473ef15e7095b9c7a363ed309b47198e5b1b0bca9"
+    },
+    {
+      "name": "games/bobo-packing/index.html",
+      "bytes": 834,
+      "sha256": "c496f2c290d2e485829d91e40c9f3dcb72e527b03671fb3f052eb88e65332255"
+    },
+    {
+      "name": "games/bobo-packing/levels.mjs",
+      "bytes": 9780,
+      "sha256": "234926712651f77cdfd76cb74c3856c69483667f1d5d6347664487f1d3ddeb3c"
+    },
+    {
+      "name": "games/bobo-packing/licenses/NotoSansSC-OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "name": "games/bobo-packing/licenses/NotoSansSymbols2-OFL.txt",
+      "bytes": 4383,
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0"
+    },
+    {
+      "name": "games/bobo-packing/licenses/font-source.json",
+      "bytes": 2107,
+      "sha256": "7692fa8bd018dfab5928adfe064fe92dad66906b622a59cb6a0d72f085b7bb1a"
+    },
+    {
+      "name": "games/bobo-packing/manifest.webmanifest",
+      "bytes": 292,
+      "sha256": "827d2c56ba70f5d18c93112fe978096d096771378b2dd3d33646fd2406682d17"
+    },
+    {
+      "name": "games/bobo-packing/render.mjs",
+      "bytes": 6658,
+      "sha256": "2701e3dbc13109c3c253f3ec262ca44e9476a5e310fb2ea6216e5ce4b6b9be26"
+    },
+    {
+      "name": "games/bobo-packing/storage.mjs",
+      "bytes": 1898,
+      "sha256": "f082703537fe374c2f5bbdd9b4e39be715ee0bccdfb6d53d082ff35ca5813972"
+    },
+    {
+      "name": "games/bobo-packing/style.css",
+      "bytes": 15756,
+      "sha256": "d875adbf391104e2347bfd55a0220ad4ce5e6c1ab896afa74354d084a04673d0"
+    },
+    {
+      "name": "games/bobo-packing/sw.js",
+      "bytes": 2028,
+      "sha256": "8798da83b2bf08debb21f7ec6926b58e2bba83225705c5cdbca195b5cd725f29"
     },
     {
       "name": "games/burstclear.js",
@@ -536,8 +805,8 @@
     },
     {
       "name": "index.html",
-      "bytes": 10859,
-      "sha256": "288aff5cb259f4f94d280bfe4f5b559e34c2ba0b78f7d460b60aed63663e9a00"
+      "bytes": 11663,
+      "sha256": "14636670fbdf380572d9af14c8d20a887c58fd9d13000e412d26d86debcf5cad"
     },
     {
       "name": "play.css",
@@ -547,7 +816,7 @@
     {
       "name": "play.html",
       "bytes": 1492,
-      "sha256": "ba5d5148c644d5348672dd7c19fba3649ed5284ac6ae80ae17d2d8c7b48b5614"
+      "sha256": "ff3e9829ba56572d2ce58dcc1ab8be8400e45adceadcd5943cd6de5411750f57"
     },
     {
       "name": "player.js",
